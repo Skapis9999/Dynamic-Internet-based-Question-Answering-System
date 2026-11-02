@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Web QA Stream</title>
+<style>
+  :root { --bg:#fafaf9; --fg:#1c1917; --muted:#78716c; --card:#fff; --line:#e7e5e4; --accent:#2563eb; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0c0a09; --fg:#f5f5f4; --muted:#a8a29e; --card:#1c1917; --line:#292524; --accent:#60a5fa; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 system-ui, sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:32px 16px; }
+  h1 { font-size:1.4rem; margin:0 0 4px; }
+  .sub { color:var(--muted); margin:0 0 24px; font-size:.9rem; }
+  form { display:flex; gap:8px; }
+  input { flex:1; padding:12px 14px; border:1px solid var(--line); border-radius:10px; background:var(--card); color:var(--fg); font-size:1rem; }
+  button { padding:12px 18px; border:0; border-radius:10px; background:var(--accent); color:#fff; font-weight:600; cursor:pointer; }
+  button:disabled { opacity:.5; cursor:default; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin-top:16px; }
+  .label { font-size:.75rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:6px; }
+  .answer { white-space:pre-wrap; }
+  .sources a, .log a { color:var(--accent); text-decoration:none; word-break:break-all; }
+  .sources li { margin:2px 0; font-size:.9rem; }
+  .log { font:12.5px/1.6 ui-monospace, monospace; color:var(--muted); max-height:260px; overflow:auto; }
+  .ok { color:#16a34a; } .err { color:#dc2626; }
+  .meta { color:var(--muted); font-size:.8rem; margin-top:8px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Dynamic Internet-based Question Answering</h1>
+  <p class="sub">Kafka → SearXNG → fetch/embed → Qdrant → qwen3 · answers from live web pages</p>
+  <form id="f">
+    <input id="q" placeholder="When did the first extension of the Athens Tram take place?" autocomplete="off" autofocus>
+    <button id="b">Ask</button>
+  </form>
+  <div id="out"></div>
+</main>
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function answerCard(kind, ev) {
+  const src = ev.sources || [];
+  const body = esc(ev.answer).replace(/\[(\d+)\]/g, (m, n) => {
+    const s = src.find(x => x.n == n);
+    return s ? `<a href="${esc(s.url)}" target="_blank">[${n}]</a>` : m;
+  });
+  const meta = ev.total_seconds != null
+    ? `${ev.total_seconds}s total · LLM ${ev.llm_seconds}s · pages ${ev.pages_used}/${ev.pages_expected}` : "";
+  return `<div class="label">${kind === "fast" ? "Fast answer (first pages)" : "Final answer"}</div>
+    <div class="answer">${body}</div>
+    ${src.length ? `<ol class="sources">${src.map(s => `<li value="${s.n}"><a href="${esc(s.url)}" target="_blank">${esc(s.title || s.url)}</a></li>`).join("")}</ol>` : ""}
+    <div class="meta">${meta}</div>`;
+}
+
+$("#f").onsubmit = async e => {
+  e.preventDefault();
+  const question = $("#q").value.trim() || $("#q").placeholder;
+  $("#b").disabled = true;
+  $("#out").innerHTML = `<div class="card" id="ans"><div class="label">Answer</div><div class="answer">Working…</div></div>
+    <div class="card"><div class="label">Pipeline</div><div class="log" id="log"></div></div>`;
+  const log = (html) => { $("#log").insertAdjacentHTML("beforeend", html + "<br>"); $("#log").scrollTop = 1e9; };
+  const t0 = performance.now();
+  const ts = () => ((performance.now() - t0) / 1000).toFixed(1).padStart(5) + "s ";
+
+  const { qid } = await (await fetch("/api/ask", { method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ question }) })).json();
+  const es = new EventSource(`/api/stream/${qid}`);
+  es.onmessage = m => {
+    const ev = JSON.parse(m.data);
+    switch (ev.type) {
+      case "accepted": log(ts() + "question on Kafka · qid " + qid); break;
+      case "queries": log(ts() + "search queries: " + ev.queries.map(esc).join(" | ")); break;
+      case "urls": log(ts() + `${ev.urls.length} pages to fetch`); break;
+      case "page": log(ts() + (ev.error ? `<span class="err">✗</span> ` : `<span class="ok">✓</span> ${ev.n_chunks} chunks · `)
+        + `<a href="${esc(ev.url)}" target="_blank">${esc(ev.url)}</a>` + (ev.error ? ` <span class="err">${esc(ev.error)}</span>` : "")); break;
+      case "fast": $("#ans").innerHTML = answerCard("fast", ev); log(ts() + "fast answer"); break;
+      case "final": $("#ans").innerHTML = answerCard("final", ev); log(ts() + "final answer"); es.close(); $("#b").disabled = false; break;
+    }
+  };
+  es.onerror = () => { es.close(); $("#b").disabled = false; };
+};
+</script>
+</body>
+</html>
