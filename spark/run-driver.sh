@@ -21,7 +21,7 @@ exec /opt/spark/bin/spark-submit \
   --conf spark.kubernetes.authenticate.caCertFile=$SA/ca.crt \
   --conf spark.kubernetes.authenticate.oauthTokenFile=$SA/token \
   --conf spark.kubernetes.container.image="$SPARK_IMAGE" \
-  --conf spark.kubernetes.container.image.pullPolicy=IfNotPresent \
+  --conf spark.kubernetes.container.image.pullPolicy=Always \
   --conf spark.kubernetes.executor.label.part-of=wqa-spark \
   --conf spark.kubernetes.executor.request.cores=250m \
   --conf spark.driver.host="$POD_IP" \

@@ -21,6 +21,26 @@ def chat(messages: list[dict], fmt: dict | str | None = None, temperature: float
     return r.json()["message"]["content"]
 
 
+def chat_stream(messages: list[dict], temperature: float = 0.2):
+    """Yield content deltas as the model generates them."""
+    import json
+    body = {
+        "model": config.LLM_MODEL, "messages": messages, "stream": True, "think": False,
+        "options": {"temperature": temperature, "num_ctx": 8192},
+    }
+    with _client.stream("POST", "/api/chat", json=body) as r:
+        r.raise_for_status()
+        for line in r.iter_lines():
+            if not line:
+                continue
+            chunk = json.loads(line)
+            delta = chunk.get("message", {}).get("content", "")
+            if delta:
+                yield delta
+            if chunk.get("done"):
+                break
+
+
 def embed(texts: list[str]) -> list[list[float]]:
     if not texts:
         return []

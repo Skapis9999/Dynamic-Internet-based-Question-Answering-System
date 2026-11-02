@@ -1,0 +1,72 @@
+[
+  {
+    "id": 43,
+    "q": "When did Socrates die?",
+    "ref": "399 BC",
+    "type": "factual",
+    "qid": "ab9e7405dfd2",
+    "pages_ok": 4,
+    "pages_failed": 4,
+    "pages_cached": 4,
+    "fast": {
+      "qid": "ab9e7405dfd2",
+      "type": "fast",
+      "ts": 1793663120.3074882,
+      "answer": "Socrates died in 399 BC [1][2].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/Socrates",
+          "title": "Socrates - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://www.softschools.com/timelines/socrates_timeline/419/",
+          "title": "Timeline"
+        }
+      ],
+      "pages_used": 2,
+      "pages_expected": 8,
+      "llm_seconds": 1.0,
+      "first_token_seconds": 26.4,
+      "total_seconds": 26.7,
+      "client_seconds": 28.8
+    },
+    "final": {
+      "qid": "ab9e7405dfd2",
+      "type": "final",
+      "ts": 1793663125.3837087,
+      "answer": "Socrates died in 399 BC [1][2].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/Socrates",
+          "title": "Socrates - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://www.softschools.com/timelines/socrates_timeline/419/",
+          "title": "Timeline"
+        },
+        {
+          "n": 3,
+          "url": "https://en.wikipedia.org/wiki/Trial_of_Socrates",
+          "title": "Trial of Socrates - Wikipedia"
+        },
+        {
+          "n": 4,
+          "url": "https://en.wikipedia.org/wiki/The_Death_of_Socrates",
+          "title": "The Death of Socrates - Wikipedia"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 0.8,
+      "first_token_seconds": 31.5,
+      "total_seconds": 31.8,
+      "client_seconds": 33.9
+    },
+    "verdict": "correct",
+    "reason": "The system answer correctly states that Socrates died in 399 BC, which matches the reference answer. The inclusion of citation markers [1][2] is not a problem, as it indicates the system is citing sources, which is acceptable and does not affect the correctness of the factual answer."
+  }
+]

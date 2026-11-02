@@ -19,7 +19,7 @@ app = FastAPI(title="Dynamic Internet-based QA")
 producer = bus.make_producer()
 
 # qid -> recent events (so a browser that connects slightly late misses nothing)
-history: dict[str, deque] = defaultdict(lambda: deque(maxlen=200))
+history: dict[str, deque] = defaultdict(lambda: deque(maxlen=600))
 subscribers: dict[str, set[asyncio.Queue]] = defaultdict(set)
 loop: asyncio.AbstractEventLoop | None = None
 
@@ -55,7 +55,8 @@ class Ask(BaseModel):
 @app.post("/api/ask")
 def ask(body: Ask) -> dict:
     qid = uuid.uuid4().hex[:12]
-    bus.send(producer, config.T_QUESTIONS, qid, {"qid": qid, "question": body.question.strip()})
+    bus.send(producer, config.T_QUESTIONS, qid,
+             {"qid": qid, "question": body.question.strip(), "asked_at": time.time()})
     bus.emit_event(producer, qid, "accepted", question=body.question.strip())
     producer.flush()
     return {"qid": qid}

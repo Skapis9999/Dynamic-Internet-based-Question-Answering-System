@@ -16,9 +16,26 @@ data:
     search:
       safe_search: 0
       formats: [html, json]
+      # Defaults suspend an engine for up to 1h (CAPTCHA) after one block; with several
+      # engines in rotation, a short pause is enough.
+      suspended_times:
+        SearxEngineAccessDenied: 120
+        SearxEngineCaptcha: 600
+        SearxEngineTooManyRequests: 120
     outgoing:
       request_timeout: 4.0
       max_request_timeout: 8.0
+    # Spread queries over more engines so no single one rate-limits us.
+    # (Tested 2026-11: bing, yahoo, yandex, mwmbl answer; duckduckgo/brave CAPTCHA under load.)
+    engines:
+      - name: bing
+        disabled: false
+      - name: yahoo
+        disabled: false
+      - name: yandex
+        disabled: false
+      - name: mwmbl
+        disabled: false
 ---
 apiVersion: v1
 kind: Service

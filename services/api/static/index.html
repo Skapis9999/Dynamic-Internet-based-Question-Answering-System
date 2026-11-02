@@ -49,7 +49,8 @@ function answerCard(kind, ev) {
     return s ? `<a href="${esc(s.url)}" target="_blank">[${n}]</a>` : m;
   });
   const meta = ev.total_seconds != null
-    ? `${ev.total_seconds}s total · LLM ${ev.llm_seconds}s · pages ${ev.pages_used}/${ev.pages_expected}` : "";
+    ? `${ev.total_seconds}s total` + (ev.first_token_seconds != null ? ` · first words at ${ev.first_token_seconds}s` : "")
+      + (ev.llm_seconds != null ? ` · LLM ${ev.llm_seconds}s · pages ${ev.pages_used}/${ev.pages_expected}` : "") : "";
   return `<div class="label">${kind === "fast" ? "Fast answer (first pages)" : "Final answer"}</div>
     <div class="answer">${body}</div>
     ${src.length ? `<ol class="sources">${src.map(s => `<li value="${s.n}"><a href="${esc(s.url)}" target="_blank">${esc(s.title || s.url)}</a></li>`).join("")}</ol>` : ""}
@@ -69,16 +70,24 @@ $("#f").onsubmit = async e => {
   const { qid } = await (await fetch("/api/ask", { method: "POST", headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ question }) })).json();
   const es = new EventSource(`/api/stream/${qid}`);
+  let streaming = null, streamed = "", finalDone = false;
   es.onmessage = m => {
     const ev = JSON.parse(m.data);
     switch (ev.type) {
       case "accepted": log(ts() + "question on Kafka · qid " + qid); break;
       case "queries": log(ts() + "search queries: " + ev.queries.map(esc).join(" | ")); break;
       case "urls": log(ts() + `${ev.urls.length} pages to fetch`); break;
-      case "page": log(ts() + (ev.error ? `<span class="err">✗</span> ` : `<span class="ok">✓</span> ${ev.n_chunks} chunks · `)
+      case "page": log(ts() + (ev.error ? `<span class="err">✗</span> ` : `<span class="ok">✓</span> ${ev.n_chunks} chunks${ev.cached ? " (cached)" : ""} · `)
+        + (ev.executor ? `${esc(ev.engine)} ${esc(ev.executor.replace(/.*-(exec-\d+)$/, "$1"))} · ` : "")
         + `<a href="${esc(ev.url)}" target="_blank">${esc(ev.url)}</a>` + (ev.error ? ` <span class="err">${esc(ev.error)}</span>` : "")); break;
-      case "fast": $("#ans").innerHTML = answerCard("fast", ev); log(ts() + "fast answer"); break;
-      case "final": $("#ans").innerHTML = answerCard("final", ev); log(ts() + "final answer"); es.close(); $("#b").disabled = false; break;
+      case "delta":
+        if (finalDone || (ev.kind === "fast" && streaming === "final")) break;
+        if (streaming !== ev.kind) { streaming = ev.kind; streamed = ""; log(ts() + `writing ${ev.kind} answer…`); }
+        streamed += ev.text;
+        $("#ans").innerHTML = `<div class="label">${ev.kind === "fast" ? "Fast answer (first pages)" : "Final answer"} · writing…</div><div class="answer">${esc(streamed)}</div>`;
+        break;
+      case "fast": if (!finalDone) $("#ans").innerHTML = answerCard("fast", ev); log(ts() + "fast answer"); break;
+      case "final": finalDone = true; $("#ans").innerHTML = answerCard("final", ev); log(ts() + "final answer"); es.close(); $("#b").disabled = false; break;
     }
   };
   es.onerror = () => { es.close(); $("#b").disabled = false; };

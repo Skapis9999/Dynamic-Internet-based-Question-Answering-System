@@ -1,0 +1,65 @@
+[
+  {
+    "id": 6,
+    "q": "Who is the President of the USA?",
+    "ref": "Donald Trump (47th president, since January 2025)",
+    "type": "time-sensitive",
+    "qid": "7729489cf9b0",
+    "pages_ok": 0,
+    "pages_failed": 0,
+    "pages_cached": 0,
+    "fast": null,
+    "final": {
+      "qid": "7729489cf9b0",
+      "type": "final",
+      "ts": 1793663435.0548623,
+      "answer": "I couldn't find any web pages for this question.",
+      "sources": [],
+      "client_seconds": 4.9
+    },
+    "verdict": "incorrect",
+    "reason": "The system answer is wrong. The reference answer states that Donald Trump is the President of the USA, and the system answer incorrectly claims it couldn't find any web pages for this question."
+  },
+  {
+    "id": 21,
+    "q": "What's the tallest mountain in the world?",
+    "ref": "Mount Everest (about 8,849 m above sea level)",
+    "type": "factual",
+    "qid": "79d25b5b380c",
+    "pages_ok": 0,
+    "pages_failed": 0,
+    "pages_cached": 0,
+    "fast": null,
+    "final": {
+      "qid": "79d25b5b380c",
+      "type": "final",
+      "ts": 1793663443.948986,
+      "answer": "I couldn't find any web pages for this question.",
+      "sources": [],
+      "client_seconds": 5.0
+    },
+    "verdict": "no_answer",
+    "reason": "The system answer states it couldn't find any web pages for the question, which implies it cannot provide an answer. However, the question is a well-known fact with an authoritative reference answer (Mount Everest at about 8,849 m). Therefore, the system's response is not a correct answer, but it also does not contradict the reference. It simply fails to provide an answer."
+  },
+  {
+    "id": 41,
+    "q": "Where was the first Grand Prix victory of Jenson Button?",
+    "ref": "The 2006 Hungarian Grand Prix at the Hungaroring, Hungary",
+    "type": "factual",
+    "qid": "de5c8026d601",
+    "pages_ok": 0,
+    "pages_failed": 0,
+    "pages_cached": 0,
+    "fast": null,
+    "final": {
+      "qid": "de5c8026d601",
+      "type": "final",
+      "ts": 1793663455.5890145,
+      "answer": "I couldn't find any web pages for this question.",
+      "sources": [],
+      "client_seconds": 7.3
+    },
+    "verdict": "incorrect",
+    "reason": "The system answer is wrong. The reference answer states that Jenson Button's first Grand Prix victory was the 2006 Hungarian Grand Prix at the Hungaroring, Hungary. The system answer incorrectly claims it couldn't find any web pages for the question, which is not true given the reference answer."
+  }
+]

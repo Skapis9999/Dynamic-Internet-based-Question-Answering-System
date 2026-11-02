@@ -1,6 +1,11 @@
-"""Phase 1: the fetch -> extract -> chunk -> embed -> Qdrant stage as Spark Structured Streaming.
+"""The fetch -> extract -> chunk -> embed -> Qdrant stage as Spark Structured Streaming.
 
 Kafka [urls] --(micro-batches)--> executors (pipeline.py per URL) --> Kafka [chunks-ready] + [events]
+
+Results are produced to Kafka by the executors *as each URL finishes*, not through Spark's batch
+Kafka sink: the sink only writes when the whole micro-batch is done, so every page (and the fast
+answer) would wait for the slowest page in the batch. Spark still does the distribution,
+offset tracking and checkpointing; delivery is at-least-once, like the rest of the pipeline.
 
 Downstream services are unchanged: they can't tell whether pages were processed by the plain
 Python fetcher or by Spark, except for the "engine"/"executor" fields on page events.
@@ -9,7 +14,7 @@ import json
 import os
 import socket
 import time
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
@@ -24,18 +29,24 @@ URL_SCHEMA = T.StructType([
     T.StructField("title", T.StringType()),
     T.StructField("rank", T.IntegerType()),
     T.StructField("expected", T.IntegerType()),
-])
-OUT_SCHEMA = T.StructType([
-    T.StructField("topic", T.StringType()),
-    T.StructField("key", T.StringType()),
-    T.StructField("value", T.StringType()),
+    T.StructField("asked_at", T.DoubleType()),
 ])
 
 PARTITIONS = int(os.getenv("SPARK_PARTITIONS", "4"))
 THREADS_PER_PARTITION = int(os.getenv("SPARK_THREADS_PER_PARTITION", "4"))
 
+_producer = None  # one Kafka producer per executor Python worker, reused across batches
 
-def process_partition(rows):
+
+def _get_producer():
+    global _producer
+    if _producer is None:
+        from confluent_kafka import Producer
+        _producer = Producer({"bootstrap.servers": config.KAFKA_BOOTSTRAP, "linger.ms": 5})
+    return _producer
+
+
+def process_partition(rows) -> None:
     """Runs on an executor. Network-bound work, so a small thread pool per partition."""
     from services.fetcher import pipeline  # imported on the executor, not the driver
 
@@ -43,27 +54,21 @@ def process_partition(rows):
     if not rows:
         return
     pipeline.ensure_collection()
+    producer = _get_producer()
     host = socket.gethostname()
 
-    def work(m):
-        t0 = time.time()
-        n, err = 0, None
-        try:
-            text, title = pipeline.fetch_and_extract(m["url"])
-            n = pipeline.embed_and_store(m["qid"], m["url"], title or m.get("title") or "",
-                                         m.get("rank") or 0, pipeline.chunk(text))
-        except Exception as e:
-            err = f"{type(e).__name__}: {e}"[:300]
-        return m, n, err, round(time.time() - t0, 2)
-
     with ThreadPoolExecutor(THREADS_PER_PARTITION) as pool:
-        for m, n, err, secs in pool.map(work, rows):
-            ready = {"qid": m["qid"], "question": m["question"], "url": m["url"],
-                     "n_chunks": n, "expected": m["expected"], "error": err}
+        futures = {pool.submit(pipeline.process_url, m["url"], m.get("title") or ""): m for m in rows}
+        for fut in as_completed(futures):  # report each URL the moment it's done
+            m, res = futures[fut], fut.result()
+            ready = {"qid": m["qid"], "question": m["question"], "url": m["url"], "expected": m["expected"],
+                     "asked_at": m.get("asked_at"), "n_chunks": res["n_chunks"], "error": res["error"]}
             event = {"qid": m["qid"], "type": "page", "ts": time.time(), "url": m["url"],
-                     "n_chunks": n, "error": err, "engine": "spark", "executor": host, "seconds": secs}
-            yield (config.T_CHUNKS_READY, m["qid"], json.dumps(ready))
-            yield (config.T_EVENTS, m["qid"], json.dumps(event))
+                     "engine": "spark", "executor": host, **res}
+            producer.produce(config.T_EVENTS, key=m["qid"].encode(), value=json.dumps(event).encode())
+            producer.produce(config.T_CHUNKS_READY, key=m["qid"].encode(), value=json.dumps(ready).encode())
+            producer.poll(0)
+    producer.flush(10)  # the batch only completes once its results are delivered
 
 
 def main() -> None:
@@ -71,14 +76,10 @@ def main() -> None:
     spark.sparkContext.setLogLevel("WARN")
 
     def handle_batch(batch_df, batch_id: int) -> None:
-        msgs = batch_df.select(F.from_json(F.col("value").cast("string"), URL_SCHEMA).alias("m")).select("m.*")
-        # Single pass over the data: each URL yields both of its output records.
-        out = msgs.repartition(PARTITIONS).rdd.mapPartitions(process_partition)
         t0 = time.time()
-        (spark.createDataFrame(out, OUT_SCHEMA)
-            .write.format("kafka")
-            .option("kafka.bootstrap.servers", config.KAFKA_BOOTSTRAP)
-            .save())
+        (batch_df.select(F.from_json(F.col("value").cast("string"), URL_SCHEMA).alias("m")).select("m.*")
+            .repartition(PARTITIONS)
+            .foreachPartition(process_partition))
         print(f"batch {batch_id} done in {time.time() - t0:.1f}s", flush=True)
 
     (spark.readStream.format("kafka")

@@ -2,3 +2,4 @@ httpx==0.28.1
 qdrant-client==1.12.1
 trafilatura==2.0.0
 lxml_html_clean==0.4.1
+confluent-kafka==2.6.1

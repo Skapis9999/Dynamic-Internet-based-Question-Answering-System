@@ -81,7 +81,7 @@ def handle(_topic: str, msg: dict) -> None:
         # partitions -> fetched in parallel by every fetcher replica.
         bus.send(producer, config.T_URLS, p["url"], {
             "qid": qid, "question": question, "url": p["url"], "title": p["title"],
-            "rank": rank, "expected": len(picked),
+            "rank": rank, "expected": len(picked), "asked_at": msg.get("asked_at"),
         })
     producer.flush()
 

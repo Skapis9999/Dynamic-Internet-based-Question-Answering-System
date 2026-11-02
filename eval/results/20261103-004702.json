@@ -1,0 +1,142 @@
+[
+  {
+    "id": 43,
+    "q": "When did Socrates die?",
+    "ref": "399 BC",
+    "type": "factual",
+    "qid": "a9dadde6fb60",
+    "pages_ok": 4,
+    "pages_failed": 4,
+    "pages_cached": 3,
+    "fast": {
+      "qid": "a9dadde6fb60",
+      "type": "fast",
+      "ts": 1793663192.8866389,
+      "answer": "Socrates died in 399 BC [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/Socrates",
+          "title": "Socrates - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://en.wikipedia.org/wiki/The_Death_of_Socrates",
+          "title": "The Death of Socrates - Wikipedia"
+        }
+      ],
+      "pages_used": 2,
+      "pages_expected": 8,
+      "llm_seconds": 1.5,
+      "first_token_seconds": 5.4,
+      "total_seconds": 5.8,
+      "client_seconds": 7.8
+    },
+    "final": {
+      "qid": "a9dadde6fb60",
+      "type": "final",
+      "ts": 1793663198.3144627,
+      "answer": "Socrates died in 399 BC [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/Socrates",
+          "title": "Socrates - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://commons.wikimedia.org/wiki/File:David_-_The_Death_of_Socrates.jpg",
+          "title": "File:David - The Death of Socrates.jpg - Wikimedia Commons"
+        },
+        {
+          "n": 3,
+          "url": "https://en.wikipedia.org/wiki/Trial_of_Socrates",
+          "title": "Trial of Socrates - Wikipedia"
+        },
+        {
+          "n": 4,
+          "url": "https://en.wikipedia.org/wiki/The_Death_of_Socrates",
+          "title": "The Death of Socrates - Wikipedia"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 1.1,
+      "first_token_seconds": 10.9,
+      "total_seconds": 11.2,
+      "client_seconds": 13.3
+    },
+    "verdict": "correct",
+    "reason": "The system answer correctly states that Socrates died in 399 BC, which matches the reference answer. The inclusion of the citation [1] is not necessary for correctness but does not detract from it."
+  },
+  {
+    "id": 44,
+    "q": "Which is the most populous country.",
+    "ref": "India (overtook China in 2023)",
+    "type": "factual",
+    "qid": "80ceae6ec446",
+    "pages_ok": 5,
+    "pages_failed": 3,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "80ceae6ec446",
+      "type": "fast",
+      "ts": 1793663213.5237653,
+      "answer": "As of the latest data, India is the most populous country with an estimated population of 1,463.9 million [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.worlddata.info/the-largest-countries.php",
+          "title": "30 most populated countries"
+        },
+        {
+          "n": 2,
+          "url": "https://www.worldometers.info/world-population/population-by-country/",
+          "title": "Countries in the world by population (2026)"
+        }
+      ],
+      "pages_used": 2,
+      "pages_expected": 8,
+      "llm_seconds": 2.6,
+      "first_token_seconds": 8.7,
+      "total_seconds": 9.4,
+      "client_seconds": 11.5
+    },
+    "final": {
+      "qid": "80ceae6ec446",
+      "type": "final",
+      "ts": 1793663218.8218825,
+      "answer": "As of the latest data, India is the most populous country, having overtaken China in April 2023 [2].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://worldpopulationreview.com/countries",
+          "title": "Total Population by Country 2026"
+        },
+        {
+          "n": 2,
+          "url": "https://www.worlddata.info/the-largest-countries.php",
+          "title": "30 most populated countries"
+        },
+        {
+          "n": 3,
+          "url": "https://www.vanguardngr.com/2026/02/top-10-countries-with-the-most-population/",
+          "title": "Top 10 countries with the most population"
+        },
+        {
+          "n": 4,
+          "url": "https://informationisbeautiful.net/visualizations/world-population/",
+          "title": "World Population — Information is Beautiful"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 1.7,
+      "first_token_seconds": 14.1,
+      "total_seconds": 14.7,
+      "client_seconds": 16.8
+    },
+    "verdict": "correct",
+    "reason": "The system answer correctly identifies India as the most populous country and notes that it overtook China in April 2023, which is consistent with the reference answer. The inclusion of a source citation [2] is not necessary for correctness but does not detract from it."
+  }
+]

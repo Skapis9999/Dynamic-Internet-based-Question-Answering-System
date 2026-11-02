@@ -52,7 +52,7 @@ spec:
       containers:
         - name: driver
           image: wqa-spark:dev
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always   # same tag every build: always re-resolve to the newest local image
           command: ["/app/run-driver.sh"]
           envFrom: [{ configMapRef: { name: wqa-config } }]
           env:

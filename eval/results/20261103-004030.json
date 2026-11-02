@@ -1,0 +1,65 @@
+[
+  {
+    "id": 43,
+    "q": "When did Socrates die?",
+    "ref": "399 BC",
+    "type": "factual",
+    "qid": "4ef32d1290e9",
+    "pages_ok": 4,
+    "pages_failed": 4,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "4ef32d1290e9",
+      "type": "fast",
+      "ts": 1793662816.359386,
+      "answer": "Socrates died in 399 B.C.E. [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://allthatsinteresting.com/socrates-death",
+          "title": "Inside The Forced Suicide Of Socrates, Who Was Sentenced To Die By Drinking Poison"
+        },
+        {
+          "n": 2,
+          "url": "https://en.wikipedia.org/wiki/Trial_of_Socrates",
+          "title": "Trial of Socrates - Wikipedia"
+        },
+        {
+          "n": 3,
+          "url": "https://en.wikipedia.org/wiki/The_Death_of_Socrates",
+          "title": "The Death of Socrates - Wikipedia"
+        }
+      ],
+      "pages_used": 1,
+      "pages_expected": 8,
+      "llm_seconds": 2.6,
+      "total_seconds": 2.6,
+      "client_seconds": 20.5
+    },
+    "final": {
+      "qid": "4ef32d1290e9",
+      "type": "final",
+      "ts": 1793662817.57432,
+      "answer": "Socrates died in 399 BC [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/Socrates",
+          "title": "Socrates - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://allthatsinteresting.com/socrates-death",
+          "title": "Inside The Forced Suicide Of Socrates, Who Was Sentenced To Die By Drinking Poison"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 0.9,
+      "total_seconds": 3.8,
+      "client_seconds": 21.7
+    },
+    "verdict": "correct",
+    "reason": "The system answer correctly states that Socrates died in 399 BC, which matches the reference answer. The inclusion of the citation [1] is not necessary for correctness but does not detract from it."
+  }
+]

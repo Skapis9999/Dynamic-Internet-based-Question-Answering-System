@@ -42,7 +42,7 @@ spec:
       containers:
         - name: api
           image: wqa-app:dev
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always   # same tag every build: always re-resolve to the newest local image
           envFrom: [{ configMapRef: { name: wqa-config } }]
           ports:
             - containerPort: 8000
@@ -70,7 +70,7 @@ spec:
       containers:
         - name: searcher
           image: wqa-app:dev
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always   # same tag every build: always re-resolve to the newest local image
           command: ["python", "-m", "services.searcher.main"]
           envFrom: [{ configMapRef: { name: wqa-config } }]
           resources:
@@ -97,7 +97,7 @@ spec:
       containers:
         - name: fetcher
           image: wqa-app:dev
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always   # same tag every build: always re-resolve to the newest local image
           command: ["python", "-m", "services.fetcher.main"]
           envFrom: [{ configMapRef: { name: wqa-config } }]
           resources:
@@ -121,7 +121,7 @@ spec:
       containers:
         - name: answerer
           image: wqa-app:dev
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always   # same tag every build: always re-resolve to the newest local image
           command: ["python", "-m", "services.answerer.main"]
           envFrom: [{ configMapRef: { name: wqa-config } }]
           resources:

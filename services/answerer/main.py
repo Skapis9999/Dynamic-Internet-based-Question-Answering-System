@@ -1,11 +1,13 @@
 """Stage 3: retrieve the best chunks for a question and let the LLM answer with citations.
 
 Like the thesis' stage2/stage3 split, it answers twice:
-  * "fast"  - as soon as the first page with text is indexed,
+  * "fast"  - once FAST_MIN_PAGES pages with text are indexed,
   * "final" - when every page is processed, or ANSWER_DEADLINE_S has passed.
+Answers are streamed to the UI token by token ("delta" events), then sent complete.
 """
 import time
 from dataclasses import dataclass, field
+from datetime import date
 
 from qdrant_client import QdrantClient, models
 
@@ -14,21 +16,27 @@ from services.common import bus, config, ollama
 log = bus.setup_logging("answerer")
 qdrant = QdrantClient(url=config.QDRANT_URL)
 
-SYSTEM = (
-    "You answer questions using ONLY the numbered web sources provided. "
-    "Be concise and factual. Cite sources inline like [1] or [2][3], using ONLY the source "
-    "numbers given in the headers; never copy reference numbers that appear inside source text. "
-    "If the sources do not contain the answer, say so plainly instead of guessing."
-)
+SYSTEM = """You answer questions using ONLY the numbered web sources provided. Today's date is {today}.
+Rules:
+- Be concise and factual. Cite sources inline like [1] or [2][3], using ONLY the source numbers given
+  in the headers; never copy reference numbers that appear inside source text.
+- If the sources describe DIFFERENT things that match the question (e.g. two places with the same
+  name), say the question is ambiguous and answer briefly for each.
+- For time-sensitive facts (current office holders, latest events), prefer the most recent information
+  and mention its date if sources disagree.
+- If the sources do not contain the answer, say so plainly instead of guessing."""
+
+DELTA_EVERY_S = 0.25
 
 
 @dataclass
 class Q:
     question: str
     expected: int
-    started: float = field(default_factory=time.time)
+    asked_at: float
+    first_seen: float = field(default_factory=time.time)
     done: int = 0
-    with_text: int = 0
+    urls: list[str] = field(default_factory=list)  # pages that produced text
     fast_sent: bool = False
 
 
@@ -36,20 +44,31 @@ state: dict[str, Q] = {}
 finished: set[str] = set()  # late pages arriving after the final answer are ignored
 
 
-def retrieve(qid: str, question: str) -> list[dict]:
-    qvec = ollama.embed([question])[0]
+def retrieve(q: Q) -> list[dict]:
+    """Top chunks among this question's pages, at most MAX_CHUNKS_PER_SOURCE per page."""
+    qvec = ollama.embed([q.question])[0]
     hits = qdrant.query_points(
-        config.QDRANT_COLLECTION, query=qvec, limit=config.TOP_K, with_payload=True,
-        query_filter=models.Filter(must=[models.FieldCondition(key="qid", match=models.MatchValue(value=qid))]),
+        config.QDRANT_COLLECTION, query=qvec, limit=config.TOP_K * 3, with_payload=True,
+        query_filter=models.Filter(must=[models.FieldCondition(key="url", match=models.MatchAny(any=q.urls))]),
     ).points
-    return [{**h.payload, "score": h.score} for h in hits]
+    picked, per_url = [], {}
+    for h in hits:
+        u = h.payload["url"]
+        if per_url.get(u, 0) < config.MAX_CHUNKS_PER_SOURCE:
+            per_url[u] = per_url.get(u, 0) + 1
+            picked.append({**h.payload, "score": h.score})
+        if len(picked) == config.TOP_K:
+            break
+    return picked
 
 
 def answer(qid: str, q: Q, kind: str) -> None:
     t0 = time.time()
-    hits = retrieve(qid, q.question)
+    hits = retrieve(q) if q.urls else []
     if not hits:
-        bus.emit_event(producer, qid, kind, answer="No usable text was found on the retrieved pages.", sources=[])
+        bus.emit_event(producer, qid, kind, answer="No usable text was found on the retrieved pages.",
+                       sources=[], total_seconds=round(time.time() - q.asked_at, 1))
+        producer.flush()
         return
 
     # Number sources per distinct URL so citations map to pages, not chunks.
@@ -59,14 +78,28 @@ def answer(qid: str, q: Q, kind: str) -> None:
             num[h["url"]] = len(num) + 1
             sources.append({"n": num[h["url"]], "url": h["url"], "title": h.get("title", "")})
     context = "\n\n".join(f"[{num[h['url']]}] ({h['url']})\n{h['text']}" for h in hits)
-
-    text = ollama.chat([
-        {"role": "system", "content": SYSTEM},
+    messages = [
+        {"role": "system", "content": SYSTEM.format(today=date.today().isoformat())},
         {"role": "user", "content": f"Sources:\n{context}\n\nQuestion: {q.question}"},
-    ])
+    ]
+
+    text, pending, last = "", "", time.time()
+    first_token = None
+    for delta in ollama.chat_stream(messages):
+        first_token = first_token or time.time()
+        text += delta
+        pending += delta
+        if time.time() - last >= DELTA_EVERY_S:
+            bus.emit_event(producer, qid, "delta", kind=kind, text=pending)
+            pending, last = "", time.time()
+    if pending:
+        bus.emit_event(producer, qid, "delta", kind=kind, text=pending)
+
     bus.emit_event(producer, qid, kind, answer=text.strip(), sources=sources,
-                   pages_used=q.done, pages_expected=q.expected, llm_seconds=round(time.time() - t0, 1),
-                   total_seconds=round(time.time() - q.started, 1))
+                   pages_used=q.done, pages_expected=q.expected,
+                   llm_seconds=round(time.time() - t0, 1),
+                   first_token_seconds=round((first_token or time.time()) - q.asked_at, 1),
+                   total_seconds=round(time.time() - q.asked_at, 1))
     producer.flush()
     log.info("[%s] %s answer in %.1fs (pages %d/%d)", qid, kind, time.time() - t0, q.done, q.expected)
 
@@ -74,20 +107,21 @@ def answer(qid: str, q: Q, kind: str) -> None:
 def handle(_topic: str, msg: dict) -> None:
     if msg["qid"] in finished:
         return
-    q = state.setdefault(msg["qid"], Q(question=msg["question"], expected=msg["expected"]))
+    q = state.setdefault(msg["qid"], Q(question=msg["question"], expected=msg["expected"],
+                                       asked_at=msg.get("asked_at") or time.time()))
     q.done += 1
     if msg.get("n_chunks"):
-        q.with_text += 1
+        q.urls.append(msg["url"])
 
 
 def tick() -> None:
     now = time.time()
     for qid, q in list(state.items()):
-        if q.done >= q.expected or now - q.started > config.ANSWER_DEADLINE_S:
+        if q.done >= q.expected or now - q.first_seen > config.ANSWER_DEADLINE_S:
             del state[qid]
             finished.add(qid)
             answer(qid, q, "final")
-        elif q.with_text and not q.fast_sent:
+        elif not q.fast_sent and len(q.urls) >= config.FAST_MIN_PAGES:
             q.fast_sent = True
             answer(qid, q, "fast")
 
