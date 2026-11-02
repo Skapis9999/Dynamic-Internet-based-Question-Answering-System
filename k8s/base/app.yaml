@@ -29,6 +29,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: api
+  labels: { part-of: wqa-app }
 spec:
   replicas: 1
   selector:
@@ -56,6 +57,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: searcher
+  labels: { part-of: wqa-app }
 spec:
   replicas: 1
   selector:
@@ -79,6 +81,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: fetcher
+  labels: { part-of: wqa-app }
 spec:
   # 3 replicas x 3 partitions on the "urls" topic = pages fetched in parallel.
   replicas: 3
@@ -103,6 +106,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: answerer
+  labels: { part-of: wqa-app }
 spec:
   replicas: 1
   selector:

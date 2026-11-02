@@ -31,6 +31,15 @@ def handle(_topic: str, msg: dict) -> None:
 
 
 if __name__ == "__main__":
-    pipeline.ensure_collection()
+    import time
+    for attempt in range(30):  # DNS/Qdrant may not be up yet after a cluster restart
+        try:
+            pipeline.ensure_collection()
+            break
+        except Exception as e:
+            log.warning("qdrant not ready (%s), retrying...", e)
+            time.sleep(2)
+    else:
+        raise SystemExit("qdrant unreachable")
     producer = bus.make_producer()
     bus.run_loop(bus.make_consumer("fetcher", [config.T_URLS]), handle)

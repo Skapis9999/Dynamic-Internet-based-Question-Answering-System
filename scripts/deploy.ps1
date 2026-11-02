@@ -2,13 +2,15 @@
 #   .\scripts\deploy.ps1            build + apply + restart app pods
 #   .\scripts\deploy.ps1 -NoBuild   just apply manifests
 param([switch]$NoBuild)
-$ErrorActionPreference = "Stop"
+# Not "Stop": in Windows PowerShell 5.1 any stderr output from docker/kubectl (e.g. build
+# progress) would abort the script. We check $LASTEXITCODE explicitly instead.
+$ErrorActionPreference = "Continue"
 Set-Location (Split-Path $PSScriptRoot -Parent)
 
 kubectl config use-context docker-desktop | Out-Null
 
 if (-not $NoBuild) {
-    docker build -t wqa-app:dev .
+    docker build -q -t wqa-app:dev .
     if ($LASTEXITCODE -ne 0) { throw "docker build failed" }
 }
 
