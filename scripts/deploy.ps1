@@ -12,6 +12,8 @@ kubectl config use-context docker-desktop | Out-Null
 if (-not $NoBuild) {
     docker build -q -t wqa-app:dev .
     if ($LASTEXITCODE -ne 0) { throw "docker build failed" }
+    docker build -q -t wqa-spark:dev -f spark/Dockerfile .
+    if ($LASTEXITCODE -ne 0) { throw "spark image build failed" }
 }
 
 kubectl apply -k k8s/base
@@ -20,6 +22,7 @@ if ($LASTEXITCODE -ne 0) { throw "kubectl apply failed" }
 if (-not $NoBuild) {
     # Same tag every time, so force pods to pick up the fresh image.
     kubectl -n wqa rollout restart deployment -l part-of=wqa-app
+    kubectl -n wqa rollout restart deployment -l part-of=wqa-spark
 }
 
 kubectl -n wqa rollout status statefulset/kafka --timeout=180s

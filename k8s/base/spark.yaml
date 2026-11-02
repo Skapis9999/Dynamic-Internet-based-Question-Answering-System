@@ -1,0 +1,83 @@
+# Spark Structured Streaming fetcher. The driver pod runs spark-submit in client mode
+# and asks the Kubernetes API for executor pods, hence the RBAC below.
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: spark
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: spark-driver
+rules:
+  - apiGroups: [""]
+    resources: [pods, services, configmaps, persistentvolumeclaims]
+    verbs: [create, get, list, watch, delete, deletecollection, patch, update]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: spark-driver
+subjects:
+  - { kind: ServiceAccount, name: spark }
+roleRef:
+  { apiGroup: rbac.authorization.k8s.io, kind: Role, name: spark-driver }
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: spark-checkpoints
+spec:
+  accessModes: [ReadWriteOnce]
+  resources:
+    requests: { storage: 1Gi }
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spark-fetcher
+  labels: { part-of: wqa-spark }
+spec:
+  replicas: 1
+  strategy: { type: Recreate }   # one driver at a time (RWO checkpoint volume)
+  selector:
+    matchLabels: { app: spark-fetcher }
+  template:
+    metadata:
+      labels: { app: spark-fetcher, part-of: wqa-spark }
+    spec:
+      serviceAccountName: spark
+      enableServiceLinks: false
+      securityContext: { fsGroup: 185 }   # 185 = spark user in the image
+      containers:
+        - name: driver
+          image: wqa-spark:dev
+          imagePullPolicy: IfNotPresent
+          command: ["/app/run-driver.sh"]
+          envFrom: [{ configMapRef: { name: wqa-config } }]
+          env:
+            - { name: SPARK_IMAGE, value: "wqa-spark:dev" }
+            - { name: SPARK_EXECUTORS, value: "2" }
+            - { name: POD_NAME, valueFrom: { fieldRef: { fieldPath: metadata.name } } }
+            - { name: POD_NAMESPACE, valueFrom: { fieldRef: { fieldPath: metadata.namespace } } }
+            - { name: POD_IP, valueFrom: { fieldRef: { fieldPath: status.podIP } } }
+          ports:
+            - { containerPort: 4040, name: spark-ui }
+          resources:
+            requests: { memory: 768Mi, cpu: 250m }
+            limits: { memory: 1280Mi }
+          volumeMounts:
+            - { name: checkpoints, mountPath: /checkpoints }
+      volumes:
+        - name: checkpoints
+          persistentVolumeClaim: { claimName: spark-checkpoints }
+---
+# Spark UI: kubectl -n wqa port-forward svc/spark-ui 4040:4040
+apiVersion: v1
+kind: Service
+metadata:
+  name: spark-ui
+spec:
+  selector: { app: spark-fetcher }
+  ports:
+    - { name: http, port: 4040 }

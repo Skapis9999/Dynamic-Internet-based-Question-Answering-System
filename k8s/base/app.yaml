@@ -83,8 +83,10 @@ metadata:
   name: fetcher
   labels: { part-of: wqa-app }
 spec:
-  # 3 replicas x 3 partitions on the "urls" topic = pages fetched in parallel.
-  replicas: 3
+  # Plain-Python fetcher, replaced by the Spark job (spark.yaml) since Phase 1.
+  # To compare engines: scale spark-fetcher to 0 and this to 3 (3 partitions on "urls").
+  # Never run both: each would process every URL.
+  replicas: 0
   selector:
     matchLabels: { app: fetcher }
   template:

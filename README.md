@@ -15,7 +15,8 @@ Browser ──POST /api/ask──► api ──► [questions]
    │                                   ▼
    │                                [urls]  (3 partitions)
    │                                   │
-   │                         fetcher ×3: fetch → trafilatura → chunk → embed → Qdrant
+   │              Spark Structured Streaming (driver + 2 executor pods on k8s):
+   │                         fetch → trafilatura → chunk → embed → Qdrant
    │                                   │
    │                                   ▼
    │                            [chunks-ready]
@@ -28,7 +29,7 @@ Browser ──POST /api/ask──► api ──► [questions]
 | Component | Role | Thesis equivalent |
 |---|---|---|
 | `searcher` | LLM query planning + SearXNG metasearch | `findImportantWord` + `googlesearch` |
-| `fetcher` | page → clean text → chunks → vectors | `htmlToText` + `buildEncyclopaedia` |
+| `spark-fetcher` | Spark Structured Streaming: page → clean text → chunks → vectors | `htmlToText` + `buildEncyclopaedia` (with `parallel = False`) |
 | Qdrant | vector store | Elasticsearch (Haystack) |
 | `answerer` | RAG with qwen3:8b, fast + final answers | extractive QA, stage2 / stage3 |
 | Kafka | decouples every stage, gives parallelism | (sequential Python calls) |
@@ -55,10 +56,28 @@ kubectl -n wqa scale deploy/fetcher --replicas=3
 kubectl -n wqa exec kafka-0 -- /opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic events
 ```
 
+## Spark on Kubernetes
+
+`spark-fetcher` is a driver pod that runs `spark-submit --master k8s://... --deploy-mode client`.
+Spark asks the Kubernetes API for executor pods (`wqa-fetcher-*-exec-N`) and removes them when the
+driver stops. Each micro-batch of URLs is spread over the executors, which share the same
+`services/fetcher/pipeline.py` code as the plain-Python fetcher.
+
+```powershell
+kubectl -n wqa port-forward svc/spark-ui 4040:4040     # Spark UI → http://localhost:4040
+kubectl -n wqa logs -f deploy/spark-fetcher
+```
+
+To compare engines, swap them (never run both, or every URL is processed twice):
+
+```powershell
+kubectl -n wqa scale deploy/spark-fetcher --replicas=0; kubectl -n wqa scale deploy/fetcher --replicas=3
+```
+
 ## Roadmap
 
 - [x] **Phase 0**: end-to-end pipeline on k8s with plain Python workers
-- [ ] **Phase 1**: replace the fetcher with Spark Structured Streaming
-- [ ] **Phase 2**: URL cache, reranking, streaming tokens, evaluation on the thesis questions
+- [x] **Phase 1**: replace the fetcher with Spark Structured Streaming
+- [ ] **Phase 2**: URL cache, per-domain rate limiting, ambiguity handling, reranking, streaming tokens, evaluation on the thesis questions
 - [ ] **Phase 3**: Strimzi (Kafka operator), Spark Operator, KEDA autoscaling on consumer lag
 - [ ] **Phase 4**: Prometheus/Grafana, Kafka UI

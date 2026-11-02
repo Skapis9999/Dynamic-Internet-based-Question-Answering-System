@@ -7,3 +7,4 @@ resources:
   - qdrant.yaml
   - searxng.yaml
   - app.yaml
+  - spark.yaml
