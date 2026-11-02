@@ -8,7 +8,11 @@ from qdrant_client import QdrantClient, models
 
 from services.common import config, ollama
 
-UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
+# Honest bot identification: Wikimedia (and others) 403 spoofed browser UAs.
+UA = ("WebQAStream/0.1 (research/education project; "
+      "+https://github.com/Skapis9999/Dynamic-Internet-based-Question-Answering-System) httpx")
+# Footnote markers like [17] or [citation needed] would be confused with our own [n] citations.
+FOOTNOTE_RE = re.compile(r"\[(?:\d+|[a-z]|citation needed|note \d+|edit)\]", re.IGNORECASE)
 _http = httpx.Client(timeout=15, follow_redirects=True, headers={"User-Agent": UA})
 _qdrant = QdrantClient(url=config.QDRANT_URL)
 
@@ -32,6 +36,7 @@ def fetch_and_extract(url: str) -> tuple[str, str]:
     if "html" not in r.headers.get("content-type", "html"):
         raise ValueError(f"not html: {r.headers.get('content-type')}")
     text = trafilatura.extract(r.text, include_comments=False, include_tables=True, favor_recall=True) or ""
+    text = FOOTNOTE_RE.sub("", text)
     meta = trafilatura.extract_metadata(r.text)
     if len(text) < 200:
         raise ValueError("no meaningful text extracted")

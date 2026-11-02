@@ -16,7 +16,8 @@ qdrant = QdrantClient(url=config.QDRANT_URL)
 
 SYSTEM = (
     "You answer questions using ONLY the numbered web sources provided. "
-    "Be concise and factual. Cite sources inline like [1] or [2][3]. "
+    "Be concise and factual. Cite sources inline like [1] or [2][3], using ONLY the source "
+    "numbers given in the headers; never copy reference numbers that appear inside source text. "
     "If the sources do not contain the answer, say so plainly instead of guessing."
 )
 
