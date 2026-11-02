@@ -52,7 +52,6 @@ Useful commands:
 ```powershell
 kubectl -n wqa get pods
 kubectl -n wqa logs -f deploy/answerer
-kubectl -n wqa scale deploy/fetcher --replicas=3
 kubectl -n wqa exec kafka-0 -- /opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic events
 ```
 
