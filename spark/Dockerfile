@@ -19,8 +19,7 @@ RUN python3 -m pip install --no-cache-dir -r /tmp/requirements.txt \
 
 WORKDIR /app
 COPY services ./services
-COPY spark/run-driver.sh ./run-driver.sh
-RUN chmod +x run-driver.sh && mkdir -p /checkpoints && chown -R spark:spark /checkpoints
+RUN mkdir -p /checkpoints && chown -R spark:spark /checkpoints
 
 ENV PYTHONPATH=/app PYTHONUNBUFFERED=1
 USER spark

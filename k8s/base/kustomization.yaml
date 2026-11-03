@@ -8,3 +8,4 @@ resources:
   - searxng.yaml
   - app.yaml
   - spark.yaml
+  - autoscaling.yaml

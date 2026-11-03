@@ -1,5 +1,6 @@
-# Spark Structured Streaming fetcher. The driver pod runs spark-submit in client mode
-# and asks the Kubernetes API for executor pods, hence the RBAC below.
+# Spark Structured Streaming fetcher, run by the Spark Operator (scripts/install-operators.ps1).
+# The operator submits the job in cluster mode; the driver pod then asks the Kubernetes API
+# for executor pods, hence the RBAC for its service account.
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -32,45 +33,48 @@ spec:
   resources:
     requests: { storage: 1Gi }
 ---
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: sparkoperator.k8s.io/v1beta2
+kind: SparkApplication
 metadata:
-  name: spark-fetcher
-  labels: { part-of: wqa-spark }
+  name: wqa-fetcher
 spec:
-  replicas: 1
-  strategy: { type: Recreate }   # one driver at a time (RWO checkpoint volume)
-  selector:
-    matchLabels: { app: spark-fetcher }
-  template:
-    metadata:
-      labels: { app: spark-fetcher, part-of: wqa-spark }
-    spec:
-      serviceAccountName: spark
-      enableServiceLinks: false
-      securityContext: { fsGroup: 185 }   # 185 = spark user in the image
-      containers:
-        - name: driver
-          image: wqa-spark:dev
-          imagePullPolicy: Always   # same tag every build: always re-resolve to the newest local image
-          command: ["/app/run-driver.sh"]
-          envFrom: [{ configMapRef: { name: wqa-config } }]
-          env:
-            - { name: SPARK_IMAGE, value: "wqa-spark:dev" }
-            - { name: SPARK_EXECUTORS, value: "2" }
-            - { name: POD_NAME, valueFrom: { fieldRef: { fieldPath: metadata.name } } }
-            - { name: POD_NAMESPACE, valueFrom: { fieldRef: { fieldPath: metadata.namespace } } }
-            - { name: POD_IP, valueFrom: { fieldRef: { fieldPath: status.podIP } } }
-          ports:
-            - { containerPort: 4040, name: spark-ui }
-          resources:
-            requests: { memory: 768Mi, cpu: 250m }
-            limits: { memory: 1280Mi }
-          volumeMounts:
-            - { name: checkpoints, mountPath: /checkpoints }
-      volumes:
-        - name: checkpoints
-          persistentVolumeClaim: { claimName: spark-checkpoints }
+  type: Python
+  pythonVersion: "3"
+  mode: cluster
+  image: wqa-spark:dev
+  imagePullPolicy: Always   # same tag every build: always re-resolve to the newest local image
+  mainApplicationFile: local:///app/services/spark_fetcher/job.py
+  sparkVersion: 4.1.3
+  # A streaming job should run forever: resubmit it whenever it stops.
+  restartPolicy:
+    type: Always
+    onFailureRetryInterval: 10
+    onSubmissionFailureRetryInterval: 20
+  sparkConf:
+    spark.sql.shuffle.partitions: "4"
+    spark.ui.showConsoleProgress: "false"
+  volumes:
+    - name: checkpoints
+      persistentVolumeClaim: { claimName: spark-checkpoints }
+  driver:
+    cores: 1
+    coreRequest: 250m
+    memory: 512m
+    memoryOverhead: 384m
+    serviceAccount: spark
+    labels: { part-of: wqa-spark }
+    envFrom: [{ configMapRef: { name: wqa-config } }]
+    podSecurityContext: { fsGroup: 185 }   # 185 = spark user in the image
+    volumeMounts:
+      - { name: checkpoints, mountPath: /checkpoints }
+  executor:
+    instances: 2
+    cores: 1
+    coreRequest: 250m
+    memory: 512m
+    memoryOverhead: 512m
+    labels: { part-of: wqa-spark }
+    envFrom: [{ configMapRef: { name: wqa-config } }]
 ---
 # Spark UI: kubectl -n wqa port-forward svc/spark-ui 4040:4040
 apiVersion: v1
@@ -78,6 +82,8 @@ kind: Service
 metadata:
   name: spark-ui
 spec:
-  selector: { app: spark-fetcher }
+  selector:
+    sparkoperator.k8s.io/app-name: wqa-fetcher
+    spark-role: driver
   ports:
     - { name: http, port: 4040 }

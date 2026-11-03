@@ -22,9 +22,10 @@ if ($LASTEXITCODE -ne 0) { throw "kubectl apply failed" }
 if (-not $NoBuild) {
     # Same tag every time, so force pods to pick up the fresh image.
     kubectl -n wqa rollout restart deployment -l part-of=wqa-app
-    kubectl -n wqa rollout restart deployment -l part-of=wqa-spark
+    # SparkApplication: deleting the driver makes the operator resubmit it with the new image.
+    kubectl -n wqa delete pod -l "spark-role=driver,sparkoperator.k8s.io/app-name=wqa-fetcher" --ignore-not-found
 }
 
-kubectl -n wqa rollout status statefulset/kafka --timeout=180s
+kubectl -n wqa wait kafka/wqa --for=condition=Ready --timeout=300s
 kubectl -n wqa get pods
 Write-Host "`nUI: http://localhost:8000  (or: kubectl -n wqa port-forward svc/api 8000:8000)"

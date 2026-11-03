@@ -1,0 +1,45 @@
+# KEDA scales the Kafka consumers on consumer-group lag (unprocessed messages).
+# Max 3 replicas = partitions per topic; more consumers in a group would sit idle.
+#
+# The answerer keeps per-question state in memory. That's safe to scale because
+# chunks-ready is keyed by qid: all of a question's messages land on one partition,
+# hence one answerer. A rebalance mid-question can still drop that question's state,
+# so scale-down is slowed with a stabilization window.
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: searcher
+spec:
+  scaleTargetRef: { name: searcher }
+  minReplicaCount: 1
+  maxReplicaCount: 3
+  triggers:
+    - type: kafka
+      metadata:
+        bootstrapServers: wqa-kafka-bootstrap.wqa.svc:9092   # FQDN: KEDA runs in the keda namespace
+        consumerGroup: searcher
+        topic: questions
+        lagThreshold: "2"          # >2 questions waiting per replica -> add a replica
+        offsetResetPolicy: earliest
+---
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: answerer
+spec:
+  scaleTargetRef: { name: answerer }
+  minReplicaCount: 1
+  maxReplicaCount: 3
+  advanced:
+    horizontalPodAutoscalerConfig:
+      behavior:
+        scaleDown:
+          stabilizationWindowSeconds: 180
+  triggers:
+    - type: kafka
+      metadata:
+        bootstrapServers: wqa-kafka-bootstrap.wqa.svc:9092   # FQDN: KEDA runs in the keda namespace
+        consumerGroup: answerer
+        topic: chunks-ready
+        lagThreshold: "16"         # ~2 questions' worth of pages waiting per replica
+        offsetResetPolicy: earliest

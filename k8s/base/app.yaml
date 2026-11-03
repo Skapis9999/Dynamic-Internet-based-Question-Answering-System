@@ -4,7 +4,7 @@ kind: ConfigMap
 metadata:
   name: wqa-config
 data:
-  KAFKA_BOOTSTRAP: "kafka:9092"
+  KAFKA_BOOTSTRAP: "wqa-kafka-bootstrap:9092"   # Strimzi bootstrap service
   QDRANT_URL: "http://qdrant:6333"
   SEARXNG_URL: "http://searxng:8080"
   # Ollama runs on the Windows host (GPU); Docker Desktop routes this name to it.
@@ -59,7 +59,7 @@ metadata:
   name: searcher
   labels: { part-of: wqa-app }
 spec:
-  replicas: 1
+  # replicas managed by KEDA (autoscaling.yaml)
   selector:
     matchLabels: { app: searcher }
   template:
@@ -110,7 +110,7 @@ metadata:
   name: answerer
   labels: { part-of: wqa-app }
 spec:
-  replicas: 1
+  # replicas managed by KEDA (autoscaling.yaml)
   selector:
     matchLabels: { app: answerer }
   template:

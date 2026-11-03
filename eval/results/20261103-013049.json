@@ -1,0 +1,137 @@
+[
+  {
+    "id": 42,
+    "q": "When did the first extension of the Athens Tram take place?",
+    "ref": "2007 (extension to Asklepieio Voulas, November 2007)",
+    "type": "factual",
+    "qid": "7d05ed852d6c",
+    "pages_ok": 7,
+    "pages_failed": 1,
+    "pages_cached": 6,
+    "fast": {
+      "qid": "7d05ed852d6c",
+      "type": "fast",
+      "ts": 1793665826.0625103,
+      "answer": "The first extension of the Athens Tram took place in 2013, with the construction of the Tramway Extension to Piraeus, which was completed by 2019 [2].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://grokipedia.com/page/trams_in_athens",
+          "title": "Trams in Athens — Grokipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://www.emetro.gr/?page_id=4089&lang=en",
+          "title": "Construction of TRAMWAY extensions"
+        }
+      ],
+      "pages_used": 2,
+      "pages_expected": 8,
+      "llm_seconds": 4.5,
+      "first_token_seconds": 28.1,
+      "total_seconds": 29.1,
+      "client_seconds": 29.1
+    },
+    "final": {
+      "qid": "7d05ed852d6c",
+      "type": "final",
+      "ts": 1793665828.0898347,
+      "answer": "The first extension of the Athens Tram took place on 15 November 2007 [2].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://grokipedia.com/page/trams_in_athens",
+          "title": "Trams in Athens — Grokipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://en.wikipedia.org/wiki/Athens_Tram",
+          "title": "Athens Tram - Wikipedia"
+        },
+        {
+          "n": 3,
+          "url": "https://en.wikipedia.org/wiki/Trams_in_Athens_(1882-1960)",
+          "title": "Trams in Athens (1882-1960) - Wikipedia"
+        },
+        {
+          "n": 4,
+          "url": "https://www.emetro.gr/?page_id=4089&lang=en",
+          "title": "Construction of TRAMWAY extensions"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 2.0,
+      "first_token_seconds": 30.5,
+      "total_seconds": 31.1,
+      "client_seconds": 31.1
+    },
+    "verdict": "correct",
+    "reason": "The system answer correctly states that the first extension of the Athens Tram took place on 15 November 2007, which aligns with the reference answer (November 2007). The extra detail of the date is consistent with the reference and does not contradict it."
+  },
+  {
+    "id": 43,
+    "q": "When did Socrates die?",
+    "ref": "399 BC",
+    "type": "factual",
+    "qid": "bb73511dc2ac",
+    "pages_ok": 5,
+    "pages_failed": 3,
+    "pages_cached": 5,
+    "fast": {
+      "qid": "bb73511dc2ac",
+      "type": "fast",
+      "ts": 1793665847.3995578,
+      "answer": "Socrates died in 399 BC [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/Socrates",
+          "title": "Socrates - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://nl.wikipedia.org/wiki/Socrates_(filosoof)",
+          "title": "Socrates (filosoof) - Wikipedia"
+        }
+      ],
+      "pages_used": 2,
+      "pages_expected": 8,
+      "llm_seconds": 2.4,
+      "first_token_seconds": 13.9,
+      "total_seconds": 14.2,
+      "client_seconds": 14.2
+    },
+    "final": {
+      "qid": "bb73511dc2ac",
+      "type": "final",
+      "ts": 1793665847.9739144,
+      "answer": "Socrates died in 399 BC [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/Socrates",
+          "title": "Socrates - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://nl.wikipedia.org/wiki/Socrates_(filosoof)",
+          "title": "Socrates (filosoof) - Wikipedia"
+        },
+        {
+          "n": 3,
+          "url": "https://www.thecollector.com/how-did-socrates-die/",
+          "title": "How Did Socrates Die? | TheCollector"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 0.6,
+      "first_token_seconds": 14.5,
+      "total_seconds": 14.7,
+      "client_seconds": 14.8
+    },
+    "verdict": "correct",
+    "reason": "The system answer correctly states that Socrates died in 399 BC, which matches the reference answer. The inclusion of the citation [1] is not necessary for correctness but does not detract from it."
+  }
+]

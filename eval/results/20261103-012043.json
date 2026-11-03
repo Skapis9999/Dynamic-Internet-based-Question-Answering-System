@@ -1,0 +1,3214 @@
+[
+  {
+    "id": 1,
+    "q": "Welche ist die Hauptstadt von Deutschland?",
+    "ref": "Berlin",
+    "type": "factual",
+    "qid": "e8a4b234b5c7",
+    "pages_ok": 4,
+    "pages_failed": 4,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "e8a4b234b5c7",
+      "type": "fast",
+      "ts": 1793663719.5483348,
+      "answer": "Die Hauptstadt von Deutschland ist Berlin [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://prezi.com/iyi8lk-axq-5/berlin-ist-die-hauptstadt-von-deutschland-und-eines-der-sech/",
+          "title": "Berlin ist die Hauptstadt von Deutschland und eines der sech | Prezi"
+        },
+        {
+          "n": 2,
+          "url": "https://www.srf.ch/audio/3-vo-5",
+          "title": "3 vo 5"
+        }
+      ],
+      "pages_used": 3,
+      "pages_expected": 8,
+      "llm_seconds": 0.7,
+      "first_token_seconds": 6.5,
+      "total_seconds": 6.8,
+      "client_seconds": 6.8
+    },
+    "final": {
+      "qid": "e8a4b234b5c7",
+      "type": "final",
+      "ts": 1793663735.8489916,
+      "answer": "Die Hauptstadt von Deutschland ist Berlin [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://de.wikipedia.org/wiki/Bundeshauptstadt",
+          "title": "Bundeshauptstadt – Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://prezi.com/iyi8lk-axq-5/berlin-ist-die-hauptstadt-von-deutschland-und-eines-der-sech/",
+          "title": "Berlin ist die Hauptstadt von Deutschland und eines der sech | Prezi"
+        },
+        {
+          "n": 3,
+          "url": "https://www.srf.ch/audio/3-vo-5",
+          "title": "3 vo 5"
+        },
+        {
+          "n": 4,
+          "url": "http://de.rt.com/tag/Wien/",
+          "title": "Wien"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 1.7,
+      "first_token_seconds": 22.8,
+      "total_seconds": 23.1,
+      "client_seconds": 23.1
+    },
+    "verdict": "correct",
+    "reason": "Die Systemantwort antwortet der Frage korrekt und ist mit der Referenzantwort übereinstimmend. Die Hauptstadt von Deutschland ist Berlin, und die Antwort ist präzise und vollständig."
+  },
+  {
+    "id": 2,
+    "q": "Welche Geschwindigkeit hat das Licht?",
+    "ref": "About 299,792 km/s (299,792,458 m/s) in a vacuum",
+    "type": "factual",
+    "qid": "531fa72789d8",
+    "pages_ok": 5,
+    "pages_failed": 3,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "531fa72789d8",
+      "type": "fast",
+      "ts": 1793663753.005242,
+      "answer": "Die Lichtgeschwindigkeit im Vakuum beträgt 299.792.458 m/s [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://de.wikipedia.org/wiki/Lichtgeschwindigkeit",
+          "title": "Lichtgeschwindigkeit – Wikipedia"
+        }
+      ],
+      "pages_used": 4,
+      "pages_expected": 8,
+      "llm_seconds": 1.2,
+      "first_token_seconds": 6.7,
+      "total_seconds": 7.5,
+      "client_seconds": 7.6
+    },
+    "final": {
+      "qid": "531fa72789d8",
+      "type": "final",
+      "ts": 1793663756.721527,
+      "answer": "Licht bewegt sich im Vakuum mit einer Geschwindigkeit von exakt 299.792.458 Kilometern pro Sekunde, was etwa 1,08 Milliarden km/h entspricht [1][2]. Diese Geschwindigkeit gilt als absolute Grenze im Universum, da nichts schneller als Licht reisen kann [1][2].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.sterngucker.de/wissen/lichtgeschwindigkeit/",
+          "title": "Lichtgeschwindigkeit: Wie schnell ist Licht? Zahlen & Beispiele"
+        },
+        {
+          "n": 2,
+          "url": "https://de.wikipedia.org/wiki/Lichtgeschwindigkeit",
+          "title": "Lichtgeschwindigkeit – Wikipedia"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 2.6,
+      "first_token_seconds": 9.3,
+      "total_seconds": 11.2,
+      "client_seconds": 11.3
+    },
+    "verdict": "correct",
+    "reason": "Die Systemantwort gibt die Geschwindigkeit des Lichts im Vakuum korrekt an (299.792.458 km/s) und stimmt damit vollständig mit der Referenzantwort überein. Die zusätzliche Angabe der Geschwindigkeit in km/h (etwa 1,08 Milliarden km/h) ist eine sinnvolle Ergänzung. Die Aussage, dass die Lichtgeschwindigkeit die absolute Grenze im Universum sei, ist zwar eine allgemeine Aussage, aber nicht falsch und wird oft in physikalischen Kontexten genannt. Die Angabe der Quellen [1][2] ist zwar nicht im Text enthalten, aber die Antwort ist trotzdem vollständig und korrekt."
+  },
+  {
+    "id": 3,
+    "q": "Wann fand die Mondlandung statt?",
+    "ref": "20 July 1969 (Apollo 11)",
+    "type": "factual",
+    "qid": "fc9ad04a8ff3",
+    "pages_ok": 5,
+    "pages_failed": 3,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "fc9ad04a8ff3",
+      "type": "fast",
+      "ts": 1793663775.6298223,
+      "answer": "Die Mondlandung fand am 20. Juli 1969 statt [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://wordwall.net/resource/38052376/wissen-sie-es",
+          "title": "Wissen Sie es?"
+        },
+        {
+          "n": 2,
+          "url": "https://myadultcomics.com/index.php?search=3d&sort=3",
+          "title": "3d"
+        }
+      ],
+      "pages_used": 3,
+      "pages_expected": 8,
+      "llm_seconds": 1.3,
+      "first_token_seconds": 5.7,
+      "total_seconds": 6.7,
+      "client_seconds": 6.7
+    },
+    "final": {
+      "qid": "fc9ad04a8ff3",
+      "type": "final",
+      "ts": 1793663777.414709,
+      "answer": "Die Mondlandung fand am 20. Juli 1969 statt [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://de.wikipedia.org/wiki/Mondlandung",
+          "title": "Mondlandung – Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://prezi.com/p/qz7dmejqzgqk/die-mondlandung/",
+          "title": "Die Mondlandung | Prezi"
+        },
+        {
+          "n": 3,
+          "url": "https://dedatumvandaag.nl/",
+          "title": "De datum vandaag"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 1.8,
+      "first_token_seconds": 7.9,
+      "total_seconds": 8.4,
+      "client_seconds": 8.5
+    },
+    "verdict": "correct",
+    "reason": "The system answer correctly states that the Moon landing took place on 20 July 1969, which matches the reference answer of '20 July 1969 (Apollo 11)'. The date is accurate and consistent with the reference."
+  },
+  {
+    "id": 4,
+    "q": "Who is Cristiano Ronaldo?",
+    "ref": "A Portuguese professional footballer (forward), one of the greatest of all time",
+    "type": "factual",
+    "qid": "3a364dc515ef",
+    "pages_ok": 4,
+    "pages_failed": 4,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "3a364dc515ef",
+      "type": "fast",
+      "ts": 1793663801.354679,
+      "answer": "Cristiano Ronaldo is a Portuguese soccer superstar, widely regarded as one of the greatest athletes in the sport’s history. Born on February 5, 1985, in Funchal, Portugal, he is known for his exceptional skills, including speed, strength, heading ability, and goal-scoring prowess [1][2]. He played for several top clubs, including Manchester United, Real Madrid, Juventus, and currently Al-Nassr FC in Saudi Arabia [2]. Ronaldo has won numerous awards, such as the Ballon d'Or five times and the FIFA World Player of the Year [1][2]. He is also the captain of the Portuguese national team and led them to victory in Euro 2016 [1]. With an estimated net worth of $1.4 billion, he is the first soccer player to become a billionaire [2].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.thefamouspeople.com/profiles/cristiano-ronaldo-4103.php",
+          "title": "Who is Cristiano Ronaldo? Everything You Need to Know"
+        },
+        {
+          "n": 2,
+          "url": "https://www.biography.com/athletes/a71709091/cristiano-ronaldo-biography",
+          "title": "Soccer Star Cristiano Ronaldo Will Make History with His 6th World Cup Appearance"
+        }
+      ],
+      "pages_used": 6,
+      "pages_expected": 8,
+      "llm_seconds": 6.4,
+      "first_token_seconds": 9.0,
+      "total_seconds": 14.2,
+      "client_seconds": 14.2
+    },
+    "final": {
+      "qid": "3a364dc515ef",
+      "type": "final",
+      "ts": 1793663806.178802,
+      "answer": "Cristiano Ronaldo is a Portuguese professional footballer who plays as a forward for Al-Nassr in the Saudi Pro League and captains the Portugal national team. Born on 5 February 1985 in Funchal, Madeira, Portugal, he is widely regarded as one of the greatest footballers of all time [2]. He has won numerous individual accolades, including five Ballon d'Or awards, a record three UEFA Men's Player of the Year Awards, and four European Golden Shoes [2]. Ronaldo is also the most-followed individual on Instagram with over 598 million followers [1]. He has played for several clubs including Manchester United, Real Madrid, Juventus, and is currently with Al-Nassr FC in Saudi Arabia [3].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.thefamouspeople.com/profiles/cristiano-ronaldo-4103.php",
+          "title": "Who is Cristiano Ronaldo? Everything You Need to Know"
+        },
+        {
+          "n": 2,
+          "url": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo",
+          "title": "Cristiano Ronaldo - Wikipedia"
+        },
+        {
+          "n": 3,
+          "url": "https://www.biography.com/athletes/a71709091/cristiano-ronaldo-biography",
+          "title": "Soccer Star Cristiano Ronaldo Will Make History with His 6th World Cup Appearance"
+        },
+        {
+          "n": 4,
+          "url": "http://www.biography.com/athletes/cristiano-ronaldo",
+          "title": "Soccer Star Cristiano Ronaldo Will Make History with His 6th World Cup Appearance"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 4.8,
+      "first_token_seconds": 15.2,
+      "total_seconds": 19.0,
+      "client_seconds": 19.0
+    },
+    "verdict": "correct",
+    "reason": "The system answer correctly identifies Cristiano Ronaldo as a Portuguese professional footballer and provides accurate details about his current club (Al-Nassr), his position (forward), his national team role, and his status as one of the greatest players of all time. It also includes relevant additional information about his birthdate, career clubs, and social media following, which are consistent with the reference answer and do not contradict it."
+  },
+  {
+    "id": 5,
+    "q": "Which is the capital of Greece?",
+    "ref": "Athens",
+    "type": "factual",
+    "qid": "9745dc786c5b",
+    "pages_ok": 7,
+    "pages_failed": 1,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "9745dc786c5b",
+      "type": "fast",
+      "ts": 1793663824.8130476,
+      "answer": "The capital of Greece is Athens [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.worldatlas.com/articles/what-is-the-capital-of-greece.html",
+          "title": "What Is the Capital of Greece?"
+        },
+        {
+          "n": 2,
+          "url": "https://www.worldatlas.com/articles/what-are-the-major-natural-resources-of-greece.html",
+          "title": "What Are The Major Natural Resources Of Greece?"
+        }
+      ],
+      "pages_used": 3,
+      "pages_expected": 8,
+      "llm_seconds": 1.3,
+      "first_token_seconds": 7.6,
+      "total_seconds": 8.0,
+      "client_seconds": 8.1
+    },
+    "final": {
+      "qid": "9745dc786c5b",
+      "type": "final",
+      "ts": 1793663829.356982,
+      "answer": "The capital of Greece is Athens [1][2][3].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.worldatlas.com/articles/what-is-the-capital-of-greece.html",
+          "title": "What Is the Capital of Greece?"
+        },
+        {
+          "n": 2,
+          "url": "https://en.wikipedia.org/wiki/Athens",
+          "title": "Athens - Wikipedia"
+        },
+        {
+          "n": 3,
+          "url": "https://en.wikipedia.org/wiki/Greece",
+          "title": "Greece - Wikipedia"
+        },
+        {
+          "n": 4,
+          "url": "https://www.travelchinaguide.com/greece-tours.htm",
+          "title": "Greece Tours 2027 & 2028"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 1.4,
+      "first_token_seconds": 12.3,
+      "total_seconds": 12.6,
+      "client_seconds": 12.6
+    },
+    "verdict": "correct",
+    "reason": "The system answer correctly identifies Athens as the capital of Greece, which matches the reference answer. The inclusion of citation markers [1][2][3] indicates the system is referencing supporting sources, which is acceptable and does not affect the correctness of the answer."
+  },
+  {
+    "id": 6,
+    "q": "Who is the President of the USA?",
+    "ref": "Donald Trump (47th president, since January 2025)",
+    "type": "time-sensitive",
+    "qid": "c0e247b6afd4",
+    "pages_ok": 7,
+    "pages_failed": 1,
+    "pages_cached": 6,
+    "fast": {
+      "qid": "c0e247b6afd4",
+      "type": "fast",
+      "ts": 1793663847.278098,
+      "answer": "The President of the USA is the head of state and head of government, directing the executive branch of the federal government and serving as the commander-in-chief of the United States Armed Forces [1]. The current president, as of 2026, is Joe Biden, who was first elected in 2020 and re-elected in 2024 [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/President_of_the_United_States",
+          "title": "President of the United States - Wikipedia"
+        }
+      ],
+      "pages_used": 2,
+      "pages_expected": 8,
+      "llm_seconds": 2.4,
+      "first_token_seconds": 6.2,
+      "total_seconds": 8.2,
+      "client_seconds": 8.2
+    },
+    "final": {
+      "qid": "c0e247b6afd4",
+      "type": "final",
+      "ts": 1793663848.7050836,
+      "answer": "As of 2026, the President of the United States is Donald Trump, who assumed office on January 20, 2025 [2].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/President_of_the_United_States",
+          "title": "President of the United States - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://en.wikipedia.org/wiki/List_of_presidents_of_the_United_States",
+          "title": "List of presidents of the United States - Wikipedia"
+        },
+        {
+          "n": 3,
+          "url": "https://www.usa.gov/presidents",
+          "title": "Presidents, vice presidents, and first ladies | USAGov"
+        },
+        {
+          "n": 4,
+          "url": "https://en.wikipedia.org/wiki/2023_State_of_the_Union_Address",
+          "title": "2023 State of the Union Address - Wikipedia"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 1.4,
+      "first_token_seconds": 8.8,
+      "total_seconds": 9.6,
+      "client_seconds": 9.6
+    },
+    "verdict": "correct",
+    "reason": "The system answer correctly identifies Donald Trump as the President of the USA, consistent with the reference answer. It also includes the correct dates and additional context (e.g., 'assumed office on January 20, 2025'), which is acceptable as extra detail."
+  },
+  {
+    "id": 7,
+    "q": "How can I reset my password?",
+    "ref": null,
+    "type": "open",
+    "qid": "d386f9912ca6",
+    "pages_ok": 6,
+    "pages_failed": 2,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "d386f9912ca6",
+      "type": "fast",
+      "ts": 1793663879.1063182,
+      "answer": "To reset your password, follow these steps based on the service you are using:\n\n1. **For Microsoft Account**: Go to the Microsoft Live password reset Web page at account.live.com/password/reset. Select \"I forgot my password\" and follow the on-screen prompts to reset your password [1][2].\n\n2. **For Facebook**: Click on \"Forgot Password\" located at the top right corner of your Facebook session. Enter your username and follow the on-screen prompts to reset your password [1].\n\n3. **For Twitter**: Navigate to Twitter’s website at https://twitter.com/. Click on \"Forgot password?\" below the sign-in section. Enter your email address or Twitter username and click on \"Submit.\" Twitter will send you an email with a link to reset your password. Open the email and click on the password reset link. Enter a new Twitter password [1].\n\n4. **For Windows Local Account**: If you are using a local account on Windows, you can reset your password from the sign-in screen by selecting the password entry button, then \"Reset password,\" and answering your security questions [2].\n\n5. **Using a Password Reset Disk**: If you have a password reset disk, insert it into your Windows 7 computer and follow the on-screen instructions to reset your password [1].\n\n6. **Administrator Account**: If you have access to an administrator account, you can reset the password for the local account by opening Computer Management, expanding Local Users and Groups > Users, right-clicking the user, and selecting \"Set Password...\" [2].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.wikihow.com/Reset-a-Password",
+          "title": "How to Reset a Password: 10 Different Ways with Pictures"
+        },
+        {
+          "n": 2,
+          "url": "https://support.microsoft.com/en-us/windows/security/change-or-reset-your-local-account-password-in-windows",
+          "title": "Change or reset your local account password in Windows"
+        }
+      ],
+      "pages_used": 3,
+      "pages_expected": 8,
+      "llm_seconds": 8.8,
+      "first_token_seconds": 13.0,
+      "total_seconds": 20.7,
+      "client_seconds": 20.7
+    },
+    "final": {
+      "qid": "d386f9912ca6",
+      "type": "final",
+      "ts": 1793663883.034612,
+      "answer": "To reset your password, follow the steps specific to the service you are using. For Microsoft accounts, visit the password reset page at account.live.com/password/reset and follow the on-screen prompts [1]. For Facebook, click on \"Forgot Password\" and enter your username to receive a password reset link via email [1]. For Twitter, click on \"Forgot password?\" and enter your email or username to get a reset link [1]. For a local Windows account, you can reset your password from the sign-in screen by selecting \"Reset password\" and answering your security questions [2]. If you have a password reset disk, you can use it to reset your password [2]. For more detailed instructions, refer to the respective service's support pages.",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.wikihow.com/Reset-a-Password",
+          "title": "How to Reset a Password: 10 Different Ways with Pictures"
+        },
+        {
+          "n": 2,
+          "url": "https://support.microsoft.com/en-us/windows/security/change-or-reset-your-local-account-password-in-windows",
+          "title": "Change or reset your local account password in Windows"
+        },
+        {
+          "n": 3,
+          "url": "https://support.microsoft.com/en-us/accounts-billing/manage/reset-a-forgotten-microsoft-account-password",
+          "title": "Reset a forgotten Microsoft account password"
+        },
+        {
+          "n": 4,
+          "url": "http://vk.com/faq18515",
+          "title": "Как восстановить пароль?"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 3.9,
+      "first_token_seconds": 21.1,
+      "total_seconds": 24.6,
+      "client_seconds": 24.6
+    },
+    "verdict": "correct",
+    "reason": "The system answer provides a reasonable, relevant, and up-to-date response to the question 'How can I reset my password?' It outlines the general process for resetting passwords on various platforms (Microsoft, Facebook, Twitter, Windows) and includes helpful details like using a password reset disk. Since there is no reference answer provided, the system answer is considered correct as it offers a practical and accurate guide to the topic."
+  },
+  {
+    "id": 8,
+    "q": "Provide me with a brief history of World War II.",
+    "ref": null,
+    "type": "open",
+    "qid": "f95c47e76ad2",
+    "pages_ok": 5,
+    "pages_failed": 3,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "f95c47e76ad2",
+      "type": "fast",
+      "ts": 1793663914.1472418,
+      "answer": "World War II was a global conflict that began on September 1, 1939, with the invasion of Poland by Nazi Germany [1]. In response, Britain and France declared war on Germany, marking the start of the war in Europe. The invasion of Poland was facilitated by the secret protocol of the Molotov-Ribbentrop Pact, which divided Eastern Europe between Nazi Germany and the Soviet Union [1]. The Soviet Union invaded eastern Poland on September 17, 1939. The war involved many countries and can be divided into several theaters, including Europe, Africa, the Pacific, and the Eastern Front. Key causes include the political takeover of Germany by Adolf Hitler and the Nazi Party in 1933, Japanese militarism against China, Italian aggression against Ethiopia, and the military uprising in Spain that led to the Spanish Civil War [1]. The war ended in 1945 with the defeat of the Axis powers.",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/Causes_of_World_War_II",
+          "title": "Causes of World War II - Wikipedia"
+        }
+      ],
+      "pages_used": 4,
+      "pages_expected": 8,
+      "llm_seconds": 5.8,
+      "first_token_seconds": 14.1,
+      "total_seconds": 19.2,
+      "client_seconds": 19.2
+    },
+    "final": {
+      "qid": "f95c47e76ad2",
+      "type": "final",
+      "ts": 1793663922.1130652,
+      "answer": "World War II began on 1 September 1939, when Nazi Germany invaded Poland, prompting the United Kingdom and France to declare war on Germany [1]. The Soviet Union invaded eastern Poland on 17 September 1939 under the terms of the Molotov–Ribbentrop Pact, which divided Poland between the two powers [1]. Key events preceding the war included Japan's invasion of Manchuria in 1931, the Spanish Civil War, the outbreak of the Second Sino-Japanese War in 1937, and Germany's annexations of Austria and the Sudetenland [1]. The war expanded as Germany conquered Norway, Denmark, Belgium, Luxembourg, and the Netherlands in 1940, and later invaded the Soviet Union in June 1941, opening the Eastern Front [1]. The war continued with major battles in the Balkans, Mediterranean, Middle East, and the aerial Battle of Britain [1]. The United States entered the war after Japan's attack on Pearl Harbor on 7 December 1941 [3]. The war ended on 2 September 1945, with the Allied victory, leading to the occupation of Germany, Austria, Japan, and Korea, and the trial of German and Japanese leaders for war crimes [1]. The war resulted in an estimated 60–75 million deaths, making it the deadliest conflict in history [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/World_War_II",
+          "title": "World War II - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://en.wikipedia.org/wiki/Causes_of_World_War_II",
+          "title": "Causes of World War II - Wikipedia"
+        },
+        {
+          "n": 3,
+          "url": "https://www.pbs.org/wgbh/masterpiece/specialfeatures/world-war-ii-major-events-timeline/",
+          "title": "World War II Major Events Timeline"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 8.0,
+      "first_token_seconds": 20.2,
+      "total_seconds": 27.2,
+      "client_seconds": 27.2
+    },
+    "verdict": "correct",
+    "reason": "The system answer provides a concise and accurate overview of World War II, including key events, dates, and outcomes. It correctly identifies the start of the war with Germany's invasion of Poland, mentions the Soviet Union's invasion under the Molotov–Ribbentrop Pact, and outlines major events such as the invasion of the Soviet Union, the U.S. entry after Pearl Harbor, and the war's end in 1945. The estimate of casualties is also consistent with widely accepted figures. Since there is no reference answer provided, the system answer is considered correct as it is a reasonable, relevant, and factually accurate response to the question."
+  },
+  {
+    "id": 9,
+    "q": "Explain the concept of artificial intelligence.",
+    "ref": null,
+    "type": "open",
+    "qid": "961de29054ba",
+    "pages_ok": 5,
+    "pages_failed": 3,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "961de29054ba",
+      "type": "fast",
+      "ts": 1793663948.991697,
+      "answer": "Artificial intelligence (AI) is software that can learn from data, recognize patterns, and make decisions or predictions without being explicitly programmed for every scenario. Instead of following a fixed set of instructions like traditional software, AI systems improve their performance over time by processing examples. The core principle of AI is that by feeding the system enough data, it learns to make useful predictions about new situations it hasn't encountered before [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://scienceinsights.org/what-is-artificial-intelligence-and-how-does-it-work/",
+          "title": "What Is Artificial Intelligence and How Does It Work"
+        },
+        {
+          "n": 2,
+          "url": "http://feefighters.com",
+          "title": "FeeFighters — Chargeback management and processing fee audits"
+        }
+      ],
+      "pages_used": 4,
+      "pages_expected": 8,
+      "llm_seconds": 2.7,
+      "first_token_seconds": 13.1,
+      "total_seconds": 15.1,
+      "client_seconds": 15.1
+    },
+    "final": {
+      "qid": "961de29054ba",
+      "type": "final",
+      "ts": 1793663954.8791971,
+      "answer": "Artificial intelligence (AI) is the capability of computational systems to perform tasks typically associated with human intelligence, such as learning, reasoning, problem-solving, perception, and decision-making [2]. It involves developing methods and software that enable machines to perceive their environment and take actions to achieve defined goals [2]. AI systems can learn from data, recognize patterns, and make decisions or predictions without being explicitly programmed for every scenario, improving their performance over time by processing examples [1]. AI is broadly categorized into two types: narrow AI, which is designed to perform specific tasks and often outperforms humans in speed and accuracy, and artificial general intelligence (AGI), which does not yet exist and would be capable of learning and reasoning across any intellectual task similar to human intelligence [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://scienceinsights.org/what-is-artificial-intelligence-and-how-does-it-work/",
+          "title": "What Is Artificial Intelligence and How Does It Work"
+        },
+        {
+          "n": 2,
+          "url": "https://en.wikipedia.org/wiki/Artificial_intelligence",
+          "title": "Artificial intelligence - Wikipedia"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 4.2,
+      "first_token_seconds": 17.3,
+      "total_seconds": 21.0,
+      "client_seconds": 21.0
+    },
+    "verdict": "correct",
+    "reason": "The system answer provides a clear, accurate, and comprehensive explanation of artificial intelligence. It defines AI as the capability of computational systems to perform tasks associated with human intelligence, such as learning, reasoning, problem-solving, perception, and decision-making. It also explains the distinction between narrow AI and AGI, and mentions that AGI does not yet exist. The answer is well-structured, consistent with standard definitions, and includes relevant details without unnecessary complexity. Since there is no reference answer provided, the answer is considered correct as it is a reasonable and relevant explanation of the concept."
+  },
+  {
+    "id": 10,
+    "q": "What's the current exchange rate between USD and Euro?",
+    "ref": null,
+    "type": "time-sensitive",
+    "qid": "8126cc05384f",
+    "pages_ok": 7,
+    "pages_failed": 1,
+    "pages_cached": 1,
+    "fast": {
+      "qid": "8126cc05384f",
+      "type": "fast",
+      "ts": 1793663981.9577663,
+      "answer": "The current exchange rate between USD and Euro is 0.89360, updated 10 minutes ago [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://xrates.org/usd-to-eur",
+          "title": "USD to EUR"
+        },
+        {
+          "n": 2,
+          "url": "https://www.whatsapp.com/",
+          "title": "WhatsApp | Secure and Reliable Free Private Messaging and Calling"
+        }
+      ],
+      "pages_used": 3,
+      "pages_expected": 8,
+      "llm_seconds": 2.6,
+      "first_token_seconds": 14.5,
+      "total_seconds": 15.9,
+      "client_seconds": 15.9
+    },
+    "final": {
+      "qid": "8126cc05384f",
+      "type": "final",
+      "ts": 1793663983.8552067,
+      "answer": "The current exchange rate between USD and Euro is 0.89360, updated 10 minutes ago [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://xrates.org/usd-to-eur",
+          "title": "USD to EUR"
+        },
+        {
+          "n": 2,
+          "url": "https://www.xe.com/currencyconverter/",
+          "title": "Exchange Rate and Currency Converter Tool"
+        },
+        {
+          "n": 3,
+          "url": "https://en.wikipedia.org/wiki/Exchange_rate",
+          "title": "Exchange rate - Wikipedia"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 1.3,
+      "first_token_seconds": 17.1,
+      "total_seconds": 17.8,
+      "client_seconds": 17.8
+    },
+    "verdict": "correct",
+    "reason": "The system answer provides a specific exchange rate (0.89360) and indicates it was updated 10 minutes ago, which is a reasonable and relevant response to the question about the current USD to Euro exchange rate. Since there is no reference answer provided, the answer is considered correct as it offers a current, factual response to the open question."
+  },
+  {
+    "id": 11,
+    "q": "Calculate 15 multiplied by 32.",
+    "ref": "480",
+    "type": "factual",
+    "qid": "35f259b9ac46",
+    "pages_ok": 5,
+    "pages_failed": 3,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "35f259b9ac46",
+      "type": "fast",
+      "ts": 1793664008.0271428,
+      "answer": "15 multiplied by 32 equals 480 [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.mathsisfun.com/numbers/calculator.html",
+          "title": "Calculator"
+        },
+        {
+          "n": 2,
+          "url": "https://verrukkelijke15.nl/",
+          "title": "De Verrukkelijke 15 van 1 november 2026"
+        }
+      ],
+      "pages_used": 2,
+      "pages_expected": 8,
+      "llm_seconds": 1.2,
+      "first_token_seconds": 13.5,
+      "total_seconds": 13.9,
+      "client_seconds": 13.9
+    },
+    "final": {
+      "qid": "35f259b9ac46",
+      "type": "final",
+      "ts": 1793664025.2131054,
+      "answer": "15 multiplied by 32 equals 480 [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://nl.wikipedia.org/wiki/15_(getal)",
+          "title": "15 (getal) - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://www.calculator.net/basic-calculator.html",
+          "title": "Basic Calculator"
+        },
+        {
+          "n": 3,
+          "url": "https://www.mathsisfun.com/numbers/calculator.html",
+          "title": "Calculator"
+        },
+        {
+          "n": 4,
+          "url": "https://www.calculator.net/percent-calculator.html",
+          "title": "Percentage Calculator"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 1.9,
+      "first_token_seconds": 30.7,
+      "total_seconds": 31.1,
+      "client_seconds": 31.1
+    },
+    "verdict": "correct",
+    "reason": "The system answer correctly states that 15 multiplied by 32 equals 480, which matches the reference answer."
+  },
+  {
+    "id": 12,
+    "q": "What is the meaning of the word 'serendipity'?",
+    "ref": "Finding something good or valuable by chance, without looking for it",
+    "type": "factual",
+    "qid": "d3fbb2da9ddb",
+    "pages_ok": 3,
+    "pages_failed": 5,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "d3fbb2da9ddb",
+      "type": "fast",
+      "ts": 1793664049.592209,
+      "answer": "The provided sources do not mention the meaning of the word \"serendipity.\"",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://brave.com/glossary/cookie/",
+          "title": "Cookie Meaning & Definition | Brave"
+        },
+        {
+          "n": 2,
+          "url": "http://lakdiva.org",
+          "title": "Lakdiva"
+        }
+      ],
+      "pages_used": 4,
+      "pages_expected": 8,
+      "llm_seconds": 1.5,
+      "first_token_seconds": 14.3,
+      "total_seconds": 15.1,
+      "client_seconds": 15.2
+    },
+    "final": {
+      "qid": "d3fbb2da9ddb",
+      "type": "final",
+      "ts": 1793664066.1951826,
+      "answer": "The provided sources do not contain information about the meaning of the word \"serendipity.\"",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/Number_sign",
+          "title": "Number sign - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://brave.com/glossary/cookie/",
+          "title": "Cookie Meaning & Definition | Brave"
+        },
+        {
+          "n": 3,
+          "url": "http://lakdiva.org",
+          "title": "Lakdiva"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 1.3,
+      "first_token_seconds": 31.3,
+      "total_seconds": 31.7,
+      "client_seconds": 31.8
+    },
+    "verdict": "incorrect",
+    "reason": "The system answer is incorrect because it contradicts the reference answer. The reference clearly states that 'serendipity' means 'finding something good or valuable by chance, without looking for it,' but the system answer claims that the sources do not contain information about the meaning of the word, which is false."
+  },
+  {
+    "id": 13,
+    "q": "Translate \"Hello, how are you?\" into French.",
+    "ref": "Bonjour, comment allez-vous ? (or: Salut, comment ça va ?)",
+    "type": "factual",
+    "qid": "bd0885e83025",
+    "pages_ok": 7,
+    "pages_failed": 1,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "bd0885e83025",
+      "type": "fast",
+      "ts": 1793664090.3677301,
+      "answer": "\"Hello, how are you?\" translates to \"Bonjour, comment allez-vous ?\" in French.",
+      "sources": [
+        {
+          "n": 1,
+          "url": "http://learningenglish.voanews.com/a/7498484.html",
+          "title": "How to Pronounce: Combining 'How old are you?' and 'I'm ------ years old.'"
+        },
+        {
+          "n": 2,
+          "url": "http://lwn.net/Articles/38489/",
+          "title": "French ex-PM condemns Software Patents"
+        }
+      ],
+      "pages_used": 2,
+      "pages_expected": 8,
+      "llm_seconds": 1.1,
+      "first_token_seconds": 13.5,
+      "total_seconds": 14.3,
+      "client_seconds": 14.3
+    },
+    "final": {
+      "qid": "bd0885e83025",
+      "type": "final",
+      "ts": 1793664094.7141714,
+      "answer": "\"Hello, how are you?\" translates to \"Bonjour, comment allez-vous?\" in French [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.frenchlearner.com/learning-french/french-for-beginners/",
+          "title": "French for Beginners | FrenchLearner"
+        },
+        {
+          "n": 2,
+          "url": "https://en.wikipedia.org/wiki/French_language",
+          "title": "French language - Wikipedia"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 1.3,
+      "first_token_seconds": 18.1,
+      "total_seconds": 18.6,
+      "client_seconds": 18.6
+    },
+    "verdict": "correct",
+    "reason": "The system answer correctly translates 'Hello, how are you?' into French as 'Bonjour, comment allez-vous?', which matches the reference answer. The system also provides a citation [1], which is consistent with the format expected for grading."
+  },
+  {
+    "id": 14,
+    "q": "Tell me a fun fact about the planet Mars.",
+    "ref": null,
+    "type": "open",
+    "qid": "b8f9eda50389",
+    "pages_ok": 5,
+    "pages_failed": 3,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "b8f9eda50389",
+      "type": "fast",
+      "ts": 1793664120.194046,
+      "answer": "Mars is often called the \"Red Planet\" because iron minerals in the Martian dirt oxidize, or rust, causing the surface to look red [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://science.nasa.gov/mars/facts/",
+          "title": "Mars: Facts - NASA Science"
+        },
+        {
+          "n": 2,
+          "url": "https://starwalk.space/en/news/mars-the-ultimate-guide",
+          "title": "All About Mars: Facts, Images and How to See It"
+        }
+      ],
+      "pages_used": 4,
+      "pages_expected": 8,
+      "llm_seconds": 3.2,
+      "first_token_seconds": 14.4,
+      "total_seconds": 15.8,
+      "client_seconds": 15.8
+    },
+    "final": {
+      "qid": "b8f9eda50389",
+      "type": "final",
+      "ts": 1793664122.2458835,
+      "answer": "Mars has some of the most impressive geological features in the Solar System, including Olympus Mons, the largest known volcano, and Valles Marineris, one of the largest canyon systems [4].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/Atmosphere_of_Mars",
+          "title": "Atmosphere of Mars - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://www.space.com/16903-mars-atmosphere-climate-weather.html",
+          "title": "Mars' Atmosphere: Composition, Climate & Weather"
+        },
+        {
+          "n": 3,
+          "url": "https://science.nasa.gov/mars/facts/",
+          "title": "Mars: Facts - NASA Science"
+        },
+        {
+          "n": 4,
+          "url": "https://starwalk.space/en/news/mars-the-ultimate-guide",
+          "title": "All About Mars: Facts, Images and How to See It"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 2.0,
+      "first_token_seconds": 16.9,
+      "total_seconds": 17.9,
+      "client_seconds": 17.9
+    },
+    "verdict": "correct",
+    "reason": "The system answer provides a correct and relevant fun fact about Mars, mentioning Olympus Mons and Valles Marineris, which are indeed notable geological features on the planet. The answer is factual, concise, and appropriate for an open-ended question about Mars."
+  },
+  {
+    "id": 15,
+    "q": "Explain the concept of blockchain technology.",
+    "ref": null,
+    "type": "open",
+    "qid": "c1d706415e20",
+    "pages_ok": 6,
+    "pages_failed": 2,
+    "pages_cached": 1,
+    "fast": {
+      "qid": "c1d706415e20",
+      "type": "fast",
+      "ts": 1793664151.2250109,
+      "answer": "Blockchain technology is a distributed ledger system that maintains a growing list of records, known as blocks, which are securely linked through cryptographic hashes [1]. Each block includes a cryptographic hash of the previous block, a timestamp, and transaction data, typically organized in a Merkle tree structure [1]. This design ensures that once data is recorded in a block, it cannot be altered retroactively without changing all subsequent blocks and achieving network consensus, making blockchain transactions resistant to modification [1]. Blockchains are decentralized, often public, and managed by a peer-to-peer network, allowing participants to verify and audit transactions independently [1]. They are authenticated through mass collaboration driven by collective self-interests, ensuring robust workflows and minimal uncertainty regarding data security [1]. Blockchain technology enables the creation of secure, verifiable, and permanent records of transactions, effectively solving issues like double-spending in digital assets [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/Blockchain",
+          "title": "Blockchain - Wikipedia"
+        }
+      ],
+      "pages_used": 3,
+      "pages_expected": 8,
+      "llm_seconds": 6.2,
+      "first_token_seconds": 14.4,
+      "total_seconds": 19.3,
+      "client_seconds": 19.3
+    },
+    "final": {
+      "qid": "c1d706415e20",
+      "type": "final",
+      "ts": 1793664155.0732403,
+      "answer": "Blockchain technology is a decentralized, distributed ledger system that records transactions across multiple computers in a secure, transparent, and tamper-resistant manner [2]. Each transaction is grouped into a block, which is cryptographically linked to the previous block, forming a chronological chain of records [2]. This design ensures that once data is recorded, it cannot be altered retroactively without the consensus of the network [1]. Blockchain operates without a central authority, relying on a peer-to-peer network to validate and maintain the shared record of data according to predefined consensus rules [2]. It provides inherent resistance to modification, making it suitable for applications such as cryptocurrencies, smart contracts, and secure data-sharing [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/Blockchain",
+          "title": "Blockchain - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://www.blockchain-council.org/blockchain/what-is-blockchain-technology-and-how-does-it-work/",
+          "title": "What is Blockchain Technology, and How Does It Work?"
+        },
+        {
+          "n": 3,
+          "url": "https://aws.amazon.com/what-is/blockchain/",
+          "title": "What is Blockchain? - Blockchain Technology Explained - AWS"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 3.8,
+      "first_token_seconds": 20.0,
+      "total_seconds": 23.1,
+      "client_seconds": 23.2
+    },
+    "verdict": "correct",
+    "reason": "The system answer provides a clear, accurate, and comprehensive explanation of blockchain technology. It correctly describes blockchain as a decentralized, distributed ledger system, explains how blocks are linked cryptographically, and highlights its tamper-resistant nature and lack of central authority. It also mentions relevant applications like cryptocurrencies and smart contracts, which are appropriate examples. Since there is no reference answer provided, the answer is considered correct as it is a reasonable and relevant explanation of the concept."
+  },
+  {
+    "id": 16,
+    "q": "How do I file my taxes online?",
+    "ref": null,
+    "type": "open",
+    "qid": "69a034319157",
+    "pages_ok": 6,
+    "pages_failed": 2,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "69a034319157",
+      "type": "fast",
+      "ts": 1793664182.553636,
+      "answer": "To file your taxes online, you can use free tax software if your adjusted gross income is $95,000 or less, or use Free File Fillable Forms if your income is higher [1]. You can also use tax preparation software of your choice to file your taxes electronically [1]. If you need more time to file, you must request an extension by the April filing deadline, but you must still pay taxes you owe by the deadline [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.irs.gov/filing/individuals/how-to-file",
+          "title": "File your tax return | Internal Revenue Service"
+        },
+        {
+          "n": 2,
+          "url": "https://files.google.com/",
+          "title": "Free up spaceon your phone"
+        }
+      ],
+      "pages_used": 3,
+      "pages_expected": 8,
+      "llm_seconds": 3.7,
+      "first_token_seconds": 13.8,
+      "total_seconds": 16.9,
+      "client_seconds": 16.9
+    },
+    "final": {
+      "qid": "69a034319157",
+      "type": "final",
+      "ts": 1793664187.3635101,
+      "answer": "To file your taxes online, you can use IRS-certified free tax preparation services or tax preparation software. If your adjusted gross income is $95,000 or less, you can use Free File [2]. For those who need more assistance, IRS-certified volunteers can provide free tax prep help if you earn $70,244 or less, have a disability, are 60 years or older, or need language support [2][3]. Additionally, you can use tax preparation software of your choice to file your taxes electronically [2]. For a reliable and straightforward experience, FileYourTaxes.com is a popular option that offers a secure, ad-free, and efficient service [1]. Always ensure you file by the April 15, 2027, deadline to avoid penalties and interest [2].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.fileyourtaxes.com",
+          "title": "Fast, Easy, Secure Online Tax Filing"
+        },
+        {
+          "n": 2,
+          "url": "https://www.irs.gov/filing/individuals/how-to-file",
+          "title": "File your tax return | Internal Revenue Service"
+        },
+        {
+          "n": 3,
+          "url": "https://www.irs.gov/how-to-file-your-taxes-step-by-step",
+          "title": "How to file your taxes: Step by step | Internal Revenue Service"
+        },
+        {
+          "n": 4,
+          "url": "https://files.google.com/",
+          "title": "Free up spaceon your phone"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 4.8,
+      "first_token_seconds": 17.7,
+      "total_seconds": 21.7,
+      "client_seconds": 21.7
+    },
+    "verdict": "correct",
+    "reason": "The system answer provides a reasonable, relevant, and up-to-date response to the question about filing taxes online. It mentions IRS-certified free tax preparation services, Free File for those with an adjusted gross income of $95,000 or less, IRS-certified volunteers for specific groups, and tax software options. It also recommends a specific website (FileYourTaxes.com) and reminds users of the tax filing deadline. Since there is no reference answer provided, the system answer is considered correct as it offers a helpful and accurate guide for filing taxes online in 2026."
+  },
+  {
+    "id": 17,
+    "q": "Can you provide recommendations for a good science fiction book to read?",
+    "ref": null,
+    "type": "open",
+    "qid": "a92b7a266eb4",
+    "pages_ok": 6,
+    "pages_failed": 2,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "a92b7a266eb4",
+      "type": "fast",
+      "ts": 1793664217.0523958,
+      "answer": "Based on the recommendations from the sources, some good science fiction books to read include \"Dune by Frank Herbert,\" \"World War Z: An Oral History of the Zombie War by Max Brooks,\" and \"Ursula K Le Guin's gender-bending classic of interplanetary diplomacy Left Hand of Darkness\" [1]. Additionally, \"The Dispossessed by Ursula Le Guin\" is highly recommended [1]. For beginners, \"The Eyre Affair by Jasper Fforde\" and \"So Long, and Thanks for All the Fish by Douglas Adams\" are suggested [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://fivebooks.com/category/fiction/science-fiction/",
+          "title": "The Best of Science Fiction | Five Books recommends"
+        },
+        {
+          "n": 2,
+          "url": "https://www.topradio.be/",
+          "title": "TOPradio - We Make You Move"
+        }
+      ],
+      "pages_used": 3,
+      "pages_expected": 8,
+      "llm_seconds": 5.2,
+      "first_token_seconds": 14.1,
+      "total_seconds": 18.4,
+      "client_seconds": 18.4
+    },
+    "final": {
+      "qid": "a92b7a266eb4",
+      "type": "final",
+      "ts": 1793664225.4953203,
+      "answer": "Certainly! Here are some recommended science fiction books based on the sources:\n\n1. **Dune by Frank Herbert** - A classic that explores politics, philosophy, and humanity [1].\n2. **World War Z: An Oral History of the Zombie War by Max Brooks** - A unique take on a post-apocalyptic scenario [1].\n3. **Left Hand of Darkness by Ursula K. Le Guin** - A gender-bending classic of interplanetary diplomacy [1].\n4. **The Dispossessed by Ursula K. Le Guin** - A thought-provoking exploration of anarchism and societal structures [1].\n5. **The Shadow of the Torturer by Gene Wolfe** - A richly detailed and complex narrative [1].\n\nFor a more contemporary recommendation, **The Just City by Jo Walton** is highlighted as a must-read [1]. Additionally, **The Eyre Affair by Jasper Fforde** and **Footfall** are suggested as good additions to the list [2]. \n\nThese recommendations cover a range of sub-genres and styles within science fiction, from hard science fiction to more philosophical and political explorations.",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://fivebooks.com/category/fiction/science-fiction/",
+          "title": "The Best of Science Fiction | Five Books recommends"
+        },
+        {
+          "n": 2,
+          "url": "https://www.goodreads.com/list/show/19341.Best_Science_Fiction",
+          "title": "Best Science Fiction (3955 books)"
+        },
+        {
+          "n": 3,
+          "url": "https://en.wikipedia.org/wiki/Science_fiction",
+          "title": "Science fiction - Wikipedia"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 6.4,
+      "first_token_seconds": 21.3,
+      "total_seconds": 26.8,
+      "client_seconds": 26.8
+    },
+    "verdict": "correct",
+    "reason": "The system answer provides a reasonable and relevant list of science fiction book recommendations. Since there is no reference answer provided, the system's response is considered correct as long as it is a thoughtful and appropriate suggestion for the question."
+  },
+  {
+    "id": 18,
+    "q": "What's the latest news in technology?",
+    "ref": null,
+    "type": "time-sensitive",
+    "qid": "489e3ca340eb",
+    "pages_ok": 1,
+    "pages_failed": 7,
+    "pages_cached": 0,
+    "fast": null,
+    "final": {
+      "qid": "489e3ca340eb",
+      "type": "final",
+      "ts": 1793664250.0057285,
+      "answer": "The provided sources discuss how to quickly find recently used files in Windows operating systems, such as Windows 10 and 11, and do not contain information about the latest news in technology [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.seniorweb.nl/artikel/recent-gebruikte-bestanden-snel-terugvinden",
+          "title": "Recent gebruikte bestanden snel terugvinden"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 1.5,
+      "first_token_seconds": 13.9,
+      "total_seconds": 14.8,
+      "client_seconds": 14.9
+    },
+    "verdict": "incorrect",
+    "reason": "The system answer incorrectly claims that the sources do not contain information about the latest news in technology, even though the question is open and no reference answer is provided. Since there is no reference answer, the system should provide a reasonable, relevant answer about the latest technology news, not claim that the sources lack such information."
+  },
+  {
+    "id": 19,
+    "q": "How can I improve my productivity at work?",
+    "ref": null,
+    "type": "open",
+    "qid": "2ac18027853e",
+    "pages_ok": 3,
+    "pages_failed": 5,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "2ac18027853e",
+      "type": "fast",
+      "ts": 1793664278.083831,
+      "answer": "To improve your productivity at work, you can set clear goals, manage your time wisely by using techniques like time-blocking and minimizing distractions [1], prioritize tasks by focusing on the most important and urgent ones [1], take regular breaks to rest and recharge [1], and delegate tasks when possible to free up your time for high-priority activities [1]. Additionally, creating a productive workspace and enhancing communication with colleagues can also contribute to increased productivity [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.linkedin.com/posts/rebecca-mccartney-1641132_8-effective-strategies-to-boost-workplace-activity-7186387165407272960-QYW7",
+          "title": "8 Effective Strategies to Boost Workplace Productivity In today's fast-paced work environment, being productive is key to achieving success. Whether you're aiming to meet tight deadlines, or simply… | Rebecca McCartney"
+        },
+        {
+          "n": 2,
+          "url": "https://tips.nl/",
+          "title": "Tips.nl | Jouw #1 bron voor tips over écht alles"
+        }
+      ],
+      "pages_used": 7,
+      "pages_expected": 8,
+      "llm_seconds": 3.0,
+      "first_token_seconds": 15.8,
+      "total_seconds": 18.1,
+      "client_seconds": 18.1
+    },
+    "final": {
+      "qid": "2ac18027853e",
+      "type": "final",
+      "ts": 1793664284.1081913,
+      "answer": "To improve your productivity at work, consider the following strategies:\n\n1. **Set Clear Goals**: Define clear and achievable goals, breaking down larger tasks into smaller, actionable steps [1].\n2. **Manage Your Time Wisely**: Use techniques such as time-blocking to allocate specific time slots for different tasks. Minimize distractions by turning off notifications and avoiding multitasking [1].\n3. **Take Regular Breaks**: Schedule short breaks throughout your workday to rest and recharge, which can enhance productivity [1].\n4. **Focus on One Task at a Time**: Concentrate on completing one task before moving to the next to avoid the inefficiencies of multitasking [2].\n5. **Prioritize Your Biggest Tasks First**: Tackle the most important and urgent tasks first to maximize your impact [2].\n6. **Delegate When Possible**: Delegate tasks to others when feasible to free up your time for high-priority activities [1].\n7. **Use the Pomodoro Strategy**: Work in focused intervals (typically 25 minutes) followed by short breaks to maintain concentration [2].\n8. **Create a Productive Workspace**: Keep your workspace organized and clutter-free to minimize distractions [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.linkedin.com/posts/rebecca-mccartney-1641132_8-effective-strategies-to-boost-workplace-activity-7186387165407272960-QYW7",
+          "title": "8 Effective Strategies to Boost Workplace Productivity In today's fast-paced work environment, being productive is key to achieving success. Whether you're aiming to meet tight deadlines, or simply… | Rebecca McCartney"
+        },
+        {
+          "n": 2,
+          "url": "https://www.indeed.com/career-advice/career-development/ways-to-be-more-productive",
+          "title": "10 Simple Ways To Become More Productive at Work"
+        },
+        {
+          "n": 3,
+          "url": "https://tips.nl/",
+          "title": "Tips.nl | Jouw #1 bron voor tips over écht alles"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 6.0,
+      "first_token_seconds": 18.6,
+      "total_seconds": 24.2,
+      "client_seconds": 24.2
+    },
+    "verdict": "correct",
+    "reason": "The system answer provides a reasonable, relevant, and comprehensive list of strategies to improve productivity at work. It covers key areas such as goal setting, time management, task prioritization, and workspace organization. Since there is no reference answer provided, the answer is considered correct as it addresses the question appropriately and offers practical advice."
+  },
+  {
+    "id": 20,
+    "q": "Provide me with a summary of the movie \"Inception.\"",
+    "ref": "2010 Christopher Nolan film: Dom Cobb, a thief who steals secrets through shared dreams, is hired to plant an idea (inception) in a businessman's mind",
+    "type": "factual",
+    "qid": "213d7cbd0ee1",
+    "pages_ok": 7,
+    "pages_failed": 1,
+    "pages_cached": 1,
+    "fast": {
+      "qid": "213d7cbd0ee1",
+      "type": "fast",
+      "ts": 1793664312.716634,
+      "answer": "\"Inception,\" released in 2010, is a science fiction heist film directed by Christopher Nolan. The story follows Dom Cobb, a professional thief who steals information by infiltrating targets' subconscious through dream-sharing technology. Cobb is offered a chance to have his criminal history erased by implanting an idea into a target's subconscious, specifically to dissolve the conglomerate of Maurice Fischer, the father of Saito's competitor, Robert Fischer. In return, Sait, a wealthy businessman, promises to clear Cobb's criminal status, allowing him to return home to his children [1]. The film features an ensemble cast including Ken Watanabe, Joseph Gordon-Levitt, Marion Cotillard, Elliot Page, Tom Hardy, Cillian Murphy, Tom Berenger, Dileep Rao, and Michael Caine [1]. It was selected for preservation in the United States National Film Registry for its cultural, historical, and aesthetic significance [1]. The film's budget was $160 million, and it grossed $839 million worldwide [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/Inception",
+          "title": "Inception - Wikipedia"
+        }
+      ],
+      "pages_used": 2,
+      "pages_expected": 8,
+      "llm_seconds": 5.8,
+      "first_token_seconds": 13.0,
+      "total_seconds": 18.5,
+      "client_seconds": 18.5
+    },
+    "final": {
+      "qid": "213d7cbd0ee1",
+      "type": "final",
+      "ts": 1793664317.074268,
+      "answer": "*Inception* is a 2010 science fiction heist film directed by Christopher Nolan. The story follows Dom Cobb, a professional thief who steals information by infiltrating targets' subconscious through dream-sharing technology. Cobb is offered a chance to have his criminal history erased by implanting an idea into a target's subconscious, specifically to dissolve the conglomerate of Saito's competitor, Maurice Fischer. The film features an ensemble cast including Ken Watanabe, Joseph Gordon-Levitt, Marion Cotillard, and Leonardo DiCaprio [1]. It was selected for preservation in the United States National Film Registry for its cultural, historical, and aesthetic significance [1]. The film received generally favorable reviews, with a Metascore of 74 and an average user score of 8.8 [2].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/Inception",
+          "title": "Inception - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://www.metacritic.com/movie/inception",
+          "title": "Inception Reviews - Metacritic"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 4.4,
+      "first_token_seconds": 19.0,
+      "total_seconds": 22.8,
+      "client_seconds": 22.8
+    },
+    "verdict": "correct",
+    "reason": "The system answer accurately summarizes the movie *Inception*, including the director, main character, plot premise, and key elements like the dream-sharing technology and the concept of planting an idea (inception). It also mentions the ensemble cast and some critical reception, which are relevant details. The answer is consistent with the reference and provides a complete, correct summary without contradicting any key points."
+  },
+  {
+    "id": 21,
+    "q": "What's the tallest mountain in the world?",
+    "ref": "Mount Everest (about 8,849 m above sea level)",
+    "type": "factual",
+    "qid": "4a1f5177de2e",
+    "pages_ok": 6,
+    "pages_failed": 2,
+    "pages_cached": 6,
+    "fast": {
+      "qid": "4a1f5177de2e",
+      "type": "fast",
+      "ts": 1793664342.4423773,
+      "answer": "The tallest mountain in the world is Mount Everest, which stands at an official height of 8848.86 meters (29,031.7 feet) above sea level [1]. However, when measured from its base on the ocean floor to its summit, Mauna Kea in Hawaii is technically taller, extending over 33,000 feet [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.himalayanrecreation.com/blog/peak-of-mount-everest",
+          "title": "Peak of Mount Everest | The highest peak on Earth"
+        },
+        {
+          "n": 2,
+          "url": "https://en.wikipedia.org/wiki/List_of_tallest_people",
+          "title": "List of tallest people - Wikipedia"
+        }
+      ],
+      "pages_used": 2,
+      "pages_expected": 8,
+      "llm_seconds": 3.1,
+      "first_token_seconds": 13.0,
+      "total_seconds": 15.0,
+      "client_seconds": 15.0
+    },
+    "final": {
+      "qid": "4a1f5177de2e",
+      "type": "final",
+      "ts": 1793664345.8281412,
+      "answer": "The tallest mountain in the world, when measured from base to summit, is Mauna Kea in Hawaii, which rises about 10,203 m (33,474 ft) from the Pacific Ocean floor [1]. However, if considering the highest mountain above sea level, Mount Everest in Nepal is the tallest, with an official height of 8848.86 meters (29,031.7 feet) above sea level [2].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/List_of_highest_mountains_on_Earth",
+          "title": "List of highest mountains on Earth - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://www.himalayanrecreation.com/blog/peak-of-mount-everest",
+          "title": "Peak of Mount Everest | The highest peak on Earth"
+        },
+        {
+          "n": 3,
+          "url": "https://www.theguardian.com/world/2013/dec/27/boy-9-climbs-aconcagua",
+          "title": "Boy, nine, climbs South America's tallest mountain"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 3.4,
+      "first_token_seconds": 16.0,
+      "total_seconds": 18.3,
+      "client_seconds": 18.4
+    },
+    "verdict": "correct",
+    "reason": "The system answer correctly identifies both perspectives: Mount Everest as the tallest mountain above sea level (consistent with the reference answer), and Mauna Kea as the tallest mountain when measured from base to summit. The answer is accurate, well-structured, and provides additional context without contradicting the reference."
+  },
+  {
+    "id": 22,
+    "q": "Can you recommend a good workout routine for beginners?",
+    "ref": null,
+    "type": "open",
+    "qid": "d98712eeb692",
+    "pages_ok": 3,
+    "pages_failed": 5,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "d98712eeb692",
+      "type": "fast",
+      "ts": 1793664372.412867,
+      "answer": "Yes, a good workout routine for beginners is a full-body strength training workout 3 times a week, as recommended by certified personal trainer Daniel Bubnis [1]. This routine is designed to help build stamina and strength over time, with tips such as starting with light weights, maintaining slow and controlled movements, and resting between exercises [1]. Additionally, a simple workout tracker template can be used to keep track of progress and maintain consistency [2].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://greatist.com/fitness/workout-routines-for-beginners",
+          "title": "Here’s the Best Full-Body Workout Routine for Beginners"
+        },
+        {
+          "n": 2,
+          "url": "https://www.notion.so/de-de/templates/a-simple-workout-tracker",
+          "title": "A Simple Workout Tracker Vorlage | Notion-Marketplace"
+        }
+      ],
+      "pages_used": 7,
+      "pages_expected": 8,
+      "llm_seconds": 2.9,
+      "first_token_seconds": 14.2,
+      "total_seconds": 16.7,
+      "client_seconds": 16.7
+    },
+    "final": {
+      "qid": "d98712eeb692",
+      "type": "final",
+      "ts": 1793664375.7791522,
+      "answer": "A good workout routine for beginners is to follow a full-body strength training workout 3 times a week, as recommended by certified personal trainer Daniel Bubnis [2]. This routine includes warmups and cooldowns, which are essential for muscle recovery [1]. Additionally, it is advised to start with light weights, maintain slow and controlled movements, and rest for up to 90 seconds between exercises [2]. Setting realistic goals and being consistent with your workouts will also help in achieving lasting results [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://greatist.com/move/got-good-workout",
+          "title": "Here’s the Best Full-Body Workout Routine for Beginners"
+        },
+        {
+          "n": 2,
+          "url": "https://greatist.com/fitness/workout-routines-for-beginners",
+          "title": "Here’s the Best Full-Body Workout Routine for Beginners"
+        },
+        {
+          "n": 3,
+          "url": "https://www.notion.so/de-de/templates/a-simple-workout-tracker",
+          "title": "A Simple Workout Tracker Vorlage | Notion-Marketplace"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 3.1,
+      "first_token_seconds": 17.7,
+      "total_seconds": 20.0,
+      "client_seconds": 20.0
+    },
+    "verdict": "correct",
+    "reason": "The system answer provides a reasonable and relevant recommendation for a beginner workout routine, including full-body strength training, frequency, warmups/coolowns, proper form, rest, and consistency. Since there is no reference answer provided, the answer is considered correct as it is a valid, evidence-based suggestion for beginners."
+  },
+  {
+    "id": 23,
+    "q": "Tell me a famous quote from Albert Einstein.",
+    "ref": null,
+    "type": "open",
+    "qid": "c109f840b137",
+    "pages_ok": 7,
+    "pages_failed": 1,
+    "pages_cached": 1,
+    "fast": {
+      "qid": "c109f840b137",
+      "type": "fast",
+      "ts": 1793664399.6774786,
+      "answer": "The provided sources do not contain any information about Albert Einstein or his quotes.",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://telsell.com/",
+          "title": "Online Bestellen bij Tel Sell ✓ Bekend van TV!"
+        },
+        {
+          "n": 2,
+          "url": "https://blackporn24.com/categories/milf/",
+          "title": "Latest Black MILF Porn Videos"
+        }
+      ],
+      "pages_used": 2,
+      "pages_expected": 8,
+      "llm_seconds": 0.9,
+      "first_token_seconds": 13.5,
+      "total_seconds": 13.9,
+      "client_seconds": 13.9
+    },
+    "final": {
+      "qid": "c109f840b137",
+      "type": "final",
+      "ts": 1793664404.5358014,
+      "answer": "A famous quote from Albert Einstein is: \"It is the supreme art of the teacher to awaken joy in creative expression and knowledge\" [1]. Another well-known quote is: \"The most important thing in life is to keep your mind open\" [1]. Additionally, he is often quoted as saying: \"The important thing is not to stop questioning. Curiosity has its own reason for existing\" [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://quoteinvestigator.com/tag/albert-einstein",
+          "title": "Tag Archives: Albert Einstein"
+        },
+        {
+          "n": 2,
+          "url": "https://nypost.com/tag/albert-einstein/",
+          "title": "albert einstein | Latest News | New York Post"
+        },
+        {
+          "n": 3,
+          "url": "http://www.einstein-bern.ch/en/einstein-society",
+          "title": "Einstein Society 2503"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 3.0,
+      "first_token_seconds": 16.8,
+      "total_seconds": 18.8,
+      "client_seconds": 18.8
+    },
+    "verdict": "correct",
+    "reason": "The system answer provides three well-known quotes from Albert Einstein, all of which are accurate and relevant to the question. Since there is no reference answer provided, the answer is considered correct as it is a reasonable, relevant response to the open-ended question."
+  },
+  {
+    "id": 24,
+    "q": "Provide a definition of the term \"climate change.\"",
+    "ref": "Long-term shifts in temperatures and weather patterns, now mainly driven by human activities such as burning fossil fuels",
+    "type": "factual",
+    "qid": "26e8b1403efe",
+    "pages_ok": 4,
+    "pages_failed": 4,
+    "pages_cached": 1,
+    "fast": {
+      "qid": "26e8b1403efe",
+      "type": "fast",
+      "ts": 1793664427.4148428,
+      "answer": "The provided sources do not contain a definition of the term \"climate change.\"",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.kreuze.nl/nieuws/de-kracht-van-samensmelting-kreuze-en-provide-bundelen-expertise/",
+          "title": "De kracht van samensmelting: Kreuze en Provide bundelen expertise - Kreuze"
+        },
+        {
+          "n": 2,
+          "url": "https://thoughtcatalog.com/?p=789996",
+          "title": "The Definition Of ‘Love At First Sight’ For Each Zodiac Sign"
+        }
+      ],
+      "pages_used": 4,
+      "pages_expected": 8,
+      "llm_seconds": 1.1,
+      "first_token_seconds": 12.8,
+      "total_seconds": 13.2,
+      "client_seconds": 13.2
+    },
+    "final": {
+      "qid": "26e8b1403efe",
+      "type": "final",
+      "ts": 1793664431.766368,
+      "answer": "Climate change refers to a long-term change in the average weather patterns that have come to define Earth’s local, regional, and global climates [1]. This change is primarily driven by human activities, particularly the burning of fossil fuels, which increases heat-trapping greenhouse gas levels in the atmosphere, leading to a rise in Earth’s average surface temperature [1]. Natural processes can also contribute, but human activities have overwhelmed these natural factors [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://science.nasa.gov/climate-change/what-is-climate-change/",
+          "title": "What Is Climate Change? - NASA Science"
+        },
+        {
+          "n": 2,
+          "url": "https://www.un.org/en/climatechange/what-is-climate-change",
+          "title": "What Is Climate Change? | United Nations"
+        },
+        {
+          "n": 3,
+          "url": "https://www.kreuze.nl/nieuws/de-kracht-van-samensmelting-kreuze-en-provide-bundelen-expertise/",
+          "title": "De kracht van samensmelting: Kreuze en Provide bundelen expertise - Kreuze"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 3.1,
+      "first_token_seconds": 15.5,
+      "total_seconds": 17.5,
+      "client_seconds": 17.5
+    },
+    "verdict": "correct",
+    "reason": "The system answer correctly defines climate change as long-term shifts in weather patterns, primarily driven by human activities like burning fossil fuels, which increase greenhouse gas levels and raise Earth's temperature. It also acknowledges the role of natural processes, though emphasizes that human activities have dominated these factors — all of which aligns with the reference answer."
+  },
+  {
+    "id": 25,
+    "q": "How does photosynthesis work?",
+    "ref": "Plants use light energy, water and CO2 to produce glucose and oxygen, in chloroplasts (chlorophyll)",
+    "type": "factual",
+    "qid": "7d65870c9204",
+    "pages_ok": 6,
+    "pages_failed": 2,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "7d65870c9204",
+      "type": "fast",
+      "ts": 1793664458.8321593,
+      "answer": "Photosynthesis works by converting sunlight into sugar through a series of complex chemical reactions. Plants and bacteria use proteins to move electrons, which charge machinery that produces sugar. In the end, plants combine CO2 and water to produce sugar and oxygen [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.earth.com/news/photosynthesis-efficient-enough/",
+          "title": "Is photosynthesis efficient enough?"
+        },
+        {
+          "n": 2,
+          "url": "https://plnts.com/nl",
+          "title": "Alles wat je nodig hebt voor je eigen groene jungle!"
+        }
+      ],
+      "pages_used": 2,
+      "pages_expected": 8,
+      "llm_seconds": 3.1,
+      "first_token_seconds": 14.7,
+      "total_seconds": 17.0,
+      "client_seconds": 17.0
+    },
+    "final": {
+      "qid": "7d65870c9204",
+      "type": "final",
+      "ts": 1793664465.9545374,
+      "answer": "Photosynthesis is the process by which photopigment-bearing autotrophic organisms, such as plants, algae, and cyanobacteria, convert light energy—typically from sunlight—into chemical energy. This process occurs in two main stages: the light-dependent reactions and the light-independent reactions (Calvin cycle) [1]. \n\nIn the light-dependent reactions, light energy is absorbed by chlorophyll and other pigments in the thylakoid membranes of chloroplasts. This energy is used to split water molecules, releasing oxygen as a byproduct, and to produce ATP and NADPH, which are energy-rich molecules [1][2]. \n\nThe light-independent reactions, or Calvin cycle, take place in the stroma of the chloroplasts. Here, carbon dioxide from the atmosphere is fixed into organic molecules, such as glucose, using the ATP and NADPH generated in the light-dependent reactions [1][2]. \n\nPhotosynthesis is the reverse of cellular respiration, where carbohydrates are broken down to release energy [1]. The overall equation for photosynthesis is: 6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂ [3].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/Photosynthesis",
+          "title": "Photosynthesis - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://www.sciencing.com/how-does-photosynthesis-work-13714442/",
+          "title": "How Does Photosynthesis Work? - Sciencing"
+        },
+        {
+          "n": 3,
+          "url": "https://www.earth.com/news/photosynthesis-efficient-enough/",
+          "title": "Is photosynthesis efficient enough?"
+        },
+        {
+          "n": 4,
+          "url": "https://microbenotes.com/photosynthesis/",
+          "title": "Photosynthesis Process: Steps, Equation & Diagram"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 6.8,
+      "first_token_seconds": 18.3,
+      "total_seconds": 24.1,
+      "client_seconds": 24.1
+    },
+    "verdict": "correct",
+    "reason": "The system answer accurately describes the process of photosynthesis, including the light-dependent and light-independent reactions, the role of chlorophyll, the production of glucose and oxygen, and the overall chemical equation. It is consistent with the reference answer and provides additional detail without contradicting it."
+  },
+  {
+    "id": 26,
+    "q": "What are the basic principles of supply and demand in economics?",
+    "ref": null,
+    "type": "open",
+    "qid": "0a7da31d322a",
+    "pages_ok": 6,
+    "pages_failed": 2,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "0a7da31d322a",
+      "type": "fast",
+      "ts": 1793664494.6943526,
+      "answer": "The basic principles of supply and demand in economics involve the interaction between the quantity of a good or service that producers are willing to supply and the quantity that consumers are willing to buy [1]. Supply refers to the amount of a resource that firms, producers, or other economic agents are willing and able to provide to the marketplace, often represented graphically as a supply curve with price on the vertical axis and quantity supplied on the horizontal axis [2]. The law of supply states that, keeping other factors constant, an increase in price results in an increase in quantity supplied [2]. Demand, on the other hand, reflects the quantity of a good or service that consumers are willing and able to purchase at various prices. The interaction between supply and demand determines the market price and quantity sold [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://ocw.mit.edu/courses/14-01sc-principles-of-microeconomics-fall-2011/pages/unit-1-supply-and-demand/",
+          "title": "Unit 1: Supply and Demand | Principles of Microeconomics | Economics | MIT OpenCourseWare"
+        },
+        {
+          "n": 2,
+          "url": "https://en.wikipedia.org/wiki/Supply_(economics)",
+          "title": "Supply (economics) - Wikipedia"
+        }
+      ],
+      "pages_used": 4,
+      "pages_expected": 8,
+      "llm_seconds": 5.9,
+      "first_token_seconds": 13.6,
+      "total_seconds": 18.8,
+      "client_seconds": 18.8
+    },
+    "final": {
+      "qid": "0a7da31d322a",
+      "type": "final",
+      "ts": 1793664498.9540896,
+      "answer": "The basic principles of supply and demand in economics involve the interaction between the quantity of a good or service that producers are willing to supply and the quantity that consumers are willing to buy [2]. In a perfectly competitive market, the price of a good will adjust until it reaches the market-clearing price, where the quantity demanded equals the quantity supplied, achieving economic equilibrium [2]. Supply is typically represented by an upward-sloping curve, indicating that as the price increases, the quantity supplied also increases, while demand is represented by a downward-sloping curve, showing that as the price increases, the quantity demanded decreases [4]. These principles form the foundation for analyzing market dynamics and price determination [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://ocw.mit.edu/courses/14-01sc-principles-of-microeconomics-fall-2011/pages/unit-1-supply-and-demand/",
+          "title": "Unit 1: Supply and Demand | Principles of Microeconomics | Economics | MIT OpenCourseWare"
+        },
+        {
+          "n": 2,
+          "url": "https://en.wikipedia.org/wiki/Supply_and_demand",
+          "title": "Supply and demand - Wikipedia"
+        },
+        {
+          "n": 3,
+          "url": "http://news.ycombinator.com/item?id=43138304",
+          "title": "Hacker News"
+        },
+        {
+          "n": 4,
+          "url": "https://en.wikipedia.org/wiki/Supply_(economics)",
+          "title": "Supply (economics) - Wikipedia"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 4.3,
+      "first_token_seconds": 19.7,
+      "total_seconds": 23.0,
+      "client_seconds": 23.0
+    },
+    "verdict": "correct",
+    "reason": "The system answer accurately describes the basic principles of supply and demand in economics. It explains that supply is upward-sloping, demand is downward-sloping, and that equilibrium occurs where supply equals demand. The answer is consistent with standard economic theory and provides a clear, relevant explanation of the topic. Since there is no reference answer provided, the answer is considered correct as it is a reasonable and accurate response to the question."
+  },
+  {
+    "id": 27,
+    "q": "Can you explain the concept of quantum computing?",
+    "ref": null,
+    "type": "open",
+    "qid": "ea2184b85368",
+    "pages_ok": 6,
+    "pages_failed": 2,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "ea2184b85368",
+      "type": "fast",
+      "ts": 1793664526.3370872,
+      "answer": "Quantum computing is a type of computing that uses quantum bits, or qubits, which have unique properties that allow them to perform calculations in ways that classical computers cannot. Unlike classical bits, which can be either 0 or 1, qubits can exist in a state of superposition, meaning they can represent both 0 and 1 simultaneously [1]. This allows a group of qubits to process a vast amount of information at once, enabling quantum computers to solve certain problems much more efficiently than classical computers [1]. The basic theory for quantum computing was developed in the 1980s and 1990s and continues to guide companies like Google in their efforts to build functional quantum computers [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.wired.com/story/wired-guide-to-quantum-computing/",
+          "title": "The WIRED Guide to Quantum Computing"
+        },
+        {
+          "n": 2,
+          "url": "https://www.kwantum.nl/",
+          "title": "Hoe leuk is dat?"
+        }
+      ],
+      "pages_used": 4,
+      "pages_expected": 8,
+      "llm_seconds": 4.4,
+      "first_token_seconds": 13.1,
+      "total_seconds": 16.8,
+      "client_seconds": 16.8
+    },
+    "final": {
+      "qid": "ea2184b85368",
+      "type": "final",
+      "ts": 1793664530.0851696,
+      "answer": "Quantum computing is a type of computing that leverages the principles of quantum mechanics to perform operations on data. Unlike classical computers, which use bits as the fundamental unit of information (representing either 0 or 1), quantum computers use qubits, which can exist in a superposition of states, meaning they can represent both 0 and 1 simultaneously [2]. This property, along with entanglement, allows quantum computers to process a vast amount of information more efficiently for certain tasks [1]. Quantum computing has the potential to solve complex problems in areas such as cryptography, material science, and drug discovery, which are challenging for classical computers [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://learn.microsoft.com/en-us/azure/quantum/overview-understanding-quantum-computing",
+          "title": "What Is Quantum Computing? - Azure Quantum"
+        },
+        {
+          "n": 2,
+          "url": "https://www.wired.com/story/wired-guide-to-quantum-computing/",
+          "title": "The WIRED Guide to Quantum Computing"
+        },
+        {
+          "n": 3,
+          "url": "https://quantum.country",
+          "title": "Quantum Country"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 3.7,
+      "first_token_seconds": 17.5,
+      "total_seconds": 20.6,
+      "client_seconds": 20.6
+    },
+    "verdict": "correct",
+    "reason": "The system answer provides a clear and accurate explanation of quantum computing, including the use of qubits, superposition, and entanglement. It also mentions potential applications, which is appropriate for an open question. The answer is consistent with current understanding of quantum computing as of 2026 and does not include any incorrect or outdated information."
+  },
+  {
+    "id": 28,
+    "q": "Who won the last World Series in baseball?",
+    "ref": null,
+    "type": "time-sensitive",
+    "qid": "9723443c8be2",
+    "pages_ok": 7,
+    "pages_failed": 1,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "9723443c8be2",
+      "type": "fast",
+      "ts": 1793664553.1157758,
+      "answer": "The last World Series in baseball was won by the Milwaukee Brewers [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/List_of_World_Series_champions",
+          "title": "List of World Series champions - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://www.wonakademie.nl/",
+          "title": "Home - Wonakademie"
+        }
+      ],
+      "pages_used": 2,
+      "pages_expected": 8,
+      "llm_seconds": 1.3,
+      "first_token_seconds": 12.5,
+      "total_seconds": 12.9,
+      "client_seconds": 12.9
+    },
+    "final": {
+      "qid": "9723443c8be2",
+      "type": "final",
+      "ts": 1793664555.0430503,
+      "answer": "The last World Series in baseball was won by the Milwaukee Brewers [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/List_of_World_Series_champions",
+          "title": "List of World Series champions - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://www.mlb.com/",
+          "title": "MLB.com | The Official Site of Major League Baseball"
+        },
+        {
+          "n": 3,
+          "url": "https://time.com/6259147/megan-rapinoe-equal-pay-world-cup/",
+          "title": "Megan Rapinoe on Her Last World Cup and Equal Pay"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 0.9,
+      "first_token_seconds": 14.4,
+      "total_seconds": 14.8,
+      "client_seconds": 14.8
+    },
+    "verdict": "incorrect",
+    "reason": "The Milwaukee Brewers did not win the most recent World Series as of 2026. The 2025 World Series was won by the Houston Astros, and the 2026 World Series was also won by the Houston Astros. The system answer is therefore incorrect."
+  },
+  {
+    "id": 29,
+    "q": "How do I troubleshoot a slow internet connection?",
+    "ref": null,
+    "type": "open",
+    "qid": "22568d4c6ce4",
+    "pages_ok": 7,
+    "pages_failed": 1,
+    "pages_cached": 1,
+    "fast": {
+      "qid": "22568d4c6ce4",
+      "type": "fast",
+      "ts": 1793664582.2519171,
+      "answer": "To troubleshoot a slow internet connection, you can try the following steps:  \n1. Use an Ethernet cable to connect your computer directly to the modem or router. If the connection is faster via Ethernet, the issue is likely with your wireless network [1].  \n2. Check if your router is outdated. Oppido recommends replacing a router that is 2 or 3 years old, as it may cause slow connections [1].  \n3. Ensure your router's speed rating (labeled AC####) matches or exceeds your internet plan’s Mbps [1].  \n4. Reposition your router to improve signal strength and range, or use a range extender [1].  \n5. Run an internet speed test to identify if the issue is with your connection or your network setup [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.wikihow.com/Fix-Your-Internet-Connection",
+          "title": "How to Fix Your Internet Connection: 19 Things to Try"
+        },
+        {
+          "n": 2,
+          "url": "https://fix-nederlands.nl/",
+          "title": "Welkom bij FIX Nederlands"
+        }
+      ],
+      "pages_used": 2,
+      "pages_expected": 8,
+      "llm_seconds": 4.9,
+      "first_token_seconds": 13.4,
+      "total_seconds": 17.4,
+      "client_seconds": 17.4
+    },
+    "final": {
+      "qid": "22568d4c6ce4",
+      "type": "final",
+      "ts": 1793664612.4841924,
+      "answer": "To troubleshoot a slow internet connection, follow these steps:\n\n1. **Run an internet speed test** to establish a baseline. This provides objective data on your download speed, upload speed, ping, and jitter [2]. \n2. **Isolate the problem** by determining if the issue is with your hardware, software, or internet service provider. Check if other devices are experiencing the same issue, and ensure your router and modem are functioning properly [2].\n3. **Check your internet plan** and compare the measured speeds with what you're paying for. If your plan is not providing the expected speeds, consider upgrading [3].\n4. **Optimize your web usage** for a slow connection, such as reducing bandwidth-heavy activities like streaming or downloading large files [3].\n5. **Contact your internet provider** if the issue persists after troubleshooting, as the problem may be on their end [3]. \n\nIf the issue continues, further steps such as restarting your router, checking for malware, or contacting technical support may be necessary.",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://broadbandnow.com/guides/no-internet-connection-troubleshoot",
+          "title": "How to Fix Home Internet: Troubleshooting No Connection Issues"
+        },
+        {
+          "n": 2,
+          "url": "https://www.teamviewer.com/en/insights/how-to-troubleshoot-slow-internet-connection/",
+          "title": "Troubleshoot slow internet connection: A step-by-step guide | TeamViewer"
+        },
+        {
+          "n": 3,
+          "url": "https://lifehacker.com/top-10-ways-to-deal-with-a-slow-internet-connection-514138634",
+          "title": "The Top 10 Ways to Deal with a Slow Internet Connection"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 6.1,
+      "first_token_seconds": 42.8,
+      "total_seconds": 47.6,
+      "client_seconds": 47.6
+    },
+    "verdict": "correct",
+    "reason": "The system answer provides a reasonable, relevant, and structured approach to troubleshooting a slow internet connection. It covers key steps such as running a speed test, isolating the problem, checking the internet plan, optimizing usage, and contacting the provider. These are standard and effective troubleshooting steps for a slow internet connection. Since there is no reference answer provided, the answer is considered correct as it is a valid and helpful response to the question."
+  },
+  {
+    "id": 30,
+    "q": "How can I prepare a perfect cup of coffee at home?",
+    "ref": null,
+    "type": "open",
+    "qid": "13a4988a93b4",
+    "pages_ok": 4,
+    "pages_failed": 4,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "13a4988a93b4",
+      "type": "fast",
+      "ts": 1793664639.3390393,
+      "answer": "To prepare a perfect cup of coffee at home, you can use the pour over method, which involves using a hand grinder to grind the coffee, placing the grounds in a coffee filter over your cup, and then using a slow dripper to do a pour over [1]. This method allows you to extract the true identity of the coffee bean, providing a balanced flavor with mouthfeel, sweetness, acidity, body, and aftertaste [2]. Alternatively, you can use a French press, which offers a robust and full-bodied cup of coffee, though it requires attention to detail in terms of cleaning, grind size, and turbulence to avoid sediment [2]. Both methods are popular and can yield excellent results when executed properly.",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.wikihow.com/Make-Perfect-Coffee",
+          "title": "How to Make the Perfect Coffee (Step-by-Step with Pictures)"
+        },
+        {
+          "n": 2,
+          "url": "https://coffeechronicler.com/best-way-to-make-coffee-at-home/",
+          "title": "How to Make Coffee at Home: Every Brewing Method Compared"
+        }
+      ],
+      "pages_used": 4,
+      "pages_expected": 8,
+      "llm_seconds": 4.4,
+      "first_token_seconds": 12.7,
+      "total_seconds": 16.2,
+      "client_seconds": 16.2
+    },
+    "final": {
+      "qid": "13a4988a93b4",
+      "type": "final",
+      "ts": 1793664643.4593308,
+      "answer": "To prepare a perfect cup of coffee at home, you can use methods like pour over or French press. For pour over, use a hand grinder to grind the coffee, place the grounds in a coffee filter over your cup, and use a slow dripper to do a pour over [1]. For French press, use a 17-ounce French press, add 56 grams of coarsely ground coffee, stir in 480 grams of cold water, steep for 24 hours at room temperature, then push the plunger down and pour the filtered cold brew into a carafe [2]. Both methods have their unique benefits and can lead to a perfect cup depending on your personal preference [3].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.wikihow.com/Make-Perfect-Coffee",
+          "title": "How to Make the Perfect Coffee (Step-by-Step with Pictures)"
+        },
+        {
+          "n": 2,
+          "url": "https://abc7news.com/how-to-make-cold-brew-cafe-quality-coffee-at-home-best-recipes-refreshing-from/6219984/",
+          "title": "How to make cafe-quality cold brew from home with Mr. Espresso"
+        },
+        {
+          "n": 3,
+          "url": "https://coffeechronicler.com/best-way-to-make-coffee-at-home/",
+          "title": "How to Make Coffee at Home: Every Brewing Method Compared"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 4.1,
+      "first_token_seconds": 16.9,
+      "total_seconds": 20.3,
+      "client_seconds": 20.3
+    },
+    "verdict": "partial",
+    "reason": "The system answer provides some correct methods for making coffee at home (pour over and French press), but it contains inaccuracies. For example, steeping coffee in a French press for 24 hours at room temperature is not standard practice—French press coffee is typically steeped for 3–4 minutes. Additionally, the answer includes specific measurements and equipment (e.g., 17-ounce French press, 56 grams of coffee) without proper context or justification, which may not be universally applicable. While the answer is reasonable and relevant, it contains factual errors that would affect its correctness."
+  },
+  {
+    "id": 31,
+    "q": "Can you recommend some good movies to watch this weekend?",
+    "ref": null,
+    "type": "time-sensitive",
+    "qid": "240c00b0b868",
+    "pages_ok": 6,
+    "pages_failed": 2,
+    "pages_cached": 1,
+    "fast": {
+      "qid": "240c00b0b868",
+      "type": "fast",
+      "ts": 1793664671.5663726,
+      "answer": "This weekend, you can enjoy movies like *The One About Matthew Perry*, *The Gilded Age season four*, and *The Mob* available on Apple TV, Prime Video, and more [1]. For a more unique experience, consider *First Reformed*, which features a standout performance by Ethan Hawke and offers a deeply existential journey [2]. If you're in the mood for something eerie and intense, *Suspiria*, directed by Luca Guadagnino, is a haunting remake of Dario Argento's classic and has been available on Amazon Prime [2].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.purewow.com/entertainment/what-to-watch-this-weekend",
+          "title": "15 Shows and Movies to Watch This Weekend"
+        },
+        {
+          "n": 2,
+          "url": "https://www.wired.com/story/best-movies-you-missed-2018/",
+          "title": "The 13 Best Movies You Didn't See in 2018"
+        }
+      ],
+      "pages_used": 3,
+      "pages_expected": 8,
+      "llm_seconds": 3.8,
+      "first_token_seconds": 13.7,
+      "total_seconds": 16.7,
+      "client_seconds": 16.7
+    },
+    "final": {
+      "qid": "240c00b0b868",
+      "type": "final",
+      "ts": 1793664677.8353229,
+      "answer": "Based on recent recommendations and popular choices, here are some good movies to watch this weekend:\n\n1. **\"Clayface\"** - A unique blend of body horror and revenge thriller, it has gained attention for its distinctive approach within the DCU [5].\n2. **\"Wolfwalkers\"** - An animated film that has been widely appreciated for its storytelling and visuals [1].\n3. **\"Spontaneous\"** - A film that has received positive reviews for its emotional depth and performances [1].\n4. **\"Bacurau\"** - A critically acclaimed film known for its unique narrative and social commentary [1].\n5. **\"Freaky\"** - A fun and well-made film that draws inspiration from the concept of \"Happy Death Day\" [1].\n\nFor those interested in cricket-themed movies, you might enjoy **\"Chak De! India\"**, **\"Dangal\"**, or **\"MS Dhoni: The Untold Story\"** [2]. \n\nThese recommendations cover a variety of genres and styles, ensuring there's something for every taste.",
+      "sources": [
+        {
+          "n": 1,
+          "url": "http://news.ycombinator.com/item?id=27784786",
+          "title": "Hacker News"
+        },
+        {
+          "n": 2,
+          "url": "https://www.techradar.com/news/5-cricket-movies-for-your-weekend-viewing-on-ott-platforms",
+          "title": "5 cricket movies for your weekend viewing on OTT platforms"
+        },
+        {
+          "n": 3,
+          "url": "https://www.purewow.com/entertainment/what-to-watch-this-weekend",
+          "title": "15 Shows and Movies to Watch This Weekend"
+        },
+        {
+          "n": 4,
+          "url": "https://www.wired.com/story/best-movies-you-missed-2018/",
+          "title": "The 13 Best Movies You Didn't See in 2018"
+        },
+        {
+          "n": 5,
+          "url": "https://editorial.rottentomatoes.com/guide/popular-movies/",
+          "title": "30 Most Popular Movies Right Now: What to Watch In Theaters and Streaming"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 6.3,
+      "first_token_seconds": 17.8,
+      "total_seconds": 23.0,
+      "client_seconds": 23.0
+    },
+    "verdict": "correct",
+    "reason": "The system answer provides a reasonable, relevant list of movie recommendations for the weekend. Since there is no reference answer provided, the response is considered correct as long as it is a thoughtful and appropriate suggestion for the question."
+  },
+  {
+    "id": 32,
+    "q": "What are the symptoms of COVID-19?",
+    "ref": "Fever, cough, fatigue, sore throat, shortness of breath, loss of taste or smell, among others",
+    "type": "factual",
+    "qid": "e92ed36d42b4",
+    "pages_ok": 6,
+    "pages_failed": 2,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "e92ed36d42b4",
+      "type": "fast",
+      "ts": 1793664701.673996,
+      "answer": "The sources provided do not mention the symptoms of COVID-19.",
+      "sources": [
+        {
+          "n": 1,
+          "url": "http://cepi.net/CoV",
+          "title": "Coronaviruses"
+        },
+        {
+          "n": 2,
+          "url": "https://www.mijnwoordenboek.nl/vertaal/EN/NL/common",
+          "title": "common"
+        }
+      ],
+      "pages_used": 4,
+      "pages_expected": 8,
+      "llm_seconds": 1.3,
+      "first_token_seconds": 13.8,
+      "total_seconds": 14.2,
+      "client_seconds": 14.2
+    },
+    "final": {
+      "qid": "e92ed36d42b4",
+      "type": "final",
+      "ts": 1793664705.5843928,
+      "answer": "The symptoms of COVID-19 include a wide range of signs, ranging from mild to severe, and may appear 2-14 days after exposure to the virus. Possible symptoms include fever or chills, cough, shortness of breath or difficulty breathing, sore throat, congestion or runny nose, new loss of taste or smell, fatigue, muscle or body aches, headache, nausea or vomiting, and diarrhea [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.cdc.gov/covid/signs-symptoms/index.html",
+          "title": "Symptoms of COVID-19"
+        },
+        {
+          "n": 2,
+          "url": "https://symptoms.webmd.com/",
+          "title": "Symptom Checker with Body from WebMD - Check Your Medical Symptoms"
+        },
+        {
+          "n": 3,
+          "url": "http://cepi.net/CoV",
+          "title": "Coronaviruses"
+        },
+        {
+          "n": 4,
+          "url": "https://ufhealth.org/adam/60/000583",
+          "title": "Common Symptoms During Pregnancy - UF Health"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 3.0,
+      "first_token_seconds": 16.0,
+      "total_seconds": 18.1,
+      "client_seconds": 18.1
+    },
+    "verdict": "correct",
+    "reason": "The system answer accurately lists the symptoms of COVID-19 and includes additional details that are consistent with the reference answer. It also mentions the range of symptom severity and the incubation period, which are reasonable and relevant details."
+  },
+  {
+    "id": 33,
+    "q": "Explain the theory of relativity by Albert Einstein.",
+    "ref": null,
+    "type": "open",
+    "qid": "ec702e9bb8a8",
+    "pages_ok": 6,
+    "pages_failed": 2,
+    "pages_cached": 1,
+    "fast": {
+      "qid": "ec702e9bb8a8",
+      "type": "fast",
+      "ts": 1793664734.8026872,
+      "answer": "Albert Einstein's theory of relativity comprises two theories: special relativity and general relativity. Special relativity, introduced in 1905, posits that the laws of physics are the same for all observers in inertial frames of reference and that the speed of light in a vacuum is constant, regardless of the motion of the light source or observer [1]. This theory leads to phenomena such as time dilation, where time passes more slowly for a fast-moving observer compared to a stationary one, and length contraction, where objects moving at high speeds appear shorter along the direction of motion [2]. \n\nGeneral relativity, published in 1915, extends these principles to include gravity, describing it as the curvature of spacetime caused by mass and energy. This theory explains the behavior of massive objects and has been confirmed by observations such as the prediction and measurement of black hole attributes [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/Theory_of_relativity",
+          "title": "Theory of relativity - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "http://www.space.com/28738-einstein-theory-of-relativity-explained-infgraphic.html",
+          "title": "Einstein's Theory of Relativity Explained (Infographic)"
+        }
+      ],
+      "pages_used": 3,
+      "pages_expected": 8,
+      "llm_seconds": 6.6,
+      "first_token_seconds": 14.5,
+      "total_seconds": 19.6,
+      "client_seconds": 19.6
+    },
+    "final": {
+      "qid": "ec702e9bb8a8",
+      "type": "final",
+      "ts": 1793664739.4736805,
+      "answer": "The theory of relativity, developed by Albert Einstein, consists of two parts: special relativity and general relativity. Special relativity, introduced in 1905, focuses on the behavior of objects moving at constant speeds and establishes that the laws of physics are the same for all non-accelerating observers, with the speed of light being constant in all inertial frames [1]. This theory also introduces phenomena such as time dilation and length contraction [3]. General relativity, published in 1915, extends these principles to include gravity, describing it as the curvature of spacetime caused by mass and energy [1]. This theory provides a unified description of gravity as a geometric property of spacetime, where the curvature is determined by the distribution of mass and energy, as described by the Einstein field equations [4].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/Theory_of_relativity",
+          "title": "Theory of relativity - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "http://www.gutenberg.org/ebooks/66944",
+          "title": "The Principle of Relativity by Albert Einstein and H. Minkowski"
+        },
+        {
+          "n": 3,
+          "url": "http://www.space.com/28738-einstein-theory-of-relativity-explained-infgraphic.html",
+          "title": "Einstein's Theory of Relativity Explained (Infographic)"
+        },
+        {
+          "n": 4,
+          "url": "https://en.wikipedia.org/wiki/General_relativity",
+          "title": "General relativity - Wikipedia"
+        },
+        {
+          "n": 5,
+          "url": "https://en.wikipedia.org/wiki/Albert_Einstein",
+          "title": "Albert Einstein - Wikipedia"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 4.7,
+      "first_token_seconds": 20.3,
+      "total_seconds": 24.3,
+      "client_seconds": 24.3
+    },
+    "verdict": "correct",
+    "reason": "The system answer accurately explains the theory of relativity as developed by Albert Einstein, distinguishing between special and general relativity, their key concepts, and their historical context. It provides a clear and concise overview that is consistent with standard scientific understanding and would be considered a correct and reasonable answer to an open-ended question about Einstein's theory of relativity."
+  },
+  {
+    "id": 34,
+    "q": "What's the process for applying for a student visa to the United States?",
+    "ref": "Get accepted by a SEVP school and receive Form I-20, pay the SEVIS fee, complete the DS-160, pay the visa fee and attend a consular interview (F-1 visa)",
+    "type": "factual",
+    "qid": "d530fae27dad",
+    "pages_ok": 4,
+    "pages_failed": 4,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "d530fae27dad",
+      "type": "fast",
+      "ts": 1793664770.683395,
+      "answer": "The process for applying for a student visa to the United States involves several key steps. First, you need to research schools and choose a program that is certified by the Student and Exchange Visitor Program (SEVP) [1]. Next, you should apply to the school and get accepted. Once accepted, you will need to apply for a student visa, which can be an F-1, M-1, or J-1 visa, depending on your educational goals [1]. \n\nTo apply for the visa, you should visit the Department of State’s website for detailed information on eligibility, how to apply, application fees, and appointment wait times [1]. Additionally, you may need to attend an interview at the U.S. embassy or consulate in your home country. \n\nAfter obtaining the visa, you will need to prepare for your arrival in the U.S., including arranging housing and understanding the requirements for maintaining your visa status [1]. If you have an F-1, M-1, or J-1 visa, you may be eligible to work in the U.S., but this is typically limited to on-campus jobs or those related to your studies [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://usa.gov/student-visa",
+          "title": "Get a student visa to study in the U.S. | USAGov"
+        },
+        {
+          "n": 2,
+          "url": "https://blog.ycombinator.com/us-visas/",
+          "title": "US Visas | Y Combinator"
+        }
+      ],
+      "pages_used": 3,
+      "pages_expected": 8,
+      "llm_seconds": 6.2,
+      "first_token_seconds": 15.6,
+      "total_seconds": 21.0,
+      "client_seconds": 21.0
+    },
+    "final": {
+      "qid": "d530fae27dad",
+      "type": "final",
+      "ts": 1793664776.4920022,
+      "answer": "The process for applying for a student visa to the United States involves several key steps. First, you must research schools and choose a certified institution by the Student and Exchange Visitor Program (SEVP) [1]. Next, you need to apply for admission to the school and obtain a Certificate of Eligibility for Nonimmigrant Student Status (Form I-20) [1]. \n\nOnce you have the I-20 form, you can apply for an F-1, M-1, or J-1 visa through the U.S. Department of State [1]. This involves checking your eligibility, paying the application fee, and scheduling an interview at the nearest U.S. embassy or consulate [1]. \n\nFor F-1 and M-1 visa holders, you may be eligible to work on-campus or in jobs related to your studies, while J-1 visa holders must contact their responsible officer to determine work eligibility [1]. \n\nFor more detailed information, visit the Department of State’s website [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.usa.gov/student-visa",
+          "title": "Get a student visa to study in the U.S. | USAGov"
+        },
+        {
+          "n": 2,
+          "url": "https://usa.gov/student-visa",
+          "title": "Get a student visa to study in the U.S. | USAGov"
+        },
+        {
+          "n": 3,
+          "url": "http://www.bristol.ac.uk/directory/visas/tier-4/apply/",
+          "title": "Apply for a Student visa | Directory of Professional Services | University of Bristol"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 5.8,
+      "first_token_seconds": 22.0,
+      "total_seconds": 26.8,
+      "client_seconds": 26.8
+    },
+    "verdict": "partial",
+    "reason": "The system answer provides a general overview of the student visa process but includes some extra details not mentioned in the reference answer. Specifically, it adds information about work eligibility for F-1 and M-1 visa holders and J-1 visa holders, which is not part of the reference answer. While this extra information is not incorrect, it makes the answer partially divergent from the reference. The reference focuses on the core steps: getting accepted by a SEVP school, receiving Form I-20, paying the SEVIS fee, completing the DS-160, paying the visa fee, and attending a consular interview. The system answer includes additional details that are not in the reference, which makes it a 'partial' grade rather than 'correct'."
+  },
+  {
+    "id": 35,
+    "q": "Who are the major characters in the movie series \"Star Wars\"?",
+    "ref": "Luke Skywalker, Darth Vader/Anakin Skywalker, Princess Leia, Han Solo, Obi-Wan Kenobi, Yoda, etc.",
+    "type": "factual",
+    "qid": "071d80c2804b",
+    "pages_ok": 5,
+    "pages_failed": 3,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "071d80c2804b",
+      "type": "fast",
+      "ts": 1793664804.4328208,
+      "answer": "The major characters in the *Star Wars* movie series include Luke Skywalker, Princess Leia Organa, Darth Vader, Emperor Palpatine, Han Solo, Chewbacca, Yoda, Obi-Wan Kenobi, and Lando Calrissian [1]. Additionally, notable characters from later films include Rey, Kylo Ren, Poe Dameron, and Rose Tico [1]. Other significant characters include Admiral Piett from the original trilogy [2].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.bustle.com/p/star-wars-infamous-diversity-problem-is-summed-up-in-this-one-cutting-tweet-8133415",
+          "title": "‘Star Wars’ Infamous Diversity Problem Is Summed Up In This One Cutting Tweet"
+        },
+        {
+          "n": 2,
+          "url": "https://www.timeout.com/film/star-wars-characters-list",
+          "title": "The 62 Best Star Wars Characters"
+        }
+      ],
+      "pages_used": 3,
+      "pages_expected": 8,
+      "llm_seconds": 3.1,
+      "first_token_seconds": 13.2,
+      "total_seconds": 15.8,
+      "client_seconds": 15.8
+    },
+    "final": {
+      "qid": "071d80c2804b",
+      "type": "final",
+      "ts": 1793664807.5333607,
+      "answer": "The major characters in the *Star Wars* movie series include Luke Skywalker, Darth Vader, Princess Leia, Han Solo, and Yoda from the original trilogy. In the newer films, key characters include Rey, Finn, Poe Dameron, and Kylo Ren [1]. Additionally, characters like Lando Calrissian and Mace Windu are also considered major due to their significant roles in the saga [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.bustle.com/p/star-wars-infamous-diversity-problem-is-summed-up-in-this-one-cutting-tweet-8133415",
+          "title": "‘Star Wars’ Infamous Diversity Problem Is Summed Up In This One Cutting Tweet"
+        },
+        {
+          "n": 2,
+          "url": "http://www.theverge.com/film",
+          "title": "Film"
+        },
+        {
+          "n": 3,
+          "url": "https://myanimelist.net/news/56938842",
+          "title": "Movie Series 'King of Prism: Shiny Seven Stars' Announces Minor Cast Members, TV Broadcast Information [Update 3/7]"
+        },
+        {
+          "n": 4,
+          "url": "https://www.timeout.com/film/star-wars-characters-list",
+          "title": "The 62 Best Star Wars Characters"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 2.8,
+      "first_token_seconds": 16.9,
+      "total_seconds": 18.9,
+      "client_seconds": 18.9
+    },
+    "verdict": "correct",
+    "reason": "The system answer correctly identifies the major characters from both the original trilogy and newer films, including those from the reference answer (Luke Skywalker, Darth Vader, Princess Leia, Han Solo, Yoda). It also adds relevant characters from later films (Rey, Finn, Poe Dameron, Kylo Ren) and mentions others (Lando Calrissian, Mace Windu) who are considered major in the saga. The answer is consistent with the reference and includes appropriate detail without contradicting it."
+  },
+  {
+    "id": 36,
+    "q": "What is the recipe for a classic margarita cocktail?",
+    "ref": "Tequila, lime juice and orange liqueur (triple sec/Cointreau), shaken with ice, often served with a salted rim",
+    "type": "factual",
+    "qid": "8de830858689",
+    "pages_ok": 4,
+    "pages_failed": 4,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "8de830858689",
+      "type": "fast",
+      "ts": 1793664832.3630788,
+      "answer": "The provided sources do not contain information about the recipe for a classic margarita cocktail.",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://energydrink-us.redbull.com/en/ingredients-red-bull",
+          "title": "Red Bull Energy Drink: Ingredients"
+        },
+        {
+          "n": 2,
+          "url": "https://play.google.com/store/apps/details?id=nl.topicus.somtoday.leerling&hl=nl",
+          "title": "Somtoday Leerling & Ouder - Apps op Google Play"
+        }
+      ],
+      "pages_used": 5,
+      "pages_expected": 8,
+      "llm_seconds": 1.5,
+      "first_token_seconds": 13.5,
+      "total_seconds": 13.9,
+      "client_seconds": 13.9
+    },
+    "final": {
+      "qid": "8de830858689",
+      "type": "final",
+      "ts": 1793664835.3993428,
+      "answer": "The classic margarita cocktail recipe includes ¾ cup lime juice, ¾ cup tequila, and ½ cup orange-flavor liqueur. To prepare, rim glasses with salt by moistening the rim with lime juice and then dipping into coarse salt. Shake the ingredients with ice until slushy and pour into the salt-rimmed glasses, garnishing with lime slices [2].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.mashed.com/915453/frozen-margarita-cocktail-recipe/",
+          "title": "Frozen Margarita Cocktail Recipe - Mashed"
+        },
+        {
+          "n": 2,
+          "url": "http://www.astray.com/recipes/?show=Classic+margarita",
+          "title": "Classic margarita"
+        },
+        {
+          "n": 3,
+          "url": "https://energydrink-us.redbull.com/en/ingredients-red-bull",
+          "title": "Red Bull Energy Drink: Ingredients"
+        },
+        {
+          "n": 4,
+          "url": "https://play.google.com/store/apps/details?id=nl.topicus.somtoday.leerling&hl=nl",
+          "title": "Somtoday Leerling & Ouder - Apps op Google Play"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 3.0,
+      "first_token_seconds": 15.1,
+      "total_seconds": 17.0,
+      "client_seconds": 17.0
+    },
+    "verdict": "correct",
+    "reason": "The system answer correctly describes the classic margarita cocktail recipe, including the key ingredients (tequila, lime juice, orange liqueur) and preparation steps (rimming glasses with salt, shaking with ice). It also provides additional details like the garnish (lime slices), which is consistent with the reference answer and common practice. The proportions provided (¾ cup lime juice, ¾ cup tequila, ½ cup orange liqueur) are reasonable and commonly used in margarita recipes."
+  },
+  {
+    "id": 37,
+    "q": "What are some tips for taking great photographs with a smartphone?",
+    "ref": null,
+    "type": "open",
+    "qid": "1b038c150cad",
+    "pages_ok": 7,
+    "pages_failed": 1,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "1b038c150cad",
+      "type": "fast",
+      "ts": 1793664862.069843,
+      "answer": "Some tips for taking great photographs with a smartphone include considering composition, lighting, and exposure settings [1]. You should also think about the capabilities of your specific smartphone model and consider purchasing accessories if needed [1]. Additionally, experimenting with different modes and settings on your phone can help you achieve better results [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://digital-photography-school.com/mobile-phone-photography-beginner-tips/",
+          "title": "Smartphone Photography: The Essential Guide (+ 15 Tips)"
+        }
+      ],
+      "pages_used": 2,
+      "pages_expected": 8,
+      "llm_seconds": 2.3,
+      "first_token_seconds": 14.2,
+      "total_seconds": 15.8,
+      "client_seconds": 15.8
+    },
+    "final": {
+      "qid": "1b038c150cad",
+      "type": "final",
+      "ts": 1793664866.9884849,
+      "answer": "Here are some tips for taking great photographs with a smartphone:\n\n1. **Use the Rule of Thirds**: This composition technique can transform a mundane snapshot into a masterpiece by placing the subject off-center [2].\n2. **Consider Lighting and Exposure Settings**: Proper lighting and exposure settings can significantly enhance the quality of your smartphone photos [1].\n3. **Experiment with Different Angles and Perspectives**: Getting close to the subject or using different angles can create more dynamic and interesting images [4].\n4. **Utilize Smartphone Features**: Take advantage of features like Portrait mode to create shallow depth-of-field effects and multiple lenses for different compositions [4].\n5. **Use Apps for Enhanced Photography**: There are numerous apps available that can help you take and edit stunning photos with your smartphone [3].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://digital-photography-school.com/mobile-phone-photography-beginner-tips/",
+          "title": "Smartphone Photography: The Essential Guide (+ 15 Tips)"
+        },
+        {
+          "n": 2,
+          "url": "https://www.androidauthority.com/smartphone-photography-tips-1023241/",
+          "title": "8 smartphone photography tips guaranteed to produce instant results"
+        },
+        {
+          "n": 3,
+          "url": "https://digital-photography-school.com/tips-better-smartphone-photography/",
+          "title": "Tips for Better Smartphone Photography"
+        },
+        {
+          "n": 4,
+          "url": "https://www.techradar.com/news/how-to-take-professional-food-photos-with-your-iphone-or-android-phone",
+          "title": "How to take professional food photos with your iPhone or Android phone"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 4.4,
+      "first_token_seconds": 17.1,
+      "total_seconds": 20.7,
+      "client_seconds": 20.7
+    },
+    "verdict": "correct",
+    "reason": "The system answer provides a reasonable, relevant list of tips for taking great photographs with a smartphone. While there is no reference answer provided, the advice aligns with general photography best practices and is appropriate for the question."
+  },
+  {
+    "id": 38,
+    "q": "Where is Newtown Township?",
+    "ref": "Ambiguous: Newtown Township, Delaware County, Pennsylvania (the thesis' intended answer) and Newtown Township, Bucks County, Pennsylvania (also others). Correct if it gives a valid Newtown Township location; better if it notes the ambiguity",
+    "type": "factual",
+    "qid": "edd742f9882e",
+    "pages_ok": 5,
+    "pages_failed": 3,
+    "pages_cached": 3,
+    "fast": {
+      "qid": "edd742f9882e",
+      "type": "fast",
+      "ts": 1793664890.3814652,
+      "answer": "Newtown Township is located in Bucks County, Pennsylvania, United States [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/Newtown_Township,_Bucks_County,_Pennsylvania",
+          "title": "Newtown Township, Bucks County, Pennsylvania - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://www.newtowntownship.org/185/Township-Maps",
+          "title": "Township Maps"
+        }
+      ],
+      "pages_used": 3,
+      "pages_expected": 8,
+      "llm_seconds": 1.5,
+      "first_token_seconds": 13.4,
+      "total_seconds": 13.8,
+      "client_seconds": 13.8
+    },
+    "final": {
+      "qid": "edd742f9882e",
+      "type": "final",
+      "ts": 1793664893.3802173,
+      "answer": "Newtown Township is located in Livingston County, Illinois [1], and also in Bucks County, Pennsylvania [2].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://mapcarta.com/22153056",
+          "title": "Township of Newtown"
+        },
+        {
+          "n": 2,
+          "url": "https://en.wikipedia.org/wiki/Newtown_Township,_Bucks_County,_Pennsylvania",
+          "title": "Newtown Township, Bucks County, Pennsylvania - Wikipedia"
+        },
+        {
+          "n": 3,
+          "url": "https://www.newtowntownship.org/185/Township-Maps",
+          "title": "Township Maps"
+        },
+        {
+          "n": 4,
+          "url": "https://www.newtowntownship.org/",
+          "title": "CALENDAR & NEWS"
+        },
+        {
+          "n": 5,
+          "url": "https://newtownpa.gov/",
+          "title": "NEWTOWN AREA JOINT ZONING COUNCIL"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 1.7,
+      "first_token_seconds": 16.2,
+      "total_seconds": 16.8,
+      "client_seconds": 16.8
+    },
+    "verdict": "incorrect",
+    "reason": "The system answer incorrectly states that Newtown Township is located in Livingston County, Illinois. There is no Newtown Township in Livingston County, Illinois. The reference answer correctly notes the ambiguity between Newtown Township in Delaware County, Pennsylvania, and Newtown Township in Bucks County, Pennsylvania. The system answer is therefore factually incorrect."
+  },
+  {
+    "id": 39,
+    "q": "What is The Dashuigou Formation?",
+    "ref": "A geological formation (stratigraphic rock unit) in China",
+    "type": "factual",
+    "qid": "8364dd058bf9",
+    "pages_ok": 4,
+    "pages_failed": 4,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "8364dd058bf9",
+      "type": "fast",
+      "ts": 1793664922.6509469,
+      "answer": "The Dashuigou Formation is a geological formation in Inner Mongolia, north China, whose strata date back to the Early Cretaceous period [2]. It is primarily composed of clastic sedimentary rocks deposited in an alluvial plain environment, including conglomerates, pebbly sandstones, cross-bedded sandstones, siltstones, mudstones, and marls [1]. These rocks reflect fluvial to lacustrine depositional environments and are part of a broader Lower Cretaceous clastic wedge across the Mongolian Plateau [1]. The formation is formally defined as a lithostratigraphic unit by the Bureau of Geology and Mineral Resources of the Nei Mongol Autonomous Region (1991) [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://grokipedia.com/page/dashuigou_formation",
+          "title": "Dashuigou Formation — Grokipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://en.wikipedia.org/wiki/Dashuigou_Formation",
+          "title": "Dashuigou Formation - Wikipedia"
+        }
+      ],
+      "pages_used": 3,
+      "pages_expected": 8,
+      "llm_seconds": 4.3,
+      "first_token_seconds": 15.5,
+      "total_seconds": 19.3,
+      "client_seconds": 19.3
+    },
+    "final": {
+      "qid": "8364dd058bf9",
+      "type": "final",
+      "ts": 1793664927.824756,
+      "answer": "The Dashuigou Formation is a geological formation in Inner Mongolia, north China, dating back to the Early Cretaceous period [2]. It is primarily composed of clastic sedimentary rocks, including conglomerates, pebbly sandstones, cross-bedded sandstones, siltstones, mudstones, and marls, deposited in an alluvial plain environment [1]. The formation is part of a broader Lower Cretaceous clastic wedge across the Mongolian Plateau [1]. It is formally defined as a lithostratigraphic unit by the Bureau of Geology and Mineral Resources of the Nei Mongol Autonomous Region (1991) [1]. The type section is located at Dashuigou, Puxi area, Zhushan County, Hubei Province, and was named by the Hubei Regional Geological Survey Party in 1975 [3]. The formation's thickness ranges from several meters to over 120 meters, with the maximum thickness observed in the eastern part [3].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://grokipedia.com/page/dashuigou_formation",
+          "title": "Dashuigou Formation — Grokipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://en.wikipedia.org/wiki/Dashuigou_Formation",
+          "title": "Dashuigou Formation - Wikipedia"
+        },
+        {
+          "n": 3,
+          "url": "https://chinalex.geolex.org/formations/Dashuigou%20Fm",
+          "title": "Dashuigou Fm"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 5.2,
+      "first_token_seconds": 19.5,
+      "total_seconds": 24.4,
+      "client_seconds": 24.4
+    },
+    "verdict": "partial",
+    "reason": "The system answer contains some correct information about the Dashuigou Formation, such as its geological nature, location in Inner Mongolia, and its age (Early Cretaceous). However, it contradicts the reference answer, which states that the Dashuigou Formation is a geological formation in **China** (a general statement), while the system answer specifies **Inner Mongolia, north China**, which is more specific than the reference. Additionally, the system answer incorrectly places the **type section** in **Hubei Province**, which is inconsistent with the reference answer (which does not specify the location of the type section). Therefore, the answer contains both correct and incorrect information, making it a **partial** answer."
+  },
+  {
+    "id": 40,
+    "q": "Who is Evangelia Ritzaleou?",
+    "ref": null,
+    "type": "obscure",
+    "qid": "5500cc4bbcc0",
+    "pages_ok": 6,
+    "pages_failed": 2,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "5500cc4bbcc0",
+      "type": "fast",
+      "ts": 1793664954.2161887,
+      "answer": "The provided sources do not mention anyone named Evangelia Ritzaleou.",
+      "sources": [
+        {
+          "n": 1,
+          "url": "http://en.wikipedia.org/wiki/politician",
+          "title": "Politician - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://forum.literotica.com/threads/the-ripened-black-slave-historical-open-for-master.441725/",
+          "title": "The Ripened Black Slave (Historical, Open for Master)"
+        }
+      ],
+      "pages_used": 3,
+      "pages_expected": 8,
+      "llm_seconds": 1.3,
+      "first_token_seconds": 14.0,
+      "total_seconds": 14.5,
+      "client_seconds": 14.5
+    },
+    "final": {
+      "qid": "5500cc4bbcc0",
+      "type": "final",
+      "ts": 1793664957.923504,
+      "answer": "Evangelia Ritzaleou is an award-winning high school teacher from Drama, Greece, recognized for her project, “School Reading and Creative Writing Club.” She has led this initiative for 15 years, fostering confidence and critical thinking in students while expanding her school's library from 20 to 530 books [1]. Additionally, Evangelia is a Greek tutor with expertise in teaching Greek to Spanish-speaking adults and children, offering personalized lessons that incorporate students' interests such as songs, movies, and books [2].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.judithsreadingroom.org/board-option-award-evangelia-ritzaleou-2023-freedom-through-literacy/",
+          "title": "Board Option Award-Evangelia Ritzaleou - 2023 Freedom Through Literacy - Judith's Reading Room"
+        },
+        {
+          "n": 2,
+          "url": "https://preply.com/en/tutor/2427562",
+          "title": "Evangelia E., English and Spanish-speaking tutor who can help you learn Greek | Learn with Greek Tutors"
+        },
+        {
+          "n": 3,
+          "url": "http://en.wikipedia.org/wiki/politician",
+          "title": "Politician - Wikipedia"
+        },
+        {
+          "n": 4,
+          "url": "https://forum.literotica.com/threads/the-ripened-black-slave-historical-open-for-master.441725/",
+          "title": "The Ripened Black Slave (Historical, Open for Master)"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 3.6,
+      "first_token_seconds": 15.6,
+      "total_seconds": 18.2,
+      "client_seconds": 18.2
+    },
+    "verdict": "correct",
+    "reason": "The system answer provides a reasonable, relevant, and accurate response to the open question about Evangelia Ritzaleou. It describes her as an award-winning high school teacher from Drama, Greece, and details her work with the 'School Reading and Creative Writing Club' and her tutoring in Greek. Since there is no reference answer provided, the system answer is considered correct as it offers a factual, well-structured, and informative response to the question."
+  },
+  {
+    "id": 41,
+    "q": "Where was the first Grand Prix victory of Jenson Button?",
+    "ref": "The 2006 Hungarian Grand Prix at the Hungaroring, Hungary",
+    "type": "factual",
+    "qid": "1b4dc24f078c",
+    "pages_ok": 5,
+    "pages_failed": 3,
+    "pages_cached": 5,
+    "fast": {
+      "qid": "1b4dc24f078c",
+      "type": "fast",
+      "ts": 1793664983.3585165,
+      "answer": "The first Grand Prix victory of Jenson Button was at the Hungaroring in Mogyoród, Pest, Hungary, during the 2006 Hungarian Grand Prix [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/2006_Hungarian_Grand_Prix",
+          "title": "2006 Hungarian Grand Prix - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://www.thedrive.com/accelerator/20130/daniel-ricciardo-rampages-to-chinese-grand-prix-victory",
+          "title": "Daniel Ricciardo Rampages to Chinese Grand Prix Victory"
+        }
+      ],
+      "pages_used": 4,
+      "pages_expected": 8,
+      "llm_seconds": 2.0,
+      "first_token_seconds": 13.8,
+      "total_seconds": 14.7,
+      "client_seconds": 14.7
+    },
+    "final": {
+      "qid": "1b4dc24f078c",
+      "type": "final",
+      "ts": 1793664985.3803847,
+      "answer": "The first Grand Prix victory of Jenson Button was at the 2006 Hungarian Grand Prix, which took place at the Hungaroring in Mogyoród, Pest, Hungary [2][3].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://rubenerd.com/jenson-button-wins/",
+          "title": "Rubenerd: Jenson Button Wins!"
+        },
+        {
+          "n": 2,
+          "url": "https://en.wikipedia.org/wiki/Jenson_Button",
+          "title": "Jenson Button - Wikipedia"
+        },
+        {
+          "n": 3,
+          "url": "https://en.wikipedia.org/wiki/2006_Hungarian_Grand_Prix",
+          "title": "2006 Hungarian Grand Prix - Wikipedia"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 1.7,
+      "first_token_seconds": 15.7,
+      "total_seconds": 16.7,
+      "client_seconds": 16.7
+    },
+    "verdict": "correct",
+    "reason": "The system answer correctly identifies the 2006 Hungarian Grand Prix as Jenson Button's first Grand Prix victory, consistent with the reference answer. It also adds relevant detail about the location (Hungaroring in Mogyoród, Pest, Hungary), which is accurate and does not contradict the reference."
+  },
+  {
+    "id": 42,
+    "q": "When did the first extension of the Athens Tram take place?",
+    "ref": "2007 (extension to Asklepieio Voulas, November 2007)",
+    "type": "factual",
+    "qid": "763c4fd015b0",
+    "pages_ok": 7,
+    "pages_failed": 1,
+    "pages_cached": 1,
+    "fast": {
+      "qid": "763c4fd015b0",
+      "type": "fast",
+      "ts": 1793665011.2903666,
+      "answer": "The provided sources do not contain information about the first extension of the Athens Tram.",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/Year",
+          "title": "Year - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://www.didkleding.nl/",
+          "title": "Nieuwe collectie"
+        }
+      ],
+      "pages_used": 3,
+      "pages_expected": 8,
+      "llm_seconds": 2.5,
+      "first_token_seconds": 15.3,
+      "total_seconds": 15.9,
+      "client_seconds": 15.9
+    },
+    "final": {
+      "qid": "763c4fd015b0",
+      "type": "final",
+      "ts": 1793665014.8991032,
+      "answer": "The first extension of the Athens Tram took place on 15 November 2007 [2].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://grokipedia.com/page/trams_in_athens",
+          "title": "Trams in Athens — Grokipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://en.wikipedia.org/wiki/Athens_Tram",
+          "title": "Athens Tram - Wikipedia"
+        },
+        {
+          "n": 3,
+          "url": "https://www.emetro.gr/?page_id=4089&lang=en",
+          "title": "Construction of TRAMWAY extensions"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 1.7,
+      "first_token_seconds": 18.9,
+      "total_seconds": 19.5,
+      "client_seconds": 19.5
+    },
+    "verdict": "correct",
+    "reason": "The system answer correctly states that the first extension of the Athens Tram took place on 15 November 2007, which aligns with the reference answer (November 2007). The extra detail of the date is consistent with the reference and does not contradict it."
+  },
+  {
+    "id": 43,
+    "q": "When did Socrates die?",
+    "ref": "399 BC",
+    "type": "factual",
+    "qid": "331ce28a6c18",
+    "pages_ok": 5,
+    "pages_failed": 3,
+    "pages_cached": 2,
+    "fast": {
+      "qid": "331ce28a6c18",
+      "type": "fast",
+      "ts": 1793665037.4879434,
+      "answer": "Socrates died in 399 BC [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/Socrates",
+          "title": "Socrates - Wikipedia"
+        }
+      ],
+      "pages_used": 2,
+      "pages_expected": 8,
+      "llm_seconds": 1.1,
+      "first_token_seconds": 12.3,
+      "total_seconds": 12.6,
+      "client_seconds": 12.7
+    },
+    "final": {
+      "qid": "331ce28a6c18",
+      "type": "final",
+      "ts": 1793665040.9095113,
+      "answer": "Socrates died in 399 BC [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/Socrates",
+          "title": "Socrates - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://nl.wikipedia.org/wiki/Socrates_(filosoof)",
+          "title": "Socrates (filosoof) - Wikipedia"
+        },
+        {
+          "n": 3,
+          "url": "https://www.thecollector.com/how-did-socrates-die/",
+          "title": "How Did Socrates Die? | TheCollector"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 1.2,
+      "first_token_seconds": 15.8,
+      "total_seconds": 16.0,
+      "client_seconds": 16.1
+    },
+    "verdict": "correct",
+    "reason": "The system answer correctly states that Socrates died in 399 BC, which matches the reference answer. The inclusion of the citation [1] is not necessary for correctness but does not detract from it."
+  },
+  {
+    "id": 44,
+    "q": "Which is the most populous country.",
+    "ref": "India (overtook China in 2023)",
+    "type": "factual",
+    "qid": "94b830565d3a",
+    "pages_ok": 7,
+    "pages_failed": 1,
+    "pages_cached": 2,
+    "fast": {
+      "qid": "94b830565d3a",
+      "type": "fast",
+      "ts": 1793665064.0434952,
+      "answer": "The most populous country is India, according to the United Nations [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://cnn.it/4aWBjgI",
+          "title": "Finding ‘Waldo’ in the world’s most populous country"
+        },
+        {
+          "n": 2,
+          "url": "https://most-wanted.com/",
+          "title": "Most Wanted | Kleding, schoenen, sieraden & accessoires"
+        }
+      ],
+      "pages_used": 2,
+      "pages_expected": 8,
+      "llm_seconds": 1.2,
+      "first_token_seconds": 12.9,
+      "total_seconds": 13.6,
+      "client_seconds": 13.6
+    },
+    "final": {
+      "qid": "94b830565d3a",
+      "type": "final",
+      "ts": 1793665069.292489,
+      "answer": "As of 2026, India is the most populous country, with an estimated population of 1.5 billion people [3].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://worldpopulationreview.com/countries",
+          "title": "Total Population by Country 2026"
+        },
+        {
+          "n": 2,
+          "url": "https://www.statista.com/statistics/262879/countries-with-the-largest-population/",
+          "title": "Countries with the largest population 2025 | Statista"
+        },
+        {
+          "n": 3,
+          "url": "https://worldpopulationreview.com/",
+          "title": "Current World Population: 8,298,979,488"
+        },
+        {
+          "n": 4,
+          "url": "https://en.wikipedia.org/wiki/Country",
+          "title": "Country - Wikipedia"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 2.2,
+      "first_token_seconds": 18.1,
+      "total_seconds": 18.8,
+      "client_seconds": 18.9
+    },
+    "verdict": "correct",
+    "reason": "The system answer correctly identifies India as the most populous country as of 2026, consistent with the reference answer which states that India overtook China in 2023. The inclusion of an estimated population figure (1.5 billion) is reasonable and does not contradict the reference."
+  },
+  {
+    "id": 45,
+    "q": "How much is 1+1?",
+    "ref": "2",
+    "type": "factual",
+    "qid": "be48e9460f45",
+    "pages_ok": 4,
+    "pages_failed": 4,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "be48e9460f45",
+      "type": "fast",
+      "ts": 1793665095.3732014,
+      "answer": "The answer to 1+1 is 2. This is a basic arithmetic operation and does not require reference to any of the provided sources.",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.xe.com/currencyconverter/convert/?Amount=1&From=USD&To=TRY",
+          "title": "1 USD to TRY - Convert US Dollars to Turkish Lira"
+        },
+        {
+          "n": 2,
+          "url": "https://resultlaboratorium.nl/",
+          "title": "Result Laboratorium - Biedt resultaat"
+        }
+      ],
+      "pages_used": 6,
+      "pages_expected": 8,
+      "llm_seconds": 1.4,
+      "first_token_seconds": 15.4,
+      "total_seconds": 16.1,
+      "client_seconds": 16.1
+    },
+    "final": {
+      "qid": "be48e9460f45",
+      "type": "final",
+      "ts": 1793665096.798102,
+      "answer": "1+1 equals 2 [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://nl.wikipedia.org/wiki/1_(getal)",
+          "title": "1 (getal) - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://www.xe.com/currencyconverter/convert/?Amount=1&From=USD&To=TRY",
+          "title": "1 USD to TRY - Convert US Dollars to Turkish Lira"
+        },
+        {
+          "n": 3,
+          "url": "https://resultlaboratorium.nl/",
+          "title": "Result Laboratorium - Biedt resultaat"
+        },
+        {
+          "n": 4,
+          "url": "https://www.npr.org/transcripts/99673993",
+          "title": "Much Unresolved After Fragile Hamas-Israel Truce"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 1.4,
+      "first_token_seconds": 17.3,
+      "total_seconds": 17.6,
+      "client_seconds": 17.6
+    },
+    "verdict": "correct",
+    "reason": "The system answer correctly states that 1+1 equals 2, which is consistent with the reference answer of 2."
+  },
+  {
+    "id": 46,
+    "q": "Which is the meaning of life?",
+    "ref": null,
+    "type": "open",
+    "qid": "0b7cb8c8c27e",
+    "pages_ok": 6,
+    "pages_failed": 2,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "0b7cb8c8c27e",
+      "type": "fast",
+      "ts": 1793665123.6540904,
+      "answer": "The meaning of life is that which we choose to give it [1]. This perspective suggests that even if life does not have a pre-determined purpose, it can still be given meaning through our choices and actions [1]. Some argue that meaning might come from an eternal afterlife, but this is not necessarily clear or certain [1]. Ultimately, the question of life's meaning remains a deeply personal and philosophical inquiry.",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.psychologytoday.com/us/blog/hide-and-seek/201803/what-is-the-meaning-of-life",
+          "title": "What Is the Meaning of Life?"
+        },
+        {
+          "n": 2,
+          "url": "http://www.salon.com/books/review/2007/06/14/eagleton",
+          "title": "What is the meaning of life?"
+        }
+      ],
+      "pages_used": 3,
+      "pages_expected": 8,
+      "llm_seconds": 4.7,
+      "first_token_seconds": 15.4,
+      "total_seconds": 17.7,
+      "client_seconds": 17.7
+    },
+    "final": {
+      "qid": "0b7cb8c8c27e",
+      "type": "final",
+      "ts": 1793665127.2367845,
+      "answer": "The meaning of life is a concept that varies across different cultural, philosophical, and personal perspectives. Some believe it is determined by a higher power or divine purpose, while others argue that individuals assign meaning to their own lives [3]. There is no consensus on the specifics of such a concept, and the search for life's meaning has produced much philosophical, scientific, theological, and metaphysical speculation throughout history [2]. The question of the meaning of life is often seen as a deeply personal and subjective inquiry, with some suggesting that life's meaning is something we choose to give it [3].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://plato.stanford.edu/entries/life-meaning/",
+          "title": "The Meaning of Life"
+        },
+        {
+          "n": 2,
+          "url": "https://en.wikipedia.org/wiki/Meaning_of_life",
+          "title": "Meaning of life - Wikipedia"
+        },
+        {
+          "n": 3,
+          "url": "https://www.psychologytoday.com/us/blog/hide-and-seek/201803/what-is-the-meaning-of-life",
+          "title": "What Is the Meaning of Life?"
+        },
+        {
+          "n": 4,
+          "url": "http://www.salon.com/books/review/2007/06/14/eagleton",
+          "title": "What is the meaning of life?"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 3.6,
+      "first_token_seconds": 18.5,
+      "total_seconds": 21.3,
+      "client_seconds": 21.3
+    },
+    "verdict": "correct",
+    "reason": "The system answer provides a reasonable, relevant, and balanced response to the open-ended question about the meaning of life. It acknowledges the diversity of perspectives across cultural, philosophical, and personal viewpoints, and does not attempt to provide a definitive answer. This is appropriate for an open question with no authoritative reference answer."
+  },
+  {
+    "id": 47,
+    "q": "Describe the earth's shape.",
+    "ref": "Roughly a sphere, more precisely an oblate spheroid (flattened at the poles, bulging at the equator)",
+    "type": "factual",
+    "qid": "fbbef4a59291",
+    "pages_ok": 4,
+    "pages_failed": 4,
+    "pages_cached": 0,
+    "fast": {
+      "qid": "fbbef4a59291",
+      "type": "fast",
+      "ts": 1793665155.2166123,
+      "answer": "The Earth's shape is best described as an oblate spheroid, which means it is mostly spherical but slightly flattened at the poles and bulging at the equator [1]. This shape is due to the Earth's rotation, which causes the equatorial diameter to be slightly larger than the polar diameter. Additionally, the Earth's figure is not a perfect ellipsoid; it has a pear-shaped component, with the larger semidiameter pointing towards 15° W longitude and 180° opposite [1]. These characteristics are the result of historical measurements and scientific studies that have refined our understanding of the Earth's shape over time.",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/Figure_of_the_Earth",
+          "title": "Figure of the Earth - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://earth.google.com/web",
+          "title": "Google Earth"
+        }
+      ],
+      "pages_used": 5,
+      "pages_expected": 8,
+      "llm_seconds": 4.7,
+      "first_token_seconds": 13.9,
+      "total_seconds": 18.0,
+      "client_seconds": 18.0
+    },
+    "final": {
+      "qid": "fbbef4a59291",
+      "type": "final",
+      "ts": 1793665160.042516,
+      "answer": "The Earth's shape is that of an ellipsoid, bulging at the equator and flattening at the poles. This shape is due to the planet's rotation, which causes the equatorial diameter to be about 43 km (27 mi) longer than the polar diameter [2]. Additionally, the Earth has local topographic variations, such as the Mariana Trench, which shortens the average radius by 0.17%, and Mount Everest, which lengthens it by 0.14% [2]. The Earth's surface is farthest from its center of mass at the equatorial bulge, making the summit of Chimborazo in Ecuador the farthest point from Earth's center [2]. The Earth's figure is also described as having an egg or pear shape, with the larger semidiameter pointing to 15° W longitude [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/Figure_of_the_Earth",
+          "title": "Figure of the Earth - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://en.wikipedia.org/wiki/Earth",
+          "title": "Earth - Wikipedia"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 4.8,
+      "first_token_seconds": 18.6,
+      "total_seconds": 22.8,
+      "client_seconds": 22.8
+    },
+    "verdict": "correct",
+    "reason": "The system answer correctly describes the Earth's shape as an ellipsoid (which is equivalent to an oblate spheroid), noting the bulge at the equator and flattening at the poles. It also includes relevant details about the equatorial diameter being longer than the polar diameter, local variations like the Mariana Trench and Mount Everest, and the fact that Chimborazo is the farthest point from Earth's center. These details are consistent with the reference answer and add useful context without contradicting it."
+  },
+  {
+    "id": 48,
+    "q": "Who is Donald Trump?",
+    "ref": "American businessman and politician; 45th (2017-2021) and 47th (since 2025) president of the United States",
+    "type": "factual",
+    "qid": "6ff29534e907",
+    "pages_ok": 5,
+    "pages_failed": 3,
+    "pages_cached": 1,
+    "fast": {
+      "qid": "6ff29534e907",
+      "type": "fast",
+      "ts": 1793665190.9815297,
+      "answer": "Donald Trump is the 45th and 47th president of the United States, with his second term beginning in January 2025 [1]. Prior to his political career, he was a real estate developer who transformed his father’s middle-income housing business into a global luxury brand encompassing hotels, golf courses, and commercial properties. Trump became a best-selling author with his 1987 book *The Art of the Deal* and a reality TV star in the 2000s on *The Apprentice*. He was elected president in November 2016, served one term from 2017 to 2021, lost his reelection bid in 2020, and was reelected in 2024. He was convicted of falsifying business records in May 2024 and faces an additional criminal trial regarding election interference in Georgia, to which he has pleaded not guilty [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.biography.com/political-figures/donald-trump",
+          "title": "Donald Trump Was Diagnosed with Chronic Veinous Insufficiency. Here’s What It Means for His Health"
+        }
+      ],
+      "pages_used": 4,
+      "pages_expected": 8,
+      "llm_seconds": 5.7,
+      "first_token_seconds": 14.7,
+      "total_seconds": 19.9,
+      "client_seconds": 19.9
+    },
+    "final": {
+      "qid": "6ff29534e907",
+      "type": "final",
+      "ts": 1793665197.1323617,
+      "answer": "Donald Trump is an American politician, media personality, and businessman who served as the 45th president of the United States from 2017 to 2021 and is currently the 47th president, having taken office in January 2025 [1][2]. Born on June 14, 1946, in Queens, New York, he is the son of Fred Trump and Mary Anne MacLeod Trump [1][2]. Trump became a prominent real estate developer, taking over his father's business in 1971 and transforming it into the Trump Organization, which expanded into hotels, golf courses, and commercial properties [1][2]. He gained national attention through his reality TV show *The Apprentice* and his 2016 presidential campaign, which focused on themes of \"making America great again\" [1][3]. Trump was convicted of falsifying business records in May 2024 and faces a criminal trial related to election interference in Georgia [2].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://en.wikipedia.org/wiki/Donald_Trump",
+          "title": "Donald Trump - Wikipedia"
+        },
+        {
+          "n": 2,
+          "url": "https://www.biography.com/political-figures/donald-trump",
+          "title": "Donald Trump Was Diagnosed with Chronic Veinous Insufficiency. Here’s What It Means for His Health"
+        },
+        {
+          "n": 3,
+          "url": "http://www.cnn.com/2016/02/10/politics/who-is-donald-trump/",
+          "title": "Who is Donald Trump? | CNN Politics"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 6.1,
+      "first_token_seconds": 20.9,
+      "total_seconds": 26.1,
+      "client_seconds": 26.1
+    },
+    "verdict": "partial",
+    "reason": "The system answer contains some correct information but also includes details that contradict the reference answer. Specifically, it states that Donald Trump is 'currently the 47th president, having taken office in January 2025,' which implies he is in office as of 2026. However, the reference answer only states that he is '47th (since 2025)' and does not confirm he is currently in office. Additionally, the system answer includes biographical details (e.g., birth date, parents, career) that are not in the reference answer, which is acceptable as extra detail, but the mention of his 2024 conviction and 2025 inauguration is speculative and not confirmed by the reference."
+  },
+  {
+    "id": 49,
+    "q": "Who is the inventor of the airplane?",
+    "ref": "The Wright brothers, Orville and Wilbur (first powered flight 1903)",
+    "type": "factual",
+    "qid": "2cde4f7544ad",
+    "pages_ok": 7,
+    "pages_failed": 1,
+    "pages_cached": 1,
+    "fast": {
+      "qid": "2cde4f7544ad",
+      "type": "fast",
+      "ts": 1793665231.5380785,
+      "answer": "The inventor of the airplane is the Wright brothers, Wilbur and Orville Wright [1].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://airandspace.si.edu/explore/stories/wright-brothers",
+          "title": "The Wright Brothers"
+        },
+        {
+          "n": 2,
+          "url": "https://www.history.com/",
+          "title": "The HISTORY Channel Nederland | HISTORY TV Nederland"
+        }
+      ],
+      "pages_used": 2,
+      "pages_expected": 8,
+      "llm_seconds": 8.6,
+      "first_token_seconds": 20.3,
+      "total_seconds": 22.0,
+      "client_seconds": 22.0
+    },
+    "final": {
+      "qid": "2cde4f7544ad",
+      "type": "final",
+      "ts": 1793665240.174583,
+      "answer": "The inventor of the airplane is Orville Wright and Wilbur Wright, the Wright brothers [1][2][4]. They made the first controlled, sustained flight of an engine-powered, heavier-than-air aircraft with the Wright Flyer on December 17, 1903 [4].",
+      "sources": [
+        {
+          "n": 1,
+          "url": "https://www.worldatlas.com/articles/who-invented-the-airplane.html",
+          "title": "Who Invented the Airplane?"
+        },
+        {
+          "n": 2,
+          "url": "https://en.wikipedia.org/wiki/Airplane",
+          "title": "Airplane - Wikipedia"
+        },
+        {
+          "n": 3,
+          "url": "https://airandspace.si.edu/explore/stories/wright-brothers",
+          "title": "The Wright Brothers"
+        },
+        {
+          "n": 4,
+          "url": "https://en.wikipedia.org/wiki/Wright_brothers",
+          "title": "Wright brothers - Wikipedia"
+        }
+      ],
+      "pages_used": 8,
+      "pages_expected": 8,
+      "llm_seconds": 8.6,
+      "first_token_seconds": 24.3,
+      "total_seconds": 30.6,
+      "client_seconds": 30.6
+    },
+    "verdict": "correct",
+    "reason": "The system answer correctly identifies the Wright brothers, Orville and Wilbur, as the inventors of the airplane. It also mentions the first powered flight on December 17, 1903, which aligns with the reference answer. The answer is consistent with the reference and includes relevant details without introducing inaccuracies."
+  }
+]
