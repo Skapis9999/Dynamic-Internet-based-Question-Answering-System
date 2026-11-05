@@ -7,6 +7,9 @@ QDRANT_URL = os.getenv("QDRANT_URL", "http://qdrant:6333")
 SEARXNG_URL = os.getenv("SEARXNG_URL", "http://searxng:8080")
 
 LLM_MODEL = os.getenv("LLM_MODEL", "qwen3:8b")
+# With 8 GB of VRAM, 8192 left the LLM + embedder so close to full that concurrent requests froze
+# the GPU for minutes (reproduced with a stress test). Prompts are ~2-3k tokens, so 4096 is enough.
+LLM_NUM_CTX = int(os.getenv("LLM_NUM_CTX", "4096"))
 EMBED_MODEL = os.getenv("EMBED_MODEL", "qwen3-embedding:0.6b")
 EMBED_DIM = int(os.getenv("EMBED_DIM", "1024"))
 # "pages": chunks keyed by URL (shared cache across questions), payload {url, title, idx, text, fetched_at}

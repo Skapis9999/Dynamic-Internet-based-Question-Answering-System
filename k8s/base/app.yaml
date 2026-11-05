@@ -10,6 +10,7 @@ data:
   # Ollama runs on the Windows host (GPU); Docker Desktop routes this name to it.
   OLLAMA_URL: "http://host.docker.internal:11434"
   LLM_MODEL: "qwen3:8b"
+  LLM_NUM_CTX: "4096"   # 8192 froze the 8 GB GPU under concurrent load, see common/config.py
   EMBED_MODEL: "qwen3-embedding:0.6b"
   EMBED_DIM: "1024"
   MAX_URLS: "8"

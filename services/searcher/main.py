@@ -76,6 +76,12 @@ def handle(_topic: str, msg: dict) -> None:
         bus.emit_event(producer, qid, "final", answer="I couldn't find any web pages for this question.", sources=[])
         return
 
+    # Tell the answerer first, on the question's own partition: it starts the deadline, so a
+    # question still gets an answer if none of its pages ever come back.
+    bus.send(producer, config.T_CHUNKS_READY, qid, {
+        "type": "started", "qid": qid, "question": question,
+        "expected": len(picked), "asked_at": msg.get("asked_at"),
+    })
     for rank, p in enumerate(picked):
         # Keyed by URL (not qid) so the pages of ONE question spread over all
         # partitions -> fetched in parallel by every fetcher replica.

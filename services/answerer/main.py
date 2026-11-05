@@ -34,8 +34,7 @@ class Q:
     question: str
     expected: int
     asked_at: float
-    first_seen: float = field(default_factory=time.time)
-    done: int = 0
+    done: set[str] = field(default_factory=set)  # pages reported (a retried Spark task may report twice)
     urls: list[str] = field(default_factory=list)  # pages that produced text
     fast_sent: bool = False
 
@@ -66,8 +65,13 @@ def answer(qid: str, q: Q, kind: str) -> None:
     t0 = time.time()
     hits = retrieve(q) if q.urls else []
     if not hits:
-        bus.emit_event(producer, qid, kind, answer="No usable text was found on the retrieved pages.",
-                       sources=[], total_seconds=round(time.time() - q.asked_at, 1))
+        msg = ("No usable text was found on the retrieved pages."
+               if len(q.done) >= q.expected else
+               f"I couldn't read the web pages in time ({len(q.done)} of {q.expected} processed). "
+               "The system may be busy or still starting up, so please try again.")
+        bus.emit_event(producer, qid, kind, answer=msg, sources=[],
+                       pages_used=len(q.done), pages_expected=q.expected,
+                       total_seconds=round(time.time() - q.asked_at, 1))
         producer.flush()
         return
 
@@ -96,12 +100,12 @@ def answer(qid: str, q: Q, kind: str) -> None:
         bus.emit_event(producer, qid, "delta", kind=kind, text=pending)
 
     bus.emit_event(producer, qid, kind, answer=text.strip(), sources=sources,
-                   pages_used=q.done, pages_expected=q.expected,
+                   pages_used=len(q.done), pages_expected=q.expected,
                    llm_seconds=round(time.time() - t0, 1),
                    first_token_seconds=round((first_token or time.time()) - q.asked_at, 1),
                    total_seconds=round(time.time() - q.asked_at, 1))
     producer.flush()
-    log.info("[%s] %s answer in %.1fs (pages %d/%d)", qid, kind, time.time() - t0, q.done, q.expected)
+    log.info("[%s] %s answer in %.1fs (pages %d/%d)", qid, kind, time.time() - t0, len(q.done), q.expected)
 
 
 def handle(_topic: str, msg: dict) -> None:
@@ -109,7 +113,9 @@ def handle(_topic: str, msg: dict) -> None:
         return
     q = state.setdefault(msg["qid"], Q(question=msg["question"], expected=msg["expected"],
                                        asked_at=msg.get("asked_at") or time.time()))
-    q.done += 1
+    if msg.get("type") == "started" or msg["url"] in q.done:
+        return
+    q.done.add(msg["url"])
     if msg.get("n_chunks"):
         q.urls.append(msg["url"])
 
@@ -117,10 +123,17 @@ def handle(_topic: str, msg: dict) -> None:
 def tick() -> None:
     now = time.time()
     for qid, q in list(state.items()):
-        if q.done >= q.expected or now - q.first_seen > config.ANSWER_DEADLINE_S:
+        if len(q.done) >= q.expected or now - q.asked_at > config.ANSWER_DEADLINE_S:
             del state[qid]
             finished.add(qid)
-            answer(qid, q, "final")
+            try:
+                answer(qid, q, "final")
+            except Exception as e:  # e.g. Ollama down: the question still needs a final answer
+                log.exception("[%s] final answer failed", qid)
+                bus.emit_event(producer, qid, "final", sources=[],
+                               answer=f"The language model failed to answer ({type(e).__name__}). Please try again.",
+                               total_seconds=round(time.time() - q.asked_at, 1))
+                producer.flush(5)
         elif not q.fast_sent and len(q.urls) >= config.FAST_MIN_PAGES:
             q.fast_sent = True
             answer(qid, q, "fast")

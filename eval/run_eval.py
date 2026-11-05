@@ -73,7 +73,7 @@ def judge(q: str, ref: str | None, answer: str) -> dict:
     body = {"model": JUDGE_MODEL, "stream": False, "think": False, "format": JUDGE_SCHEMA,
             # Same num_ctx as the services: a different value makes Ollama reload the model
             # (5-8 s) every time the judge and the pipeline alternate, skewing the latencies.
-            "options": {"temperature": 0, "num_ctx": 8192},
+            "options": {"temperature": 0, "num_ctx": 4096},
             "messages": [{"role": "user", "content": JUDGE_PROMPT.format(
                 today=datetime.now().date().isoformat(), q=q, ref=ref or "(none: open question)", a=answer)}]}
     out = post_json(f"{OLLAMA}/api/chat", body, timeout=120)

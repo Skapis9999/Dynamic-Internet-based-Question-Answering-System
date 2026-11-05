@@ -17,6 +17,7 @@ from services.common import bus, config
 log = bus.setup_logging("api")
 app = FastAPI(title="Dynamic Internet-based QA")
 producer = bus.make_producer()
+STREAM_TIMEOUT_S = 120
 
 # qid -> recent events (so a browser that connects slightly late misses nothing)
 history: dict[str, deque] = defaultdict(lambda: deque(maxlen=600))
@@ -58,7 +59,7 @@ def ask(body: Ask) -> dict:
     bus.send(producer, config.T_QUESTIONS, qid,
              {"qid": qid, "question": body.question.strip(), "asked_at": time.time()})
     bus.emit_event(producer, qid, "accepted", question=body.question.strip())
-    producer.flush()
+    producer.flush(5)  # bounded: with Kafka down the request must not hang (messages stay queued)
     return {"qid": qid}
 
 
@@ -71,16 +72,24 @@ async def stream(qid: str) -> StreamingResponse:
         try:
             for ev in list(history.get(qid, ())):
                 yield f"data: {json.dumps(ev)}\n\n"
-            deadline = time.time() + 300
-            while time.time() < deadline:
+                if ev["type"] == "final":
+                    return
+            # Safety net if a stage is down and no one else can answer: never leave the UI waiting.
+            deadline = time.time() + STREAM_TIMEOUT_S
+            while (left := deadline - time.time()) > 0:
                 try:
-                    ev = await asyncio.wait_for(queue.get(), timeout=15)
+                    ev = await asyncio.wait_for(queue.get(), timeout=min(15, left))
                 except asyncio.TimeoutError:
                     yield ": keep-alive\n\n"
                     continue
                 yield f"data: {json.dumps(ev)}\n\n"
                 if ev["type"] == "final":
-                    break
+                    return
+            timeout_event = {"qid": qid, "type": "final", "ts": time.time(), "sources": [],
+                             "answer": "The system didn't answer in time. It may be busy or "
+                                       "still starting up, so please try again.",
+                             "total_seconds": STREAM_TIMEOUT_S}
+            yield f"data: {json.dumps(timeout_event)}\n\n"
         finally:
             subscribers[qid].discard(queue)
 

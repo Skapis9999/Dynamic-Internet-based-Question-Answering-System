@@ -23,7 +23,7 @@ UA = ("WebQAStream/0.1 (research/education project; "
 FOOTNOTE_RE = re.compile(r"\[(?:\d+|[a-z]|citation needed|note \d+|edit)\]", re.IGNORECASE)
 
 _http = httpx.Client(timeout=15, follow_redirects=True, headers={"User-Agent": UA})
-_qdrant = QdrantClient(url=config.QDRANT_URL)
+_qdrant = QdrantClient(url=config.QDRANT_URL, timeout=30)  # default 5 s is too short when the node is busy
 
 CHUNK_CHARS = 1000
 OVERLAP_CHARS = 150
